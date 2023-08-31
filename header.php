@@ -26,7 +26,7 @@
                     ?>                     
                     <div class="menu__content">IT VOLUNTEERS</div>
                     <nav class="menu__body"> 
-                        <div class=" menu__container">
+                        <div class="menu__container">
                             <?php wp_nav_menu( [
                                 'theme_location'       => 'header',                          
                                 'container'            => false,                           

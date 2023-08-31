@@ -34,11 +34,38 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_script( 'about-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/about.js', array(), false, true );
   }
 
- 
-}
+  if ( is_page_template('horses.php') ) {
+    wp_enqueue_style( 'horses-style', get_template_directory_uri() . '/assets/styles/template-styles/horses.css', array('main') );
+    wp_enqueue_script( 'horses-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/horses.js', array(), false, true );
+  }
+
+  if ( is_page_template('events.php') ) {
+    wp_enqueue_style( 'events-style', get_template_directory_uri() . '/assets/styles/template-styles/events.css', array('main') );
+    wp_enqueue_script( 'events-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/events.js', array(), false, true );
+  }
+
+  if ( is_page_template('museum.php') ) {
+    wp_enqueue_style( 'museum-style', get_template_directory_uri() . '/assets/styles/template-styles/museum.css', array('main') );
+    wp_enqueue_script( 'museum-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/museum.js', array(), false, true );
+  }
+
+  if ( is_page_template('contacts.php') ) {
+    wp_enqueue_style( 'contacts-style', get_template_directory_uri() . '/assets/styles/template-styles/contacts.css', array('main') );
+    wp_enqueue_script( 'contacts-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/contacts.js', array(), false, true );
+  }
+
+  if ( is_page_template('donate.php') ) {
+    wp_enqueue_style( 'donate-style', get_template_directory_uri() . '/assets/styles/template-styles/donate.css', array('main') );
+    wp_enqueue_script( 'donate-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/donate.js', array(), false, true );
+  }
+
+ }
+
 /** add fonts */
 function add_google_fonts() {
-  wp_enqueue_style( 'google_web_fonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto' );
+    wp_enqueue_style( 'amatic-sc', 'https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap' );
+    wp_enqueue_style( 'fira-sans-500', 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap' );
+    wp_enqueue_style( 'fira-sans-400', 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&display=swap' );
 }
  
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );

@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: home
+Template Name: contacts
 */
 get_header();
 ?>
 
-<h2 class="text">home page</h2>
+<h2 class="text">contacts</h2>
 
 
 

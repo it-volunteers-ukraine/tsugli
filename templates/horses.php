@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: home
+Template Name: horses
 */
 get_header();
 ?>
 
-<h2 class="text">home page</h2>
+<h2 class="horses">horses</h2>
 
 
 

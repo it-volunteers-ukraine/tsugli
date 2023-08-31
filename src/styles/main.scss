@@ -1,9 +1,10 @@
 @import "./footer.scss";
 @import "./header.scss";
-@import "./global.scss";
 @import "./variables.scss";
+@import "./global.scss";
 @import "./general.scss";
+@import "./placeholder.scss";
 
-.main{
-    color: $green;
+.main {
+  color: $primary-color;
 }
