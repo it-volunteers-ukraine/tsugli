@@ -24,41 +24,41 @@ function wp_it_volunteers_scripts() {
   wp_enqueue_style( 'wp-it-volunteers-style', get_template_directory_uri() . '/assets/styles/main.css', array('main') );
   wp_enqueue_script( 'wp-it-volunteers-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array(), false, true );
 
-  if ( is_page_template('home.php') ) {
+
+  if ( is_page_template('templates/home.php') ) {
     wp_enqueue_style( 'home-style', get_template_directory_uri() . '/assets/styles/template-styles/home.css', array('main') );
     wp_enqueue_script( 'home-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/home.js', array(), false, true );
   }
 
-  if ( is_page_template('about.php') ) {
+  if ( is_page_template('templates/about.php') ) {
     wp_enqueue_style( 'about-style', get_template_directory_uri() . '/assets/styles/template-styles/about.css', array('main') );
     wp_enqueue_script( 'about-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/about.js', array(), false, true );
   }
 
-  if ( is_page_template('horses.php') ) {
+  if ( is_page_template('templates/horses.php') ) {
     wp_enqueue_style( 'horses-style', get_template_directory_uri() . '/assets/styles/template-styles/horses.css', array('main') );
     wp_enqueue_script( 'horses-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/horses.js', array(), false, true );
   }
 
-  if ( is_page_template('events.php') ) {
+  if ( is_page_template('templates/events.php') ) {
     wp_enqueue_style( 'events-style', get_template_directory_uri() . '/assets/styles/template-styles/events.css', array('main') );
     wp_enqueue_script( 'events-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/events.js', array(), false, true );
   }
 
-  if ( is_page_template('museum.php') ) {
+  if ( is_page_template('templates/museum.php') ) {
     wp_enqueue_style( 'museum-style', get_template_directory_uri() . '/assets/styles/template-styles/museum.css', array('main') );
     wp_enqueue_script( 'museum-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/museum.js', array(), false, true );
   }
 
-  if ( is_page_template('contacts.php') ) {
+  if ( is_page_template('templates/contacts.php') ) {
     wp_enqueue_style( 'contacts-style', get_template_directory_uri() . '/assets/styles/template-styles/contacts.css', array('main') );
     wp_enqueue_script( 'contacts-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/contacts.js', array(), false, true );
   }
 
-  if ( is_page_template('donate.php') ) {
+  if ( is_page_template('templates/donate.php') ) {
     wp_enqueue_style( 'donate-style', get_template_directory_uri() . '/assets/styles/template-styles/donate.css', array('main') );
     wp_enqueue_script( 'donate-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/donate.js', array(), false, true );
   }
-
  }
 
 /** add fonts */
