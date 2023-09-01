@@ -76,6 +76,7 @@ function wp_it_volunteers_menus() {
   $locations = array(
     'header' => __( 'Header Menu', 'wp-it-volunteers' ),
     'footer' => __( 'Footer Menu', 'wp-it-volunteers' ),
+    'contacts' => __( 'Contacts Menu', 'wp-it-volunteers' ),
   );
 
   register_nav_menus( $locations );
@@ -123,3 +124,5 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 
 	return $data;
 }
+/** require walkers */
+require get_template_directory() . '/template_parts/contacts-walker.php';
