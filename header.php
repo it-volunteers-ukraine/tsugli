@@ -23,13 +23,11 @@
                     type="button"
                     aria-controls="menu-container"
                     data-menu-button>
-
                     <svg class="button-menu__icon" width="44px" height="44px" aria-label="Перемикач мобільного меню">
                         <use class="button-menu__burger" href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-menu"></use>
                         <use class="button-menu__cros" href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-x"></use>
                     </svg>
-                    
-                 </button>     
+                </button>     
                     
                  
                  <div class="menu-container" id="menu-container" data-menu>
@@ -46,21 +44,21 @@
                             ?>   
                     </nav> 
 
-                        <div class="header__mobile">
-                                    <a class="header__button" href="#"
+                    <div class="header__mobile">
+                                <a class="header__button" href="#"
                                     >Задонатити
                                 </a>   
 
                                 <ul class="header-networks">
                                 <li class="header-networks__item" >
-                                    <a href="">
+                                    <a href="#">
                                     <svg class="header-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="header-networks__item">
-                                    <a href="">
+                                    <a href="#">
                                     <svg class="header-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-fb"></use>
                                     </svg>
@@ -80,7 +78,7 @@
                                     </a>
                                 </li>
                                 <li class="header-networks__item">
-                                    <a href="">
+                                    <a href="#">
                                     <svg class="header-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-whatsapp"></use></svg
                                     ></a>
@@ -88,17 +86,15 @@
                                 </ul>
                                 </div>
                      </div>
-
-                 <a class="header__link" href="#"
+                 
+                    <a class="header__link" href="#"
                      >Задонатити
-                    <svg class="offering__icon" width="24px" height="24px">
-                        <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
-                    </svg>
-                </a> 
-
+                            <svg class="offering__icon" width="24px" height="24px">
+                                <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
+                            </svg>
+                    </a> 
                 </div>  
-                
-                
+       
             </div>                      
         </header>  
 	
