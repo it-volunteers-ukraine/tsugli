@@ -15,6 +15,10 @@ get_header();
 
 ?>
 
+<?php if ( get_header_image() ) : ?>
+  <img src="<?php header_image(); ?>">
+<?php endif; ?>
+
 <?php
   wp_nav_menu(
     array(

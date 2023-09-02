@@ -96,5 +96,6 @@
                 </div>  
        
             </div>                      
-        </header>  
+        </header>
+        <body <?php body_class(); ?>>  
 	

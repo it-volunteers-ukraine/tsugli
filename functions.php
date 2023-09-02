@@ -1,15 +1,24 @@
 <?php
 if ( ! function_exists('wp_it_volunteers_setup')) {
   function wp_it_volunteers_setup() {
-    add_theme_support( 'custom-logo', 
+    add_theme_support( 'custom-logo',
       array(
         'height'      => 64,
         'width'       => 64,
         'flex-width'  => true,
-        'flex-height' => true,        
+        'flex-height' => true,
       )
     );
-    add_theme_support( 'title-tag' );    
+    add_theme_support( 'title-tag' );
+    add_theme_support( 'custom-background' );
+    add_theme_support( 'custom-header',
+      array(
+        'width'              => 1000,
+		    'height'             => 250,
+		    'flex-width'         => true,
+		    'flex-height'        => true,
+      )
+  );
   }
   add_action( 'after_setup_theme', 'wp_it_volunteers_setup' );
 }
@@ -68,7 +77,7 @@ function add_google_fonts() {
     wp_enqueue_style( 'fira-sans-400', 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&display=swap' );
     wp_enqueue_style( 'fira-sans-600', 'href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&display=swap"' );
 }
- 
+
 add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 
 /** Register menus */
