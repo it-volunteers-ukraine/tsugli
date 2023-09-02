@@ -45,7 +45,7 @@
                     </nav> 
 
                     <div class="header__mobile">
-                                <a class="header__button" href="#"
+                                <a class="header__button" href="<?php echo get_permalink(38); ?>"
                                     >Задонатити
                                 </a>   
 
@@ -87,7 +87,7 @@
                                 </div>
                      </div>
                  
-                    <a class="header__link" href="#"
+                    <a class="header__link" href="<?php echo get_permalink(38); ?>"
                      >Задонатити
                             <svg class="offering__icon" width="24px" height="24px">
                                 <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>

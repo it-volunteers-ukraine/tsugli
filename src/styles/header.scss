@@ -1,23 +1,35 @@
 .header {
-  background: $secondary-color;
-  margin: 0 auto;
   position: relative;
-  justify-content: space-between;
+  margin: 0 auto;
+  background: $secondary-color;
 }
 
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 12px 0;
   position: relative;
+  padding: 12px 0;
 
   @media screen and (min-width: $tablet1) {
-    padding: 17px 0;
     justify-content: flex-start;
+    padding: 17px 0;
   }
 
   @media screen and (min-width: $tablet2) {
     padding: 18px 0;
+  }
+}
+
+.custom-logo-link {
+  @media screen and (min-width: $tablet1) and (max-width: 991px) {
+    margin-right: 325px;
+  }
+  @media screen and (min-width: $tablet2) {
+    margin-right: 86px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 339px;
   }
 }
 
@@ -37,8 +49,6 @@
     opacity: 0;
     pointer-events: 0;
     visibility: hidden;
-    // transform: scaleY(0);
-    // transform-origin: top;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
       opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,16 +58,15 @@
     pointer-events: auto;
     opacity: 1;
     visibility: visible;
-    // transform: scaleX(1);
   }
 
   @media screen and (min-width: $tablet2) {
     position: relative;
-    background-color: $secondary-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0;
+    background-color: $secondary-color;
   }
 }
 
@@ -78,6 +87,7 @@
 .nav-menu__list {
   display: flex;
   list-style: none;
+
   @media screen and (max-width: 767px) {
     flex-direction: column;
     gap: 12px;
@@ -109,21 +119,21 @@
   font-weight: 500;
   letter-spacing: 0.36px;
   color: $secondary-color;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: font-weight 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (max-width: 991px) {
     &:hover,
     &:focus {
-      color: $primary-color;
+      font-weight: 600;
     }
   }
 
   @media screen and (min-width: $tablet2) {
-    color: $accent-color;
+    padding: 0;
     font-size: 14px;
     line-height: 1.43;
     letter-spacing: 0;
-    padding: 0;
+    color: $accent-color;
   }
 
   @media screen and (min-width: $desktop) {
@@ -151,6 +161,12 @@
   }
 }
 
+.nav-menu__list .current_page_item a {
+  font-weight: 600;
+  @media screen and (min-width: $tablet2) {
+    font-weight: 500;
+  }
+}
 .nav-menu__list .current_page_item a::after {
   content: "";
   position: absolute;
@@ -186,14 +202,14 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
+  padding: 10px 12px 10px 14px;
 
-  color: $accent-color;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.4px;
+  color: $accent-color;
   background-color: $secondary-color;
   border: 1px solid $accent-color;
-  padding: 10px 12px 10px 14px;
   fill: currentColor;
   border-radius: 8px;
 
@@ -210,9 +226,9 @@
 
   @media screen and (min-width: $desktop) {
     padding: 12px 14px 12px 18px;
+    gap: 8px;
     font-size: 24px;
     letter-spacing: 0.48px;
-    gap: 8px;
   }
 }
 
@@ -220,15 +236,15 @@
   display: inline-flex;
   justify-content: center;
   padding: 16px 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  background-color: $secondary-color;
   color: $button-color;
   font-size: 20px;
   letter-spacing: 0.4px;
   font-weight: 700;
   border-radius: 8px;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
-  width: 100%;
-  background-color: $secondary-color;
-  margin-bottom: 24px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
@@ -310,18 +326,5 @@
   .header-networks__item:hover &,
   .header-networks__item:focus & {
     transform: scale(1.2);
-  }
-}
-
-.custom-logo-link {
-  @media screen and (min-width: $tablet1) and (max-width: 991px) {
-    margin-right: 325px;
-  }
-  @media screen and (min-width: $tablet2) {
-    margin-right: 86px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    margin-right: 339px;
   }
 }
