@@ -224,7 +224,8 @@
 
   &:hover,
   &:focus {
-    background-color: $primary-color;
+    background-color: $accent-color;
+    color: $secondary-color;
   }
 
   @media screen and (min-width: $tablet1) {
