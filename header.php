@@ -39,7 +39,7 @@
                                 'menu_class'           => 'nav-menu__list',
                                 'menu_id'              => false,    
                                 'echo'                 => true,                            
-                                'items_wrap'           => '<ul id="%1$s" class="header_list %2$s">%3$s</ul>',  
+                                'items_wrap'           => '<ul id="%1$s" class="header_list %2$s">%3$s</ul>'  
                                 ] ); 
                             ?>   
                     </nav> 

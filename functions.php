@@ -132,6 +132,4 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 	}
 
 	return $data;
-}
-/** require walkers */
-require get_template_directory() . '/template_parts/contacts-walker.php';
+};
