@@ -1,3 +1,338 @@
-.header{
-    color: blue;
+.header {
+  position: relative;
+  margin: 0 auto;
+  background: $secondary-color;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 12px 0;
+
+  @media screen and (min-width: $tablet1) {
+    justify-content: flex-start;
+    padding: 17px 0;
+  }
+
+  @media screen and (min-width: $tablet2) {
+    padding: 18px 0;
+  }
+}
+
+.custom-logo-link {
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+  @media screen and (min-width: $tablet1) and (max-width: 991px) {
+    margin-right: 325px;
+  }
+  @media screen and (min-width: $tablet2) {
+    margin-right: 86px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 339px;
+  }
+}
+
+.menu-container {
+  @media screen and (max-width: 991px) {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 328px;
+    padding: 16px;
+    display: block;
+    border-radius: 8px;
+    background-color: $accent-color;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+    pointer-events: 0;
+    visibility: hidden;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &.is-open {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media screen and (min-width: $tablet2) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background-color: $secondary-color;
+  }
+}
+
+.nav-menu {
+  @media screen and (max-width: 991px) {
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: $tablet2) {
+    margin-right: 87px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 40px;
+  }
+}
+
+.nav-menu__list {
+  display: flex;
+  list-style: none;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: $tablet2) {
+    gap: 32px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (min-width: $desktop) {
+    gap: 40px;
+  }
+}
+
+.nav-menu__list li {
+  position: relative;
+  padding: 12px 16px;
+
+  @media screen and (min-width: $tablet2) {
+    padding: 0;
+  }
+}
+
+.nav-menu__list li a {
+  font-family: $fira;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.36px;
+  color: $secondary-color;
+  transition: font-weight 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 991px) {
+    &:hover,
+    &:focus {
+      font-weight: 600;
+    }
+  }
+
+  @media screen and (min-width: $tablet2) {
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0;
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -8px;
+    background-color: $accent-color;
+    transform: scaleX(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: scaleX(1);
+  }
+}
+
+.nav-menu__list .current_page_item a {
+  font-weight: 600;
+  @media screen and (min-width: $tablet2) {
+    font-weight: 500;
+  }
+}
+.nav-menu__list .current_page_item a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: -8px;
+  background-color: $accent-color;
+}
+
+// .logo__text {
+//   width: 128px;
+//   height: 32px;
+
+//   @media screen and (min-width: $tablet1) {
+//     width: 130px;
+//     height: 33px;
+//   }
+
+//   @media screen and (min-width: $tablet2) {
+//     width: 121px;
+//     height: 30px;
+//   }
+
+//   @media screen and (min-width: $desktop) {
+//     width: 160px;
+//     height: 40px;
+//   }
+// }
+
+.header__link {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 12px 10px 14px;
+
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: $accent-color;
+  background-color: $secondary-color;
+  border: 1px solid $accent-color;
+  fill: currentColor;
+  border-radius: 8px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $secondary-color;
+  }
+
+  @media screen and (min-width: $tablet1) {
+    display: flex;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 12px 14px 12px 18px;
+    gap: 8px;
+    font-size: 24px;
+    letter-spacing: 0.48px;
+  }
+}
+
+.header__button {
+  display: inline-flex;
+  justify-content: center;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  background-color: $secondary-color;
+  color: $button-color;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+  }
+}
+
+.header__mobile {
+  @media screen and (min-width: $tablet2) {
+    display: none;
+  }
+}
+
+.button-menu {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: none;
+  background-color: transparent;
+  fill: $accent-color;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $button-color;
+  }
+
+  @media screen and (min-width: $tablet1) {
+    position: absolute;
+    top: 18px;
+    right: 0;
+  }
+  @media screen and (min-width: $tablet2) {
+    display: none;
+  }
+}
+
+.button-menu__icon {
+  padding: 8px;
+}
+
+.button-menu__burger {
+  cursor: pointer;
+}
+
+.button-menu .button-menu__cros {
+  display: block;
+}
+
+.button-menu.is-open .button-menu__cros {
+  display: none;
+}
+
+.button-menu .button-menu__burger {
+  display: none;
+}
+
+.button-menu.is-open .button-menu__burger {
+  display: block;
+}
+
+.header-networks {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (min-width: $tablet2) {
+    display: none;
+  }
+}
+
+.header-networks__icon {
+  fill: $primary-color;
+  padding: 10px;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .header-networks__item:hover &,
+  .header-networks__item:focus & {
+    transform: scale(1.2);
+  }
 }
