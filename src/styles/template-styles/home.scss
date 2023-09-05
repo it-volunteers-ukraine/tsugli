@@ -1,6 +1,6 @@
 @import "../variables.scss";
 @import "../plaseholder.scss";
-
+// HERO
 .hero {
   height: 396px;
 
@@ -131,6 +131,8 @@
   }
 }
 
+// ACTIVITIES
+
 .activities {
   position: relative;
 }
@@ -224,6 +226,7 @@
 .activities__img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .activities__text {
@@ -245,6 +248,7 @@
   }
 }
 
+// ABOUT-US
 .about-us {
   margin-top: 72px;
   margin-bottom: 72px;
@@ -378,5 +382,87 @@
   @media screen and (min-width: $desktop) {
     width: 306px;
     height: 76px;
+  }
+}
+
+// GALLERY
+.gallery {
+  position: relative;
+}
+.gallery__container {
+  padding: 16px 16px 12px;
+  border-radius: 8px;
+  background: $accent-color;
+  box-shadow: 0px 7px 15px 1px rgba(0, 0, 0, 0.25);
+}
+
+.gallery__title {
+  color: $primary-color;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0.96px;
+  margin-bottom: 16px;
+}
+
+.gallery__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 255px;
+}
+
+.gallery__button {
+  padding: 12px;
+  color: $secondary-color;
+  font-family: $fira;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  border-radius: 4px;
+  border: 1px solid $secondary-color;
+  background-color: $button-color;
+}
+
+.galerry__container {
+  display: none;
+  @media screen and (min-width: $tablet1) {
+    display: block;
+  }
+}
+
+.galerry__container--mob {
+  display: block;
+  position: absolute;
+  bottom: 44px;
+  left: 0;
+  overflow: hidden;
+}
+
+.gallery__wrapper.swiper-wrapper {
+  width: 360px;
+}
+.gallery__slide.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery__slide.swiper-slide img {
+  display: block;
+  width: 276px;
+  height: 219px;
+  object-fit: cover;
+}
+
+.swiper-pagination {
+  display: block;
+  text-align: center;
+  color: $secondary-color;
+  font-family: $fira;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  @media screen and (min-width: $tablet1) {
+    display: none;
   }
 }

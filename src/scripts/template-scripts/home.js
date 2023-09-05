@@ -1,5 +1,5 @@
 const swiper = new Swiper(".swiper", {
-  slidesPerView: 1.515,
+  slidesPerView: 1.51,
   spaceBetween: 16,
   breakpoints: {
     768: {
@@ -12,8 +12,14 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// Получаем текущую ширину экрана
 const screenWidth = window.innerWidth;
-
-// Устанавливаем allowTouchMove в зависимости от ширины экрана
 swiper.allowTouchMove = screenWidth <= 768;
+
+const swiperGallery = new Swiper(".swiper-gallery", {
+  slidesPerView: 1.3,
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+});
