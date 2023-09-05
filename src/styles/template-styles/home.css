@@ -144,7 +144,7 @@
   }
 }
 
-.about-us {
+.activities {
   position: relative;
 }
 
@@ -271,5 +271,159 @@
     font-size: 39px;
     line-height: 1.03;
     letter-spacing: 0.78px;
+  }
+}
+
+.about-us {
+  margin-top: 72px;
+  margin-bottom: 72px;
+}
+@media screen and (min-width: 768px) {
+  .about-us {
+    margin-top: 252px;
+    margin-bottom: 80px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-us {
+    margin-top: 304px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-us {
+    margin-top: 267px;
+    margin-bottom: 132px;
+  }
+}
+
+.about-us__container {
+  padding: 16px;
+  background-color: #f1eee8;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 768px) {
+  .about-us__container {
+    padding: 32px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-us__container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 7px;
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .about-us__container {
+    gap: 50px;
+    padding: 64px;
+  }
+}
+
+.about-us__text {
+  color: #4f4840;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.25px;
+}
+@media screen and (min-width: 768px) {
+  .about-us__text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375;
+    letter-spacing: 0.32px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-us__text {
+    width: 528px;
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .about-us__text {
+    width: 658px;
+  }
+}
+
+.about-us__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 17px;
+  padding: 12px 0;
+  gap: 4px;
+}
+@media screen and (min-width: 768px) {
+  .about-us__logo {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 24px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-us__logo {
+    gap: 22px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .about-us__logo {
+    gap: 32px;
+  }
+}
+
+.about-us__sign {
+  width: 53px;
+  height: 53px;
+}
+@media screen and (min-width: 768px) {
+  .about-us__sign {
+    width: 55px;
+    height: 55px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-us__sign {
+    width: 76px;
+    height: 75px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .about-us__sign {
+    width: 106px;
+    height: 105px;
+  }
+}
+
+.about-us__name {
+  width: 107px;
+  height: 26px;
+}
+@media screen and (min-width: 768px) {
+  .about-us__name {
+    width: 156px;
+    height: 39px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-us__name {
+    width: 216px;
+    height: 54px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .about-us__name {
+    width: 306px;
+    height: 76px;
   }
 }/*# sourceMappingURL=home.css.map */

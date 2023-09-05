@@ -17,8 +17,8 @@ get_header();
     </a>
 </section> 
 
-<section class="about-us">
-     <div class="activities swiper">
+<section class="activities ">
+     <div class="swiper">
     <ul class="activities__list swiper-wrapper">
         
         <li class="activities__item swiper-slide">
@@ -45,7 +45,18 @@ get_header();
     </ul> 
      </div>
 </section>
-      
+
+<section class="about-us section">
+    <div class="about-us__container">
+        <div class="about-us__logo">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Логотип" class='about-us__sign'>
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/text.svg" alt="Щербаті Цуглі" class='about-us__name'>
+        </div>
+     <p class="about-us__text"><?php the_field('about-us__text'); ?> </p>
+
+</div>
+     
+ </section>
 
 </main>
 
