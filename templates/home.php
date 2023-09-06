@@ -57,11 +57,10 @@ get_header();
 </div>
      
  </section>
-</main>
 
 
  <section class="gallery section">
-        <div class="gallery__container ">
+        <div class="gallery__wrapper ">
           <h2 class="gallery__title">Наше життя</h2>
               <ul class="gallery__buttons">
              
@@ -85,56 +84,45 @@ get_header();
 
         </div>
 
-<!-- <?php if(have_rows('gallery')):?>
-
-
+<?php if(have_rows('gallery')):?>
         <div class="galerry__container">
-
-        <?php 
-          while(have_rows('gallery')): the_row();
-   
+        <?php while(have_rows('gallery')): the_row();?>
+                <?php   
         $image=get_sub_field('img');
-        $picture=$image['sizes']['custom-size'];
         $category = get_sub_field('category'); 
         ?>
 
-          <a class="gallery__item" data-category="<?php echo $category; ?>" href="">
-            <img src="<?php echo $picture; ?>" alt="<?php echo $image['alt']; ?>" />
+          <a class="gallery__link gallery__item" data-category="<?php echo $category; ?>"  href="<?php echo $image['url']; ?>">
+            <img class="gallery__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" data-source="<?php echo $image['url']; ?>"/>
           </a>
 
-<?php 
-endwhile; ?>
-
-
-
+<?php endwhile; ?>
        </div>
-<?php endif; ?> -->
-
-
-
+<?php endif; ?> 
 
 
 <?php if (have_rows('gallery')) : ?>
     <div class="galerry__container--mob swiper-gallery">
-        <div class="gallery__wrapper swiper-wrapper">
+        <div class="gallery__wrap swiper-wrapper">
             <?php while (have_rows('gallery')) : the_row(); ?>
                 <?php
                 $image = get_sub_field('img');
                 $category = get_sub_field('category');
                 ?>
-                <div class="gallery__slide swiper-slide">
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                    <!-- <p><?php echo $category; ?></p> -->
+
+                <div class="gallery__item swiper-slide" data-category="<?php echo $category; ?>">
+                    <img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                 </div>
+                
             <?php endwhile; ?>
         </div>
     </div>
 <?php endif; ?>
 
+</section>
 
-      </section>
 
-
+</main>
 
 <?php get_footer(); ?>
 
