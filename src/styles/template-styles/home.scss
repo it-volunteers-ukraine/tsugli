@@ -1,6 +1,15 @@
 @import "../variables.scss";
 @import "../plaseholder.scss";
+
 // HERO
+
+.main {
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
 .hero {
   height: 396px;
 
@@ -538,6 +547,7 @@
 
   @media screen and (min-width: $tablet1) {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
     position: absolute;

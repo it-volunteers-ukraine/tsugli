@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 12px 0;
+  padding: 16px 0;
 
   @media screen and (min-width: $tablet1) {
     justify-content: flex-start;
@@ -21,6 +21,7 @@
 }
 
 .custom-logo-link {
+  width: 196px;
   transform: scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -28,44 +29,54 @@
   &:focus {
     transform: scale(1.1);
   }
-  @media screen and (min-width: $tablet1) and (max-width: 991px) {
+  @media screen and (min-width: $tablet1) {
+    width: 189px;
+    height: 46px;
     margin-right: 325px;
   }
   @media screen and (min-width: $tablet2) {
+    width: 188px;
+    height: 44px;
     margin-right: 86px;
   }
 
   @media screen and (min-width: $desktop) {
+    width: 232px;
+    height: 56px;
     margin-right: 339px;
   }
 }
+.custom-logo-link .custom-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .menu-container {
-  @media screen and (max-width: 991px) {
-    position: absolute;
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 328px;
-    padding: 16px;
-    display: block;
-    border-radius: 8px;
-    background-color: $accent-color;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  padding: 16px;
+  display: block;
+  background-color: $accent-color;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
 
-    opacity: 0;
-    pointer-events: 0;
-    visibility: hidden;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 2;
+  @media screen and (max-width: 767px) {
+    right: -16px;
   }
-
-  &.is-open {
-    pointer-events: auto;
-    opacity: 1;
-    visibility: visible;
+  @media screen and (min-width: $tablet1) and (max-width: 991px) {
+    border-bottom-left-radius: 8px;
+    right: -32px;
+  }
+  @media screen and (max-width: 991px) {
+    top: 80px;
+    width: 360px;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
   @media screen and (min-width: $tablet2) {
@@ -75,6 +86,12 @@
     align-items: center;
     padding: 0;
     background-color: $secondary-color;
+  }
+
+  &.is-open {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -95,10 +112,10 @@
 .nav-menu__list {
   display: flex;
   list-style: none;
+  flex-direction: column;
+  gap: 12px;
 
   @media screen and (max-width: 767px) {
-    flex-direction: column;
-    gap: 12px;
     margin-bottom: 24px;
   }
   @media screen and (min-width: $tablet2) {
@@ -184,26 +201,6 @@
   bottom: -8px;
   background-color: $accent-color;
 }
-
-// .logo__text {
-//   width: 128px;
-//   height: 32px;
-
-//   @media screen and (min-width: $tablet1) {
-//     width: 130px;
-//     height: 33px;
-//   }
-
-//   @media screen and (min-width: $tablet2) {
-//     width: 121px;
-//     height: 30px;
-//   }
-
-//   @media screen and (min-width: $desktop) {
-//     width: 160px;
-//     height: 40px;
-//   }
-// }
 
 .header__link {
   display: none;
@@ -337,3 +334,5 @@
     transform: scale(1.2);
   }
 }
+
+
