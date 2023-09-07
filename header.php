@@ -41,9 +41,11 @@
                                 'echo'                 => true,                            
                                 'items_wrap'           => '<ul id="%1$s" class="header_list %2$s">%3$s</ul>'  
                                 ] ); 
+/*
+Temporary put # instead of <?php echo esc_attr(get_field('instagram_link', 16));?> in the a tags in mobile menu to prevent project crush when run locally.
+*/
                             ?>   
                     </nav> 
-
                     <div class="header__mobile">
                                 <a class="header__button" href="<?php echo get_permalink(38); ?>"
                                     >Задонатити
@@ -65,13 +67,12 @@
                                     </a>
                                 </li>
                                 <li class="header-networks__item">
-                                    <a href="mailto:<?php echo esc_attr(get_field('email', 16)); ?>"
+                                    <a href="#"
                                     ><svg class="header-networks__icon" width="44px" height="44px">
-                                        <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-mail"></use></svg
-                                    ></a>
+                                        <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-mail"></use></svg></a>
                                 </li>
                                 <li class="header-networks__item">
-                                    <a href="<?php echo esc_attr(get_field('instagram_link', 16));?>">
+                                    <a href="#">
                                     <svg class="header-networks__icon" width="44px" height="44px">
                                     <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-instagram"></use>
                                     </svg>
@@ -80,22 +81,18 @@
                                 <li class="header-networks__item">
                                     <a href="#">
                                     <svg class="header-networks__icon" width="44px" height="44px">
-                                        <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-whatsapp"></use></svg
-                                    ></a>
+                                        <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-whatsapp"></use></svg></a>
                                 </li>
                                 </ul>
                                 </div>
                      </div>
-                 
                     <a class="header__link" href="<?php echo get_permalink(38); ?>"
                      >Задонатити
                             <svg class="offering__icon" width="24px" height="24px">
                                 <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
                             </svg>
-                    </a> 
-                </div>  
-       
-            </div>                      
+                    </a>
+                </div>
+            </div>
         </header>
-        <body <?php body_class(); ?>>  
-	
+        <body <?php body_class(); ?>>
