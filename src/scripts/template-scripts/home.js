@@ -52,7 +52,7 @@ galleryButtons.forEach(function (button) {
 });
 
 // LightBox
-const galleryContainer = document.querySelector(".galerry__container");
+const galleryContainer = document.querySelector(".gallery__container");
 galleryContainer.addEventListener("click", onImageClick);
 
 function onImageClick(event) {
