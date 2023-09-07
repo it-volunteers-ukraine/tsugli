@@ -4,7 +4,7 @@ Template Name: home
 */
 get_header();
 ?>
-<main class="container main" style="background-image:url(<?php the_field('bg');?>)">
+<main class="container" >
 <section class="hero section" style="background: linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img') ?>); background-size: cover; background-repeat: no-repeat; background-position: center; ">
     <h1 class="title">Коні породи Щербаті Цуглі</h1>
     <h2 class="hero__title"><?php the_field('hero-title'); ?></h2>
@@ -60,7 +60,7 @@ get_header();
 
  <section class="gallery section">
         <div class="gallery__wrapper ">
-          <h2 class="gallery__title">Наше життя</h2>
+          <h2 class="gallery__title"><?php the_field('gallery-text'); ?></h2>
               <ul class="gallery__buttons">
              
                 <li>
@@ -117,6 +117,44 @@ get_header();
         </div>
     </div>
 <?php endif; ?>
+
+</section>
+
+<section class="events section">
+
+<div>
+  <h2 class="events__title"><?php the_field('events-title'); ?> </h2>
+    <a class="events__button" href="<?php echo get_permalink(11112); ?>"><?php the_field('events-button'); ?> 
+        <svg class="hero__icon" width="24px" height="24px">
+          <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
+       </svg>
+    </a>
+  </div>
+
+
+<div class="events__container">
+  <ul class="events__list">
+    <li class="events__item">
+
+      <div class="events__img">
+        <img src="" alt=""/>
+      </div>
+      <div class="events__wrapper">
+        <ul class="events__info">
+          <li class="events__category"></li>
+          <li class="events__date"></li>
+        </ul>
+<h3 class="events__subtitle"></h3>
+<p class="events__text"></p>
+<a href="<?php the_permalink(); ?>" class=""></a>
+
+      </div>
+
+    </li>
+  </ul>
+</div>
+
+
 
 </section>
 
