@@ -84,7 +84,7 @@ get_header();
         </div>
 
 <?php if(have_rows('gallery')):?>
-        <div class="galerry__container">
+        <div class="gallery__container">
         <?php while(have_rows('gallery')): the_row();?>
                 <?php   
         $image=get_sub_field('img');

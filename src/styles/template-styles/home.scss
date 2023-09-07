@@ -542,9 +542,10 @@
 }
 
 // Tablet - desktop gallery
-.galerry__container {
-  display: none;
 
+.gallery__container {
+  display: none;
+  width: 100%;
   @media screen and (min-width: $tablet1) {
     display: flex;
     justify-content: center;
