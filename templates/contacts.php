@@ -29,6 +29,18 @@ get_header();
   )
 ?>
 
+<?php
+  $formShortcode = get_field('contact_form_shortcode');
+  if ( $formShortcode ) : ?>
+  <div class='form-map__container'>
+    <div class='form__container'>
+      <?php echo do_shortcode($formShortcode);?>
+    </div>
+    <div class='map__container'>
+    </div>
+  </div>
+<?php endif; ?>
+
 <style>
 /*Temporary using separate svg files, looking for an approach to use svg sprite in pseudo elements
 */
@@ -49,11 +61,5 @@ get_header();
     content: url('<?php echo get_template_directory_uri(); ?>/assets/images/facebook_icon.svg');
   }
 </style>
-
-<?php
-  echo do_shortcode(
-    '[contact-form-7 id="16576e7" title="Contact form 1"]'
-  );
-?>
 
 <?php get_footer(); ?>
