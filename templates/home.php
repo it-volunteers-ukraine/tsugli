@@ -133,23 +133,47 @@ get_header();
 
 <div class="events__container">
   <ul class="events__list">
-    <li class="events__item">
 
+ <?php global $post;
+ $myposts= get_posts([
+  'numberposts' => -1,
+  'posts_per_page' => 3
+ ]);
+
+ if ($myposts){
+  foreach ($myposts as $post){
+    setup_postdata($post);
+  ?>
+
+    <li class="events__item">
       <div class="events__img">
-        <img src="" alt=""/>
-      </div>
-      <div class="events__description">
-        <ul class="events__info">
-          <li class="events__category"></li>
-          <li class="events__date"></li>
-        </ul>
-<h3 class="events__subtitle"></h3>
-<p class="events__text"></p>
-<a href="<?php the_permalink(); ?>" class=""></a>
+      
+    <?php
+ if (has_post_thumbnail()) {
+      the_post_thumbnail(array(400, 256));
+  } else {
+    echo '<img src="' . get_template_directory_uri() . '/assets/images/no-photo.jpg" alt="Кінь">';
+  }
+  ?>
+   </div>
+         <div class="events__description">
+           <div class="events__info">
+              <span class="events__category"><?php the_category(', '); ?></span>
+              <span class="events__date"><?php the_field('date'); ?></span>
+           </div>
+           
+<h3 class="events__subtitle"><?php the_title(); ?></h3>
+<p class="events__text"><?php the_content(); ?></p>
+<a href="<?php the_permalink(); ?>" class="">Дізнатися Більше</a>
 
       </div>
 
     </li>
+
+ <?php }
+ }
+ wp_reset_postdata();?>
+  
   </ul>
 </div>
 

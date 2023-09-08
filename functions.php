@@ -142,3 +142,8 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 */
 
 require get_template_directory() . '/template-parts/contacts-walker.php';
+
+
+/*register img for posts
+*/
+add_theme_support( 'post-thumbnails' );
