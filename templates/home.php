@@ -120,11 +120,12 @@ get_header();
 
 </section>
 
-<section class="events section">
-<div class="events__wrapper">
+<section class="section ">
+  <div class="events">
+    <div class="events__wrapper">
   <h2 class="events__title"><?php the_field('events-title'); ?> </h2>
     <a class="events__button" href="<?php echo get_permalink(11112); ?>"><?php the_field('events-button'); ?> 
-        <svg class="hero__icon" width="24px" height="24px">
+        <svg class="events__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
     </a>
@@ -150,7 +151,7 @@ get_header();
       
     <?php
  if (has_post_thumbnail()) {
-      the_post_thumbnail(array(400, 256));
+      the_post_thumbnail();
   } else {
     echo '<img src="' . get_template_directory_uri() . '/assets/images/no-photo.jpg" alt="Кінь">';
   }
@@ -158,30 +159,37 @@ get_header();
    </div>
          <div class="events__description">
            <div class="events__info">
-              <span class="events__category"><?php the_category(', '); ?></span>
-              <span class="events__date"><?php the_field('date'); ?></span>
+              <div class="events__category">
+                  <svg  width="24px" height="24px">
+                      <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-folder"></use>
+                  </svg>  
+              <?php the_category(', '); ?></div>
+              <div class="events__date">
+                   <svg  width="24px" height="24px">
+                      <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-calendar"></use>
+                    </svg>  
+                <?php the_field('date'); ?></div>
            </div>
            
 <h3 class="events__subtitle"><?php the_title(); ?></h3>
-<p class="events__text"><?php the_content(); ?></p>
-<a href="<?php the_permalink(); ?>" class="">Дізнатися Більше</a>
-
+<?php the_content(); ?>
+    <a href="<?php the_permalink(); ?>" class="events__link">Дізнатися Більше     
+       <svg class="events__icon" width="24px" height="24px">
+          <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
+       </svg>
+    </a>
       </div>
-
     </li>
 
  <?php }
  }
  wp_reset_postdata();?>
   
-  </ul>
-</div>
+   </ul>
+  </div>
 
-
-
+ </div>
 </section>
-
-
 </main>
 
 <?php get_footer(); ?>
