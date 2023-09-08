@@ -5,9 +5,7 @@
 
 .hero {
   height: 396px;
-
   padding-top: 90px;
-
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -636,4 +634,9 @@
     padding: 16px 16px 16px 24px;
     font-size: 24px;
   }
+}
+
+.events__wrapper {
+  display: flex;
+  justify-content: space-between;
 }

@@ -44,13 +44,15 @@
     margin-right: 325px;
   }
   @media screen and (min-width: $tablet2) {
+    width: 173px;
+    height: 41px;
     margin-right: 86px;
   }
 
   @media screen and (min-width: $desktop) {
     width: 231px;
     height: 56px;
-    margin-right: 339px;
+    margin-right: 334px;
   }
 }
 .custom-logo-link .custom-logo {
@@ -214,7 +216,7 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 10px 12px 10px 14px;
+  padding: 9px 11px 9px 13px;
 
   font-size: 20px;
   font-weight: 700;
@@ -238,7 +240,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 12px 14px 12px 18px;
+    padding: 11px 13px 11px 17px;
     gap: 8px;
     font-size: 24px;
     letter-spacing: 0.48px;

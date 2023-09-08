@@ -121,8 +121,7 @@ get_header();
 </section>
 
 <section class="events section">
-
-<div>
+<div class="events__wrapper">
   <h2 class="events__title"><?php the_field('events-title'); ?> </h2>
     <a class="events__button" href="<?php echo get_permalink(11112); ?>"><?php the_field('events-button'); ?> 
         <svg class="hero__icon" width="24px" height="24px">
@@ -139,7 +138,7 @@ get_header();
       <div class="events__img">
         <img src="" alt=""/>
       </div>
-      <div class="events__wrapper">
+      <div class="events__description">
         <ul class="events__info">
           <li class="events__category"></li>
           <li class="events__date"></li>
