@@ -30,16 +30,22 @@ get_header();
 ?>
 
 <?php
+  $formDescription = get_field('contact_form_description');
+  $formHeader = get_field('contact_form_header');
   $formShortcode = get_field('contact_form_shortcode');
-  if ( $formShortcode ) : ?>
+?>
+  <div class='wrapper--center'>
   <div class='form-map__container'>
     <div class='form__container'>
+      <h2><?php echo $formHeader;?></h2>
+      <p><?php echo $formDescription;?></p>
       <?php echo do_shortcode($formShortcode);?>
     </div>
     <div class='map__container'>
     </div>
   </div>
-<?php endif; ?>
+  </div>
+
 
 <style>
 /*Temporary using separate svg files, looking for an approach to use svg sprite in pseudo elements

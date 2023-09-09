@@ -1,25 +1,35 @@
 @import "../variables.scss";
 
-.menu-contacts-menu-container {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-
+@mixin wrapper {
   display: flex;
   justify-content: center;
+}
 
+@mixin background-container {
+  width: 100%;
+  max-width: 1280px;
+
+  display: flex;
+
+  border-radius: $container-border-radius;
+  background-color: $accent-color;
+  box-shadow: $container-shadow;
+}
+
+.menu-contacts-menu-container,
+.wrapper--center {
+  @include wrapper;
   a {
     color: $primary-color;
   }
-
   a:visited {
     color: $primary-color;
   }
 }
 
 .contacts__list {
-  width: 100%;
-  display: flex;
+  @include background-container;
+  
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 132px 32px 132px 32px;
@@ -28,14 +38,9 @@
   list-style-type: none;
   text-decoration: none;
 
-  border-radius: $container-border-radius;
-  background-color: $accent-color;
-
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 2%;
-
-  box-shadow: $container-shadow;
 
 
   @media screen and (max-width: $tablet2) {
@@ -72,5 +77,53 @@
 }
 
 .form-map__container {
-  background-color: red;
+  @include background-container;
+  flex-wrap: wrap;
+
+  margin: 0 82px 0 32px;
+  padding: 40px 64px;
+
+  color: $secondary-color;
+  font-family: $fira;
+}
+
+.form__container {
+  
+  width: 50%;
+
+  p {
+    width: 100%;
+    margin-top: 32px;
+    display: inline-block;
+  }
+
+  h2 {
+    font-family: $amatic;
+    font-size: 56px;
+    font-weight: bold;
+  }
+
+  .wpcf7-email,
+  .wpcf7-text,
+  .wpcf7-number,
+  .wpcf7-textarea {
+    line-height: 22px;
+    padding: 8px;
+    width: 444px;
+    margin-top: 5px;
+  }
+
+  .wpcf7-response-output {
+    text-align: center;
+    border-color: $error !important;
+  }
+
+  .wpcf7-not-valid {
+    border-color: $error !important;
+  }
+
+  .wpcf7-not-valid-tip {
+    color: $error !important;
+    margin-top: 5px;
+  }
 }

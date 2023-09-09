@@ -54,15 +54,12 @@ get_header();
      <p class="about-us__text"><?php the_field('about-us__text'); ?> </p>
 
 </div>
-     
  </section>
-
 
  <section class="gallery section">
         <div class="gallery__wrapper ">
           <h2 class="gallery__title"><?php the_field('gallery-text'); ?></h2>
               <ul class="gallery__buttons">
-             
                 <li>
                   <button class="gallery__button" data-category="museum">Музей-Хаб</button>
                 </li>
