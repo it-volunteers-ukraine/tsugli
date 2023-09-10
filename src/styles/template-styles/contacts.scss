@@ -1,50 +1,347 @@
-.contacts__list {
+@import "../variables.scss";
+
+@mixin wrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+@mixin background-container {
+
+  display: flex;
+
+  border-radius: $container-border-radius;
+  background-color: $accent-color;
+  box-shadow: $container-shadow;
+}
+
+@mixin input-inside-icon {
+  display: inline;
+  position: absolute;
+  left: 400px;
+  top: 4px;
+
+  @media screen and (max-width: $tablet1) {
+    left: 310px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    left: 250px;
+  }
+}
+
+.page-wrapper {
+  position: relative;
+}
+
+.content-container {
   width: 100%;
   max-width: 1280px;
-  margin: 132px auto;
-  padding: 64px 0 64px 80px;
+}
+
+.menu-contacts-menu-container,
+.wrapper--center {
+  @include wrapper;
+
+  a {
+    color: $primary-color;
+  }
+
+  a:visited {
+    color: $primary-color;
+  }
+}
+
+.contacts__list {
+  @include background-container;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 132px 32px 132px 32px;
+  padding: 64px;
 
   list-style-type: none;
   text-decoration: none;
 
-  border-radius: $container-border-radius;
-  background-color: $accent-color;
-
+  font-family: $fira;
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 2%;
 
 
-  @media screen and (max-width: 992px) {
-    padding: 0 0 32px 32px;
+  @media screen and (max-width: $tablet2) {
+    font-size: 21px;
+    padding: 32px;
+    margin: 80px 32px 80px 32px;
   }
 
-  @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
+  @media screen and (max-width: $mobile) {
+    font-size: 16px;
+    letter-spacing: 0.42px;
+    line-height: 26px;
+
+    padding: 0 16px 16px 16px;
+    margin: 72px 16px 72px 16px;
+
+    justify-content: flex-start;
   }
 }
 
 .contacts__item {
   text-align: center;
-  margin-right: 79px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet1) {
     margin-top: 32px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
   }
 
 }
 
 .contacts__item:before {
-    content: '';
-    display: block;
-    height: 44px;
-    width: 44px;
-    background-repeat: no-repeat;
-    margin: 0 auto 24px auto;
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-repeat: no-repeat;
+  margin: 0 auto 24px auto;
 
-    @media screen and (max-width: 992px) {
-      margin-bottom: 16px;
+  @media screen and (max-width: $tablet2) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    transform: scale(0.75);
+    margin-bottom: 0;
+  }
+}
+
+.contacts__item--messengers:before {
+  @media screen and (max-width: $mobile) {
+    margin-left: -20px;
+  }
+}
+
+.form-map__container {
+  @include background-container;
+
+  margin: 0 82px 0 32px;
+  padding: 40px 64px;
+
+  color: $secondary-color;
+  font-family: $fira;
+
+  @media screen and (max-width: $tablet2) {
+    flex-direction: column-reverse;
+    margin: 0 32px 0 32px;
+  }
+
+  @media screen and (max-width: $tablet1) {
+    padding: 40px 2%;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: 40px 16px;
+  }
+}
+
+.form__container {
+
+  width: 50%;
+
+  p {
+    width: 100%;
+    margin-top: 32px;
+    display: inline-block;
+  }
+
+  h2 {
+    font-family: $amatic;
+    font-size: 56px;
+    font-weight: bold;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  .wpcf7-email,
+  .wpcf7-text,
+  .wpcf7-number,
+  .wpcf7-textarea {
+    line-height: 22px;
+    padding: 8px;
+    width: 444px;
+    margin-top: 5px;
+    border-radius: $input-border-radius;
+
+    @media screen and (max-width: $tablet1) {
+      width: 350px;
     }
+
+    @media screen and (max-width: $mobile) {
+      width: 290px;
+    }
+  }
+
+  .wpcf7-response-output {
+    border-color: $error !important;
+    border-radius: $input-border-radius !important;
+    width: 420px !important;
+  }
+
+  .wpcf7-not-valid {
+    border-color: $error !important;
+  }
+
+  .wpcf7-not-valid-tip {
+    color: $error !important;
+    margin-top: 5px;
+    display: inline-block;
+    width: 80%;
+  }
+
+  //Better put main button styles in mixins
+
+  .wpcf7-submit {
+    display: inline-flex;
+    justify-content: center;
+    padding: 16px 44px 16px 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 150px;
+    background-color: $secondary-color;
+    color: $button-color;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: $primary-color;
+      cursor: pointer;
+    }
+
+    &:after {
+      z-index: 1000;
+      display: inline;
+      position: absolute;
+    }
+  }
+
+  @media screen and (max-width: $tablet2) {
+    width: 100%;
+    margin-top: 32px;
+    text-align: center;
+
+    p {
+      width: 440px;
+      text-align: start;
+    }
+
+    p:last-of-type {
+      text-align: center;
+      margin-left: 10%;
+    }
+
+    >p:last-of-type {
+      width: 80%;
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: $tablet1) {
+    p {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+    margin-top: 32px;
+    text-align: start;
+
+    p {
+      width: calc(100% - 32px);
+    }
+  }
+}
+
+span[data-name='your-name']:after,
+span[data-name='your-email']:after,
+span[data-name='your-number']:after,
+span[data-name='your-message']:after {
+  @include input-inside-icon;
+}
+
+.map__container {
+  font-size: 21px;
+  margin-top: 10px;
+  width: 50%;
+
+}
+
+.adress {
+  display: flex;
+
+  img {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: $tablet1) {
+    margin-left: 5%;
+  }
+}
+
+.header-image {
+  background-size: cover;
+  height: 574px;
+  width: 100%;
+
+  h1 {
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 80px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    h1 {
+      margin-left: 5%;
+    }
+  }
+
+
+  @media screen and (max-width: $tablet2) {
+    height: 296px;
+
+    h1 {
+      font-size: 48px;
+      margin-top: 32px;
+    }
+  }
+
+  @media screen and (max-width: $tablet1) {
+    height: 233px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    background-size: cover;
+    height: 196px;
+
+    h1 {
+      font-size: 40px;
+      margin-top: 25px;
+    }
+  }
 }
