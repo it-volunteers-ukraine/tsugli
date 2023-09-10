@@ -21,6 +21,14 @@
   position: absolute;
   left: 400px;
   top: 4px;
+
+  @media screen and (max-width: $tablet1) {
+    left: 310px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    left: 250px;
+  }
 }
 
 .page-wrapper {
@@ -56,19 +64,27 @@
   list-style-type: none;
   text-decoration: none;
 
+  font-family: $fira;
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 2%;
 
 
   @media screen and (max-width: $tablet2) {
+    font-size: 21px;
     padding: 32px;
     margin: 80px 32px 80px 32px;
   }
 
   @media screen and (max-width: $mobile) {
-    padding: 32px;
+    font-size: 16px;
+    letter-spacing: 0.42px;
+    line-height: 26px;
+
+    padding: 0 16px 16px 16px;
     margin: 72px 16px 72px 16px;
+
+    justify-content: flex-start;
   }
 }
 
@@ -79,17 +95,35 @@
     margin-top: 32px;
   }
 
+  @media screen and (max-width: $mobile) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
 }
 
 .contacts__item:before {
   display: block;
-  height: 44px;
   width: 44px;
+  height: 44px;
   background-repeat: no-repeat;
   margin: 0 auto 24px auto;
 
   @media screen and (max-width: $tablet2) {
     margin-bottom: 16px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    transform: scale(0.75);
+    margin-bottom: 0;
+  }
+}
+
+.contacts__item--messengers:before {
+  @media screen and (max-width: $mobile) {
+    margin-left: -20px;
   }
 }
 
@@ -101,6 +135,19 @@
 
   color: $secondary-color;
   font-family: $fira;
+
+  @media screen and (max-width: $tablet2) {
+    flex-direction: column-reverse;
+    margin: 0 32px 0 32px;
+  }
+
+  @media screen and (max-width: $tablet1) {
+    padding: 40px 2%;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: 40px 16px;
+  }
 }
 
 .form__container {
@@ -133,6 +180,14 @@
     width: 444px;
     margin-top: 5px;
     border-radius: $input-border-radius;
+
+    @media screen and (max-width: $tablet1) {
+      width: 350px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      width: 290px;
+    }
   }
 
   .wpcf7-response-output {
@@ -182,6 +237,43 @@
       position: absolute;
     }
   }
+
+  @media screen and (max-width: $tablet2) {
+    width: 100%;
+    margin-top: 32px;
+    text-align: center;
+
+    p {
+      width: 440px;
+      text-align: start;
+    }
+
+    p:last-of-type {
+      text-align: center;
+      margin-left: 10%;
+    }
+
+    >p:last-of-type {
+      width: 80%;
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: $tablet1) {
+    p {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+    margin-top: 32px;
+    text-align: start;
+
+    p {
+      width: calc(100% - 32px);
+    }
+  }
 }
 
 span[data-name='your-name']:after,
@@ -205,6 +297,10 @@ span[data-name='your-message']:after {
     width: 44px;
     height: 44px;
     margin-right: 10px;
+  }
+
+  @media screen and (max-width: $tablet1) {
+    margin-left: 5%;
   }
 }
 
