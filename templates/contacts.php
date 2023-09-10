@@ -15,19 +15,19 @@ get_header();
 
 ?>
 
-<div class='page-wrapper'>
-<div class='main-image-wrapper'>
-  <?php if( get_field('contacts_header_image') ): ?>
-    <img class='header-image' src="<?php the_field('contacts_header_image'); ?>" />
-  <?php endif; ?>
-  <div class='header-container'>
-    <h1>
-      <?php
-        the_title();
-      ?>
-    </h1>
+<?php if( get_field('contacts_header_image') ): ?>
+  <div class='header-image'>
+    <div class='wrapper--center'>
+      <div class='content-container'>
+        <h1>
+          <?php
+            the_title();
+          ?>
+        </h1>
+      </div>
+    </div>
   </div>
-</div>
+<?php endif; ?>
 
 
 <?php
@@ -112,6 +112,10 @@ get_header();
 
 .wpcf7-submit:after {
   content: url('<?php echo get_template_directory_uri(); ?>/assets/images/button_arrow_icon.svg');
+}
+
+.header-image {
+  background-image: url('<?php the_field('contacts_header_image'); ?>');
 }
 
 </style>

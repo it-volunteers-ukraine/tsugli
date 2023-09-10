@@ -32,34 +32,6 @@
   max-width: 1280px;
 }
 
-.main-image-wrapper {
-  height: 500px;
-
-  .header-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .header-container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-
-    position: relative;
-  }
-
-  h1 {
-    font-size: 70px;
-    font-weight: bold;
-
-    position: absolute;
-    top: 80px;
-    left: 0;
-  }
-}
-
 .menu-contacts-menu-container,
 .wrapper--center {
   @include wrapper;
@@ -233,5 +205,47 @@ span[data-name='your-message']:after {
     width: 44px;
     height: 44px;
     margin-right: 10px;
+  }
+}
+
+.header-image {
+  background-size: cover;
+  height: 574px;
+  width: 100%;
+
+  h1 {
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 80px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    h1 {
+      margin-left: 5%;
+    }
+  }
+
+
+  @media screen and (max-width: $tablet2) {
+    height: 296px;
+
+    h1 {
+      font-size: 48px;
+      margin-top: 32px;
+    }
+  }
+
+  @media screen and (max-width: $tablet1) {
+    height: 233px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    background-size: cover;
+    height: 196px;
+
+    h1 {
+      font-size: 40px;
+      margin-top: 25px;
+    }
   }
 }
