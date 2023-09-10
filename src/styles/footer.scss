@@ -1,3 +1,118 @@
+@import "./variables.scss";
+
 .footer {
-    color: pink;
+  background: $secondary-color;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer-menu {
+  margin-bottom: 24px;
+}
+
+.footer-menu__logo {
+  margin-bottom: 32px;
+}
+
+.footer-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.footer-menu__list a {
+  color: $accent-color;
+  font-family: $fira;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: #f8e9cb;
+  }
+}
+
+.footer-networks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.footer-networks__icon {
+  fill: $accent-color;
+  padding: 10px;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .footer-networks__item:hover &,
+  .footer-networks__item:focus & {
+    transform: scale(1.2);
+  }
+}
+
+.wpcf7-form {
+  position: relative;
+}
+
+.wpcf7-form-control.wpcf7-email.footer__input {
+  width: 100%;
+  padding: 17px 52px 17px 14px;
+  border-radius: 8px;
+  border: 1px solid #e4dfd9;
+  background-color: $button-color;
+  font-family: $fira;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: 0.32px;
+
+  &::placeholder {
+    color: #e4dfd9;
+    font-family: $fira;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: 0.32px;
+  }
+}
+
+// .footer-form__button {
+//   position: relative;
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     top: 16px;
+//     right: 16px;
+//     width: 24px;
+//     height: 24px;
+//     background: url("../../assets/images/icon-left.svg");
+//     z-index: 2;
+//   }
+// }
+
+.wpcf7-form-control.wpcf7-submit.footer__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: $secondary-color;
+  color: $accent-color;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+  }
 }
