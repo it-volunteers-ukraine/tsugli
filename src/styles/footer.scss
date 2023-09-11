@@ -1,29 +1,84 @@
 @import "./variables.scss";
 
 .footer {
+  position: relative;
   background: $secondary-color;
   padding-top: 32px;
   padding-bottom: 16px;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    z-index: 1;
+    background-color: transparent;
+    background-image: url("../../assets/images/fence.svg");
+    background-position: center;
+    background-repeat: repeat-x;
+
+    @media screen and (min-width: $desktop) {
+      background-size: cover;
+      height: 80px;
+      top: -79px;
+    }
+  }
+}
+
+.footer__wrapper {
+  border-bottom: 1px solid $accent-color;
+  @media screen and (min-width: $tablet1) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 36px;
+  }
 }
 
 .footer-menu {
   margin-bottom: 24px;
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 0;
+    width: 380px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 520px;
+  }
 }
 
 .footer-menu__logo {
   margin-bottom: 32px;
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 47px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 48px;
+  }
 }
 
 .footer-menu__list {
   display: flex;
   flex-direction: column;
   gap: 34px;
+
+  @media screen and (min-width: $tablet1) {
+    flex-direction: row;
+    gap: 16px;
+  }
+  @media screen and (min-width: $desktop) {
+    gap: 40px;
+  }
 }
 
-.footer-menu__list a {
+.footer-menu__list li a {
+  position: relative;
   color: $accent-color;
   font-family: $fira;
   font-size: 16px;
@@ -31,9 +86,44 @@
   line-height: 1.25;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    color: #f8e9cb;
+  @media screen and (min-width: $tablet1) {
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.25px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -6px;
+    background-color: $accent-color;
+    transform: scaleX(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: scaleX(1);
+  }
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+    padding-bottom: 44px;
+  }
+  @media screen and (min-width: $tablet1) {
+    width: 290px;
+    justify-content: space-between;
   }
 }
 
@@ -41,6 +131,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 0;
+  }
 }
 
 .footer-networks__icon {
@@ -115,4 +208,47 @@
   &:focus {
     background-color: $primary-color;
   }
+}
+
+// .wpcf7 form .wpcf7-response-output,
+// .wpcf7-not-valid-tip {
+//   color: $orange-text-color;
+//   font-size: 12px;
+//   font-family: $fira;
+//   border: none;
+//   margin: 0;
+//   padding: 5px;
+//   position: absolute;
+//   top: -40px;
+// }
+
+.wpcf7 form .wpcf7-mail-sent-ok,
+form .wpcf7-spinner,
+.wpcf7 form .wpcf7-response-output,
+.wpcf7-not-valid-tip {
+  display: none !important;
+}
+
+.footer__rigths {
+  display: block;
+  padding-top: 16px;
+  color: $accent-color;
+  text-align: center;
+  font-family: $fira;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.25px;
+}
+
+/* Уведомление с фоном коричневого цвета */
+.toastify__toast {
+  background-color: #8b4513; /* Коричневый цвет фона */
+  color: #f5deb3; /* Бежевый цвет текста */
+}
+
+/* Содержимое уведомления */
+.toastify-content {
+  padding: 10px;
 }
