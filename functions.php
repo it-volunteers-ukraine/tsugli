@@ -75,6 +75,10 @@ function wp_it_volunteers_scripts() {
     wp_enqueue_style( 'donate-style', get_template_directory_uri() . '/assets/styles/template-styles/donate.css', array('main') );
     wp_enqueue_script( 'donate-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/donate.js', array(), false, true );
   }
+
+    if (is_singular() && locate_template('template-parts/content-events.php')) {
+    wp_enqueue_style( 'events-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/content-events.css', array('main') );
+    }
  }
 
 /** add fonts */
