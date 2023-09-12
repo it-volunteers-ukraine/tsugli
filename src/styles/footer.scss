@@ -1,3 +1,355 @@
+@import "./variables.scss";
+
 .footer {
-    color: pink;
+  position: relative;
+  background: $secondary-color;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    z-index: 1;
+    background-color: transparent;
+    background-image: url("../../assets/images/fence.svg");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+
+    @media screen and (min-width: $desktop) {
+      height: 80px;
+      top: -79px;
+    }
+  }
+}
+
+.footer__wrapper {
+  border-bottom: 1px solid $accent-color;
+  @media screen and (min-width: $tablet1) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 24px;
+  }
+}
+
+.footer-menu {
+  margin-bottom: 24px;
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 0;
+    width: 380px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 520px;
+  }
+}
+
+.footer-menu__logo {
+  margin-bottom: 32px;
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 47px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 48px;
+  }
+}
+
+.footer-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+
+  @media screen and (min-width: $tablet1) {
+    flex-direction: row;
+    gap: 16px;
+  }
+  @media screen and (min-width: $desktop) {
+    gap: 40px;
+  }
+}
+
+.footer-menu__list li a {
+  position: relative;
+  color: $accent-color;
+  font-family: $fira;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $tablet1) {
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0.25px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -6px;
+    background-color: $accent-color;
+    transform: scaleX(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    transform: scaleX(1);
+  }
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+    padding-bottom: 44px;
+  }
+  @media screen and (min-width: $tablet1) {
+    width: 290px;
+    justify-content: space-between;
+  }
+}
+
+.footer-networks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 0;
+  }
+}
+
+.footer-networks__icon {
+  fill: $accent-color;
+  padding: 10px;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .footer-networks__item:hover &,
+  .footer-networks__item:focus & {
+    transform: scale(1.2);
+  }
+}
+
+.wpcf7-form {
+  position: relative;
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 36px;
+  }
+}
+
+.wpcf7-form-control.wpcf7-email.footer__input {
+  width: 100%;
+  padding: 17px 52px 17px 14px;
+  border-radius: 8px;
+  border: 1px solid #e4dfd9;
+  background-color: $button-color;
+  font-family: $fira;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: 0.32px;
+
+  &::placeholder {
+    color: #e4dfd9;
+    font-family: $fira;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: 0.32px;
+  }
+}
+
+.wpcf7-form-control.wpcf7-submit.footer__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: $secondary-color;
+  color: $accent-color;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+  }
+}
+
+.wpcf7-not-valid-tip {
+  color: $orange-text-color;
+  font-size: 12px;
+  font-family: $fira;
+  border: none;
+  margin: 0;
+  padding: 5px;
+}
+
+.wpcf7 form .wpcf7-mail-sent-ok,
+form .wpcf7-spinner,
+.wpcf7 form .wpcf7-response-output {
+  display: none !important;
+}
+
+.footer__rigths {
+  display: block;
+  padding-top: 16px;
+  color: $accent-color;
+  text-align: center;
+  font-family: $fira;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.25px;
+}
+
+.pop-up {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.pop-up__wrapper {
+  position: relative;
+  padding: 15px 10px;
+  border-radius: 10px;
+  background: $button-color;
+  text-align: center;
+
+  @media screen and (min-width: $tablet1) {
+    padding: 72px 64px 56px;
+  }
+}
+
+.pop-up__button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  fill: $primary-color;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $secondary-color;
+  }
+  @media screen and (min-width: $tablet1) {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+.pop-up__button svg {
+  padding: 8px;
+  @media screen and (min-width: $tablet1) {
+    padding: 0;
+  }
+}
+.pop-up__greetings {
+  margin-bottom: 8px;
+  color: $primary-color;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  @media screen and (min-width: $tablet1) {
+    font-size: 40px;
+  }
+}
+.pop-up__text {
+  color: $secondary-color;
+  font-family: $fira;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: 0.32px;
+  margin-bottom: 16px;
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 36px;
+    font-size: 16px;
+  }
+}
+
+.pop-up__img {
+  width: 310px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $tablet1) {
+    width: 492px;
+    height: 327px;
+    margin-bottom: 36px;
+  }
+}
+
+.pop-up__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pop-up__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 10px 10px 12px;
+  color: $button-color;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  border-radius: 8px;
+  background: $secondary-color;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  fill: currentColor;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $tablet1) {
+    font-size: 24px;
+    padding: 16px 16px 16px 24px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+  }
 }
