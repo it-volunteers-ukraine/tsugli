@@ -46,10 +46,11 @@
   margin-bottom: 24px;
   @media screen and (min-width: $tablet1) {
     margin-bottom: 0;
-    width: 380px;
+    padding-bottom: 12px;
+    width: 400px;
   }
   @media screen and (min-width: $desktop) {
-    width: 520px;
+    width: 540px;
   }
 }
 
