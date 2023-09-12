@@ -16,6 +16,7 @@ function handleWpcf7Invalid(event) {
       fontSize: "16px",
       fontFamily: "'Fira Sans', sans-serif",
       borderRadius: "8px",
+      padding: "10px",
     },
   }).showToast();
 }
