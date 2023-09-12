@@ -1,18 +1,25 @@
 
 <div class="pop-up">
-    <svg class="button-menu__icon" width="44px" height="44px" aria-label="Перемикач мобільного меню">
-      <use class="button-menu__cros" href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-x"></use>
-    </svg>
+    <div class="pop-up__wrapper"> 
+      <button class="pop-up__button" type="button" > 
+        <svg  width="44px" height="44px" aria-label="Перемикач мобільного меню">
+         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-x"></use>
+        </svg>
+      </button>
+
     <p class="pop-up__greetings">Вітаємо!</p>
     <p class="pop-up__text">Ви успішно підписалися на розсилку</p>
     <div  class="pop-up__img">
           <img  src="<?php bloginfo('template_url'); ?>/assets/images/pov-woman-feeds-wild-horse 1.jpg" alt="Жінка з рук кормить коня ">
     </div>
-    <a href="<?php the_permalink(); ?>" class="pop-up__link"">До Подій    
+  
+  
+    <a href="<?php the_permalink(); ?>" class="pop-up__link">До Подій    
        <svg class="pop-up__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
-    </a>
+    </a></div>
+
 </div>
 
 <footer class="footer">
