@@ -21,9 +21,9 @@
     background-image: url("../../assets/images/fence.svg");
     background-position: center;
     background-repeat: repeat-x;
+    background-size: cover;
 
     @media screen and (min-width: $desktop) {
-      background-size: cover;
       height: 80px;
       top: -79px;
     }
