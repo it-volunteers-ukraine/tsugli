@@ -390,7 +390,17 @@
 
 .gallery {
   position: relative;
+  margin-bottom: 72px;
+
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 80px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 132px;
+  }
 }
+
 .gallery__wrapper {
   padding: 16px 16px 12px;
   border-radius: 8px;
