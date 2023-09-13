@@ -44,8 +44,7 @@ $pagination_args = array(
   'format' => '/page/%#%',
   'current' => $current_page,
   'total' => $total_pages,
-  'prev_text' => '',
-  'next_text' => '',
+  'prev_next' => false,
 );
 
 // Выводим пагинацию
