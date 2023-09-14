@@ -9,14 +9,12 @@ function handleWpcf7Invalid(event) {
     gravity: "bottom",
     position: "center",
     style: {
-      width: "300px",
       background: "#f1eee8",
       border: "2px solid #4f4840",
       color: "#4f4840",
-      fontSize: "16px",
+      fontSize: "18px",
       fontFamily: "'Fira Sans', sans-serif",
       borderRadius: "8px",
-      padding: "10px",
     },
   }).showToast();
 }

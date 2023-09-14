@@ -1,10 +1,12 @@
      <ul class="posts__list">
-              <?php
+           <?php
             global $post;
 
             $myposts = get_posts([ 
               'numberposts' => -1,
               'posts_per_page' => 6,
+              'order' => 'DESC',  
+              'orderby' => 'date',  
               'paged' => get_query_var('paged') ? get_query_var('paged') : 1 
 
             ]);

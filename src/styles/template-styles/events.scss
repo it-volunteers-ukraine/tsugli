@@ -80,7 +80,17 @@
   }
 }
 
+.events__container {
+  @media screen and (min-width: $tablet2) {
+    display: flex;
+    gap: 24px;
+  }
+}
+
 .events__posts {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 72px;
+  }
   @media screen and (min-width: $tablet2) {
     max-width: 640px;
   }
@@ -90,12 +100,16 @@
 }
 .events__pagination {
   display: flex;
-  gap: 32px;
+  gap: 16px;
   justify-content: center;
   width: 100%;
   padding: 16px 32px;
   background-color: $accent-color;
   border-radius: 8px;
+
+  @media screen and (min-width: $tablet1) {
+    gap: 32px;
+  }
 }
 
 .events__pagination a,

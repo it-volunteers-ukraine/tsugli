@@ -160,3 +160,15 @@ add_theme_support( 'post-thumbnails' );
 
 
 
+/*Register sidebar
+*/
+add_action( 'widgets_init', 'register_tsugli_sidebar' );
+
+function register_tsugli_sidebar(){
+	register_sidebar( array(
+		'name' => 'Сайдбар',
+		'id' => 'sidebar',
+		'before_widget' => '<li class="sidebar-block">',
+		'after_widget' => '</li>',
+		) );
+}

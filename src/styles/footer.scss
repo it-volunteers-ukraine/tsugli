@@ -194,9 +194,12 @@
   border: none;
   border-radius: 4px;
   background-color: $secondary-color;
-  color: $accent-color;
+  color: transparent;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-image: url("../../assets/images/button_arrow_icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 
   &:hover,
   &:focus {
@@ -205,6 +208,9 @@
 }
 
 .wpcf7-not-valid-tip {
+  position: absolute;
+  top: 40px;
+  left: 0;
   color: $orange-text-color;
   font-size: 12px;
   font-family: $fira;

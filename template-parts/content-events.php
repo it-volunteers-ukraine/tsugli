@@ -14,8 +14,9 @@
 
  <?php global $post;
  $myposts= get_posts([
-  'numberposts' => -1,
-  'posts_per_page' => 3
+ 'numberposts' => 3, 
+  'order' => 'DESC',  
+  'orderby' => 'date'  
  ]);
 
  if ($myposts){

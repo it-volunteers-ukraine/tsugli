@@ -52,10 +52,11 @@ echo '<div class="events__pagination">';
 echo paginate_links($pagination_args);
 echo '</div>';
 ?>
-
-
 </div>
-<div class='events__sidebar'></div>
+
+<div class='events__sidebar'>
+    <?php get_sidebar(); ?>
+</div>
 
         </div>
     </section>
