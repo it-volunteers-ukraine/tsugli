@@ -2,16 +2,16 @@
 
 .widget-area {
   display: flex;
-  gap: 72px;
+  gap: 16px;
   flex-direction: column;
   width: 328px;
 
   @media screen and (min-width: $tablet1) {
-    gap: 24px;
+    width: 264px;
   }
 
   @media screen and (min-width: $tablet2) {
-    width: 264px;
+    gap: 24px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -23,11 +23,27 @@
   width: 100%;
 }
 
+.sidebar__wrapp {
+  padding: 32px 16px;
+
+  @media screen and (min-width: $tablet1) {
+    padding: 32px 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 32px;
+  }
+}
+
 .sidebar__search {
   padding: 32px 16px;
   border-radius: 8px;
   background-color: $accent-color;
   overflow: hidden;
+
+  @media screen and (min-width: $tablet1) {
+    padding: 32px;
+  }
 }
 
 .wp-block-search__inside-wrapper {
@@ -53,6 +69,7 @@
     letter-spacing: 0.32px;
   }
 }
+
 .wp-block-search__inside-wrapper .wp-block-search__button {
   padding: 8px;
   width: 40px;
@@ -76,13 +93,12 @@
   padding: 16px 32px;
   background: $secondary-color;
   color: $button-color;
-  font-size: 32px;
+  font-size: 39px;
   font-weight: 700;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.78px;
 }
 
 .categories__list {
-  padding: 32px 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -134,35 +150,17 @@
 }
 
 .latest-posts {
-  padding: 32px 16px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-// .posts__list {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 16px;
-//   margin-bottom: 24px;
-
-//   @media screen and (min-width: $tablet1) {
-//     gap: 24px;
-//   }
-
-//   @media screen and (min-width: $desktop) {
-//     gap: 36px;
-//     margin-bottom: 36px;
-//   }
-// }
-
 .latest-posts__item {
   display: flex;
   border-radius: 8px;
-  //   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 
-  @media screen and (min-width: $tablet2) {
+  @media screen and (min-width: $tablet1) {
     gap: 10px;
   }
 }
@@ -193,13 +191,14 @@
 .latest-posts__description {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 16px;
   padding: 16px 8px;
   width: 184px;
 
-  @media screen and (min-width: $tablet2) {
+  @media screen and (min-width: $tablet1) {
     width: 126px;
-    padding: 5px;
+    padding: 0;
     gap: 5px;
   }
 
@@ -218,13 +217,14 @@
   font-weight: 500;
   line-height: 1.25;
 
-  @media screen and (min-width: $tablet2) {
+  @media screen and (min-width: $tablet1) {
     font-size: 12px;
     line-height: 1.66;
   }
 
   @media screen and (min-width: $desktop) {
     flex-direction: row;
+    font-size: 16px;
   }
 }
 
@@ -235,6 +235,7 @@
   gap: 8px;
   fill: currentColor;
 }
+
 .latest-posts __date {
   color: $secondary-color;
 }
@@ -261,14 +262,14 @@
   color: $primary-color;
   width: 168px;
   max-height: 56px;
-  display: inline-flex;
+  display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   white-space: normal;
 
-  @media screen and (min-width: $tablet2) {
+  @media screen and (min-width: $tablet1) {
     width: 126px;
     max-height: 43px;
 
@@ -283,10 +284,6 @@
     line-height: 1.08;
     letter-spacing: 0.52px;
   }
-}
-
-.sidebar-form {
-  padding: 32px 16px;
 }
 
 .sidebar-form__text {
@@ -306,7 +303,6 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
-
   color: $button-color;
   font-size: 20px;
   font-weight: 700;
@@ -324,21 +320,24 @@
     background-color: $primary-color;
   }
 }
-.sidebar-donate {
-  padding: 32px 16px;
-}
+
 .sidebar-donate__img {
   margin: 0 auto;
   margin-bottom: 18px;
-
   width: 261px;
   height: 254px;
   border-radius: 8px;
   overflow: hidden;
-  //   @media screen and (min-width: $tablet1) {
-  //     width: 80px;
-  //     height: 113px;
-  //   }
+
+  @media screen and (min-width: $tablet1) {
+    width: 216px;
+    height: 219px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 332px;
+    height: 233px;
+  }
 }
 
 .sidebar-donate__img img {

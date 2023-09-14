@@ -81,6 +81,10 @@
 }
 
 .events__container {
+  @media screen and (min-width: $tablet1) {
+    display: flex;
+    gap: 16px;
+  }
   @media screen and (min-width: $tablet2) {
     display: flex;
     gap: 24px;

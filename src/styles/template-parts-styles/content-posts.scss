@@ -6,10 +6,6 @@
   gap: 16px;
   margin-bottom: 24px;
 
-  @media screen and (min-width: $tablet1) {
-    gap: 24px;
-  }
-
   @media screen and (min-width: $desktop) {
     gap: 36px;
     margin-bottom: 36px;
@@ -23,7 +19,7 @@
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 
-  @media screen and (min-width: $tablet1) {
+  @media screen and (min-width: $tablet2) {
     flex-direction: row;
   }
 }
@@ -33,6 +29,10 @@
   height: 246px;
 
   @media screen and (min-width: $tablet1) {
+    width: 424px;
+    height: 246px;
+  }
+  @media screen and (min-width: $tablet2) {
     width: 300px;
     height: 313px;
   }
@@ -55,15 +55,6 @@
   gap: 12px;
   padding: 16px 16px 20px 16px;
   background-color: $button-color;
-
-  @media screen and (min-width: $tablet1) {
-    padding: 24px;
-  }
-
-  @media screen and (min-width: $tablet1) {
-    width: 404px;
-  }
-
   @media screen and (min-width: $tablet2) {
     width: 340px;
   }
@@ -113,7 +104,7 @@
   font-weight: 700;
   line-height: 1.18;
   letter-spacing: 0.68px;
-  @media screen and (min-width: $tablet1) {
+  @media screen and (min-width: $tablet2) {
     height: 80px;
     display: inline-flex;
     align-items: center;

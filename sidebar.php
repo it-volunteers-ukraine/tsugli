@@ -14,7 +14,7 @@ if ( ! is_active_sidebar( 'sidebar' ) ) {
 
 <aside id="secondary" class="widget-area">
 
-<ul class="sidebar__search">
+<ul class="sidebar__search ">
 	<?php dynamic_sidebar( 'sidebar' ); ?>
 </ul>
 
@@ -23,7 +23,7 @@ if ( ! is_active_sidebar( 'sidebar' ) ) {
 		<?php
 $categories = get_categories();
 
-echo '<ul class="categories__list">';
+echo '<ul class="categories__list sidebar__wrapp">';
 echo '<li class="categories__item categories__item--contrast"><a href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '"><span>Всі категорії</span> <span class="categories__count categories__count--contrast">' . count($categories) . '</span></a></li>'; // Ссылка на все категории
 
 foreach ($categories as $category) {
@@ -35,12 +35,11 @@ echo '</ul>';
 
 <div class="sidebar__section">
    <h3 class="sidebar__title">Останні Пости</h3>
-    <ul class="latest-posts">
+    <ul class="latest-posts sidebar__wrapp">
            <?php
             global $post;
 
             $myposts = get_posts([ 
-              'numberposts' => -1,
               'posts_per_page' => 5,
               'order' => 'DESC',  
               'orderby' => 'date',  
@@ -98,8 +97,8 @@ echo '</ul>';
 
 <div class="sidebar__section">
 	<h3 class="sidebar__title">Підпишись</h3>
-	<div class="sidebar-form">
-		<p class="sidebar-form__text">Будь у курсі, не пропусти новин.</p>
+	<div class="sidebar-form sidebar__wrapp">
+		<p class="sidebar-form__text">Будь у курсі, не пропусти цікаві події.</p>
 		<?php echo do_shortcode('[contact-form-7 id="e76af3c" title="Контактна форма"]'); ?>
 	</div>
 </div>
@@ -107,7 +106,7 @@ echo '</ul>';
 <div class="sidebar__section">
 	<h3 class="sidebar__title">Підтримай</h3>
 
-	<div class="sidebar-donate">
+	<div class="sidebar-donate sidebar__wrapp">
 			<div class="sidebar-donate__img">
           <img  src="<?php bloginfo('template_url'); ?>/assets/images/pov-woman-feeds-wild-horse 1.jpg" alt="Жінка з рук кормить коня ">
 	</div>
