@@ -79,6 +79,9 @@ function wp_it_volunteers_scripts() {
     if (is_singular() && locate_template('template-parts/content-events.php')) {
     wp_enqueue_style( 'events-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/content-events.css', array('main') );
     }
+    if (is_singular() && locate_template('template-parts/content-posts.php')) {
+    wp_enqueue_style( 'posts-style', get_template_directory_uri() . '/assets/styles/template-parts-styles/content-posts.css', array('main') );
+    }
  }
 
 /** add fonts */
@@ -157,3 +160,15 @@ add_theme_support( 'post-thumbnails' );
 
 
 
+/*Register sidebar
+*/
+add_action( 'widgets_init', 'register_tsugli_sidebar' );
+
+function register_tsugli_sidebar(){
+	register_sidebar( array(
+		'name' => 'Сайдбар',
+		'id' => 'sidebar',
+		'before_widget' => '<li class="sidebar-block">',
+		'after_widget' => '</li>',
+		) );
+}
