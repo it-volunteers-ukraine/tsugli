@@ -1,3 +1,306 @@
-.about {
-    color: red
+@import "../variables.scss";
+@import "../plaseholder.scss";
+
+.about-hero {
+  @extend %hero;
+}
+
+.about-hero__title {
+  @extend %hero__title;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 115px;
+  margin-bottom: 160px;
+  @media screen and (min-width: $tablet1) {
+    gap: 318px;
+  }
+  @media screen and (min-width: $tablet2) {
+    gap: 348px;
+  }
+}
+
+.about-history {
+  padding: 16px;
+  border-radius: 8px;
+  background: $accent-color;
+  box-shadow: 0px 7px 15px 1px rgba(0, 0, 0, 0.25);
+
+  @media screen and (min-width: $tablet1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    padding: 32px 44px 32px 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 48px 39px 24px 102px;
+  }
+}
+
+.about-history__logo {
+  display: flex;
+  gap: 17px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 17px;
+  }
+  @media screen and (min-width: $tablet1) {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.about-history__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 137px;
+  height: 107px;
+  @media screen and (min-width: $tablet1) {
+    width: 100px;
+    height: 102px;
+  }
+  @media screen and (min-width: $tablet2) {
+    width: 100px;
+    height: 91px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 213px;
+    height: 224px;
+  }
+}
+
+.about-history__box--small {
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.about-history__box--desktop {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.about-history__img {
+  margin: 0 auto;
+}
+
+.about-history__img--old {
+  width: 77px;
+  height: 76px;
+
+  @media screen and (min-width: $tablet1) {
+    width: 63px;
+    height: 63px;
+  }
+  @media screen and (min-width: $tablet2) {
+    width: 56px;
+    height: 56px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 160px;
+    height: 159px;
+  }
+}
+
+.about-history__img--new {
+  width: 108px;
+  height: 83px;
+  @media screen and (min-width: $tablet1) {
+    width: 100px;
+    height: 82px;
+  }
+  @media screen and (min-width: $tablet2) {
+    width: 86px;
+    height: 71px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 213px;
+    height: 163px;
+  }
+}
+
+.about-history__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-history__text {
+  color: $secondary-color;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.307px;
+  @media screen and (min-width: $tablet1) {
+    font-size: 14px;
+    letter-spacing: 0.28px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+    letter-spacing: 0.64px;
+  }
+}
+
+.about-history__description {
+  @extend %text;
+}
+
+.about__section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 221px 16px 32px;
+  border-radius: 8px;
+  background: $accent-color;
+
+  @media screen and (min-width: $tablet1) {
+    padding: 94px 44px 32px;
+  }
+
+  @media screen and (min-width: $tablet2) {
+    padding-top: 118px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 48px 64px 64px;
+  }
+}
+
+.about__img {
+  position: absolute;
+  left: 16px;
+  top: -43px;
+  width: 298px;
+  height: 240px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 7px 15px 1px rgba(0, 0, 0, 0.25);
+  @media screen and (min-width: $tablet1) {
+    width: 640px;
+    height: 280px;
+    top: -208px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  @media screen and (min-width: $tablet2) {
+    width: 840px;
+    height: 362px;
+    top: -278px;
+  }
+}
+
+.about__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__title {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  @media screen and (min-width: $desktop) {
+    font-size: 48px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.about__text {
+  @extend %text;
+}
+
+.about__button {
+  color: $orange-text-color;
+  text-align: end;
+  font-family: $fira;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  @media screen and (min-width: $tablet1) {
+    display: none;
+  }
+}
+
+.about__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 24px;
+  width: 144px;
+  color: $accent-color;
+  background-color: $secondary-color;
+  fill: currentColor;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none; /* Додайте стиль для посилання (необов'язково) */
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+  }
+
+  @media screen and (min-width: $tablet1) {
+    padding: 16px 16px 16px 24px;
+    font-size: 24px;
+    font-style: normal;
+    letter-spacing: 0.48px;
+  }
+}
+
+.box {
+  @media screen and (max-width: 767px) {
+    input {
+      opacity: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    input:focus ~ label {
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    input:checked + p {
+      -webkit-line-clamp: unset;
+    }
+
+    input:checked ~ label,
+    p:not(.truncated) ~ label {
+      display: none;
+    }
+  }
+  @media screen and (min-width: $tablet1) {
+    input {
+      display: none;
+    }
+  }
 }
