@@ -22,21 +22,21 @@ get_header();
         
         <li class="activities__item swiper-slide">
         <div class="activities__img">
-            <img src='<?php  the_field('img_1')?>' alt=''/>
+            <img src='<?php  the_field('img_1')?>' alt='<?php  the_field('alt_1')?>'/>
         </div>
         <p class="activities__text"><?php  the_field('text_1')?></p>
         </li>
 
         <li class="activities__item swiper-slide" >
         <div class="activities__img">
-            <img src='<?php  the_field('img_2')?>' alt=''/>
+            <img src='<?php  the_field('img_2')?>' alt='<?php  the_field('alt_2')?>'/>
         </div>
         <p class="activities__text"><?php  the_field('text_2')?></p>
         </li>
 
         <li class="activities__item swiper-slide">
         <div class="activities__img">
-            <img src='<?php  the_field('img_3')?>' alt=''/>
+            <img src='<?php  the_field('img_3')?>' alt='<?php  the_field('alt_3')?>'/>
         </div>
         <p class="activities__text"><?php  the_field('text_3')?></p>
         </li>

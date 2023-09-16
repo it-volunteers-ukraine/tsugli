@@ -39,17 +39,17 @@ get_header();
     </section>
 
 <section class="section">
-    <div class="about__section box">
-        <div class="about__img">
+    <div class="about__section box about_museum">
+        <div class="about__img museum__img">
 
-        <img src="<?php  the_field('museum-img')?>" alt=""/>
+        <img src="<?php  the_field('museum-img')?>" alt="<?php the_field('museum_alt')?> "/>
     </div>
     <h3 class="about__title"><?php  the_field('museum-title')?></h3>
         <input type="checkbox" id="expanded1">
 
-    <p class="about__text"><?php  the_field('museum-text')?></p>
+    <p class="about__text truncated"><?php  the_field('museum-text')?></p>
         <label class="about__button" for="expanded1" role="button">Читати Далі</label>
-           <a href="<?php echo get_permalink(38); ?>" class="about__link"><?php  the_field('museum-button')?>     
+           <a href="<?php echo get_permalink(38); ?>" class="about__link"><?php the_field('museum-button')?>     
        <svg class="posts__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
@@ -59,13 +59,13 @@ get_header();
 </section>
 
 <section class="section">
-    <div class="about__section box">
-        <div class="about__img">
-        <img src="<?php  the_field('horses-img')?>" alt=""/>
+    <div class="about__section box about__horses">
+        <div class="about__img horses__img">
+        <img src="<?php  the_field('horses-img')?>" alt="<?php  the_field('horses_alt')?>"/>
     </div>
     <h3 class="about__title"><?php  the_field('horses-title')?></h3>
     <input type="checkbox" id="expanded2">
-    <p class="about__text"><?php  the_field('horses-text')?></p>
+    <p class="about__text truncated"><?php  the_field('horses-text')?></p>
     <label class="about__button" for="expanded2" role="button">Читати Далі</label>
 
         <a href="<?php echo get_permalink(38); ?>" class="about__link"><?php  the_field('horses-button')?>     
@@ -78,14 +78,14 @@ get_header();
 </section>
 
 <section class="section">
-    <div class="about__section box">
-        <div class="about__img">
-        <img src="<?php  the_field('nature-img')?>" alt=""/>
+    <div class="about__section box about__nature">
+        <div class="about__img  nature__img">
+        <img src="<?php  the_field('nature-img')?>" alt="<?php  the_field('nature_alt')?>"/>
     </div>
     <h3 class="about__title"><?php  the_field('nature-title')?></h3>
       <input type="checkbox" id="expanded3">
-    <p class="about__text"><?php  the_field('nature-text')?></p>
-      <label class="about__button" for="expanded3" role="button">Читати Далі</label>
+    <p class="about__text truncated"><?php  the_field('nature-text')?></p>
+    <label class="about__button" for="expanded3" role="button">Читати Далі</label>
     
         <a href="<?php echo get_permalink(38); ?>" class="about__link"><?php  the_field('nature-button')?>     
        <svg class="posts__icon" width="24px" height="24px">
@@ -96,6 +96,9 @@ get_header();
     
 </section>
 
+<section>
+
+</section>
 
     </div>
 </main>
