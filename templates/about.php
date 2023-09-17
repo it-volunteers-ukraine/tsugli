@@ -96,8 +96,44 @@ get_header();
     
 </section>
 
-<section>
+<section class="about-gallery section">
+  <div class="about-gallery__container">
 
+     <h3 class="about__title about-gallery__title"><?php  the_field('gallery-title')?></h3>
+    <a class="about-gallery__button" href="<?php echo get_permalink(12); ?>"><?php the_field('gallery-button'); ?> 
+      <svg class="about-gallery__icon" width="24px" height="24px">
+          <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
+       </svg>
+    </a>
+
+      <div class="about-gallery__wrapper about-swiper">
+
+        <ul class="about-gallery__list swiper-wrapper">
+            
+           <li class="about-gallery__item swiper-slide">
+             <div class="about-gallery__img">
+               <img src='<?php  the_field('img_1')?>' alt='<?php  the_field('alt_1')?>'/>
+             </div>
+           </li>
+           <li class="about-gallery__item swiper-slide">
+             <div class="about-gallery__img">
+               <img src='<?php  the_field('img_2')?>' alt='<?php  the_field('alt_2')?>'/>
+             </div>
+           </li>
+           <li class="about-gallery__item swiper-slide">
+             <div class="about-gallery__img">
+               <img src='<?php  the_field('img_3')?>' alt='<?php  the_field('alt_3')?>'/>
+             </div>
+           </li>
+           <li class="about-gallery__item swiper-slide">
+             <div class="about-gallery__img">
+               <img src='<?php  the_field('img_4')?>' alt='<?php  the_field('alt_4')?>'/>
+             </div>
+           </li>
+         </ul>
+      </div>
+  </div>
+   
 </section>
 
     </div>

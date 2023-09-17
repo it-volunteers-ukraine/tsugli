@@ -12,3 +12,16 @@ checkboxes.forEach((checkbox, index) => {
 
   observer.observe(ps[index]);
 });
+
+const swiper = new Swiper(".about-swiper", {
+  slidesPerView: 1.51,
+  spaceBetween: 16,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+    1920: {
+      slidesPerView: 4,
+    },
+  },
+});

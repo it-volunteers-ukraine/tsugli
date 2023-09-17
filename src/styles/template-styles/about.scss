@@ -12,16 +12,18 @@
 .about__container {
   display: flex;
   flex-direction: column;
-  gap: 115px;
+  gap: 72px;
   margin-bottom: 160px;
   @media screen and (min-width: $tablet1) {
-    gap: 318px;
+    gap: 80px;
+    margin-bottom: 218px;
   }
   @media screen and (min-width: $tablet2) {
-    gap: 348px;
+    margin-bottom: 225px;
   }
   @media screen and (min-width: $desktop) {
     gap: 132px;
+    margin-bottom: 207px;
   }
 }
 
@@ -170,17 +172,21 @@
   padding: 221px 16px 32px;
   border-radius: 8px;
   background: $accent-color;
+  margin-top: 43px;
 
   @media screen and (min-width: $tablet1) {
     padding: 94px 44px 32px;
+    margin-top: 208px;
   }
 
   @media screen and (min-width: $tablet2) {
     padding-top: 118px;
+    margin-top: 278px;
   }
 
   @media screen and (min-width: $desktop) {
     padding: 48px 64px 64px;
+    margin-top: 0;
   }
 }
 
@@ -307,7 +313,7 @@
       display: none;
     }
   }
-  
+
   @media screen and (min-width: $tablet1) {
     input {
       display: none;
@@ -365,4 +371,110 @@
     width: 397px;
     height: 253px;
   }
+}
+
+.about-gallery {
+  position: relative;
+}
+
+.about-gallery__container {
+  padding: 24px 8px;
+  border-radius: 8px;
+  background: $accent-color;
+  @media screen and (min-width: $tablet1) {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 64px 314px;
+  }
+  @media screen and (min-width: $tablet2) {
+    padding: 24px 36px 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 24px 64px 436px;
+  }
+}
+
+.about-gallery__title {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 292px;
+  }
+}
+
+.about-gallery__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 15px 15px 23px;
+  color: $secondary-color;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  border-radius: 8px;
+  border: 1px solid $secondary-color;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  fill: currentColor;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 767px) {
+    margin-left: 78px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: $secondary-color;
+  }
+}
+
+.about-gallery__wrapper {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 360px;
+  overflow: hidden;
+  @media screen and (min-width: $tablet1) {
+    width: $tablet1;
+    top: 109px;
+  }
+  @media screen and (min-width: $tablet2) {
+    width: $tablet2;
+    top: 119px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 1440px;
+    left: 240px;
+    top: 109px;
+  }
+}
+
+.about-gallery__list {
+  display: flex;
+}
+
+.about-gallery__img {
+  width: 225px;
+  height: 240px;
+
+  @media screen and (min-width: $tablet1) {
+    width: 245px;
+    height: 240px;
+  }
+  @media screen and (min-width: $tablet2) {
+    width: 320px;
+    height: 362px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 348px;
+    width: 348px;
+  }
+}
+
+.about-gallery__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
