@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.hero {
+.hero-home {
   height: 396px;
   padding-top: 90px;
   background-size: cover;
@@ -41,7 +41,7 @@
   margin: -1px;
 }
 
-.hero__title {
+.hero-home__title {
   color: $primary-color;
   font-size: 56px;
   font-weight: 700;
@@ -402,7 +402,7 @@
   }
 }
 
-.gallery__wrapper {
+.gallery-home__wrapper {
   padding: 16px 16px 12px;
   border-radius: 8px;
   background: $accent-color;
@@ -502,7 +502,7 @@
   color: $accent-color;
 }
 
-.galerry__container--mob {
+.galerry-home__container--mob {
   display: block;
   position: absolute;
   bottom: 44px;
@@ -544,7 +544,7 @@
   }
 }
 
-.gallery__container {
+.gallery-home__container {
   display: none;
   width: 100%;
   @media screen and (min-width: $tablet1) {

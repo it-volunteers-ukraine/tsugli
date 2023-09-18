@@ -8,9 +8,9 @@ get_header();
 
 <main class='container'>
     <h1 class='visually-hidden'>Події та заходи </h1>
-    <section class="events-hero section" style="background: linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('img') ?>);  background-size: cover; background-repeat: no-repeat; background-position: center; ">
-<h2 class="events-hero__title"><?php the_field('title') ?></h2>
-    </section>
+    
+  <?php get_template_part( 'template-parts/hero'); ?>
+
 
     <section class='events section'>
         <p class="events__title"><?php the_field('text') ?></p>

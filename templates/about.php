@@ -6,9 +6,8 @@ get_header();
 ?>
 <main class="container">
         <h1 class='visually-hidden'>Основними напрямки  діяльності організації Щербаті Цуглі  </h1>
-    <section class="about-hero section" style="background: linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('img') ?>);  background-size: cover; background-repeat: no-repeat; background-position: center; ">
-<h2 class="about-hero__title"><?php the_field('title') ?></h2>
-    </section>
+  <?php get_template_part( 'template-parts/hero'); ?>
+
 
     <div class="about__container">
 
@@ -49,7 +48,7 @@ get_header();
 
     <p class="about__text truncated"><?php  the_field('museum-text')?></p>
         <label class="about__button" for="expanded1" role="button">Читати Далі</label>
-           <a href="<?php echo get_permalink(38); ?>" class="about__link"><?php the_field('museum-button')?>     
+           <a href="<?php echo get_permalink(19); ?>" class="about__link"><?php the_field('museum-button')?>     
        <svg class="posts__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
@@ -68,7 +67,7 @@ get_header();
     <p class="about__text truncated"><?php  the_field('horses-text')?></p>
     <label class="about__button" for="expanded2" role="button">Читати Далі</label>
 
-        <a href="<?php echo get_permalink(38); ?>" class="about__link"><?php  the_field('horses-button')?>     
+        <a href="<?php echo get_permalink(14); ?>" class="about__link"><?php  the_field('horses-button')?>     
        <svg class="posts__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
@@ -87,7 +86,7 @@ get_header();
     <p class="about__text truncated"><?php  the_field('nature-text')?></p>
     <label class="about__button" for="expanded3" role="button">Читати Далі</label>
     
-        <a href="<?php echo get_permalink(38); ?>" class="about__link"><?php  the_field('nature-button')?>     
+        <a href="<?php echo get_permalink(19); ?>" class="about__link"><?php  the_field('nature-button')?>     
        <svg class="posts__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>

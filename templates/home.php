@@ -5,9 +5,9 @@ Template Name: home
 get_header();
 ?>
 <main class="container" >
-<section class="hero section" style="background: linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img') ?>); background-size: cover; background-repeat: no-repeat; background-position: center; ">
+<section class="hero-home section" style="background: linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img') ?>); background-size: cover; background-repeat: no-repeat; background-position: center; ">
     <h1 class="title">Коні породи Щербаті Цуглі</h1>
-    <h2 class="hero__title"><?php the_field('hero-title'); ?></h2>
+    <h2 class="hero-home__title"><?php the_field('hero-title'); ?></h2>
     <p class="hero__text"><?php the_field('hero-text'); ?></p>
     <a class="hero__button" href="<?php echo get_permalink(12); ?>"><?php the_field('hero-button'); ?> 
         <svg class="hero__icon" width="24px" height="24px">
@@ -57,7 +57,7 @@ get_header();
  </section>
 
  <section class="gallery section">
-        <div class="gallery__wrapper ">
+        <div class="gallery-home__wrapper ">
           <h2 class="gallery__title"><?php the_field('gallery-text'); ?></h2>
               <ul class="gallery__buttons">
                 <li>
@@ -81,7 +81,7 @@ get_header();
         </div>
 
 <?php if(have_rows('gallery')):?>
-        <div class="gallery__container">
+        <div class="gallery-home__container">
         <?php while(have_rows('gallery')): the_row();?>
                 <?php   
         $image=get_sub_field('img');
@@ -98,7 +98,7 @@ get_header();
 
 
 <?php if (have_rows('gallery')) : ?>
-    <div class="galerry__container--mob swiper-gallery">
+    <div class="galerry-home__container--mob swiper-gallery">
         <div class="gallery__wrap swiper-wrapper">
             <?php while (have_rows('gallery')) : the_row(); ?>
                 <?php

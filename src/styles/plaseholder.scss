@@ -17,72 +17,10 @@
   justify-content: center;
 }
 
-%hero-title {
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-
-  @media screen and (min-width: $tablet1) {
-    font-size: 48px;
-    letter-spacing: 0.96px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    font-size: 70px;
-    line-height: 0.91;
-    letter-spacing: 1.4px;
-  }
-}
-
 %text {
   font-family: $fira;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.38;
   letter-spacing: 0.32px;
-}
-
-%hero {
-  height: 196px;
-  padding-top: 16px;
-  margin-bottom: 80px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: $secondary-color;
-
-  @media screen and (min-width: $tablet1) {
-    height: 232px;
-    padding-top: 32px;
-  }
-
-  @media screen and (min-width: $tablet2) {
-    height: 296px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    height: 574px;
-    padding-top: 81px;
-    margin-bottom: 64px;
-  }
-}
-
-%hero__title {
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-
-  @media screen and (min-width: $tablet1) {
-    font-size: 48px;
-    letter-spacing: 0.96px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    font-size: 70px;
-    line-height: 0.91;
-    letter-spacing: 1.4px;
-  }
-}
-.about-history__description {
-  @extend %text;
 }

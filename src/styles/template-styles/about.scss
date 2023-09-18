@@ -1,14 +1,6 @@
 @import "../variables.scss";
 @import "../plaseholder.scss";
 
-.about-hero {
-  @extend %hero;
-}
-
-.about-hero__title {
-  @extend %hero__title;
-}
-
 .about__container {
   display: flex;
   flex-direction: column;
