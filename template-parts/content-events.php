@@ -1,7 +1,7 @@
  <div class="events">
     <div class="events__wrapper">
   <h2 class="events__title">Події</h2>
-    <a class="events__button" href="<?php echo get_permalink(11112); ?>">Всі
+    <a class="events__button" href="<?php echo get_permalink(17); ?>">Всі
         <svg class="events__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>

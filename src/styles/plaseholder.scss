@@ -17,23 +17,6 @@
   justify-content: center;
 }
 
-%hero-title {
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-
-  @media screen and (min-width: $tablet1) {
-    font-size: 48px;
-    letter-spacing: 0.96px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    font-size: 70px;
-    line-height: 0.91;
-    letter-spacing: 1.4px;
-  }
-}
-
 %text {
   font-family: $fira;
   font-size: 16px;
