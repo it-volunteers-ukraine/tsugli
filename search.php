@@ -23,33 +23,6 @@
         } else { echo '<p class="events__title"> Нічого не знайдено.</p>';}
         wp_reset_postdata(); ?>
 
-	<?php
-
-
-$posts_per_page = 6;
-
-$total_posts = wp_count_posts()->publish;
-
-// Вычисляем общее количество страниц пагинации
-$total_pages = ceil($total_posts / $posts_per_page);
-
-// Получаем текущий номер страницы
-$current_page = get_query_var('paged') ? get_query_var('paged') : 1;
-
-// Формируем массив с аргументами для функции paginate_links()
-$pagination_args = array(
-  'base' => get_pagenum_link(1) . '%_%',
-  'format' => '/page/%#%',
-  'current' => $current_page,
-  'total' => $total_pages,
-  'prev_next' => false,
-);
-
-// Выводим пагинацию
-echo '<div class="events__pagination">';
-echo paginate_links($pagination_args);
-echo '</div>';
-?>
 </div>
 
 <div class='events__sidebar'>
