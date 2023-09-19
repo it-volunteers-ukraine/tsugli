@@ -14,17 +14,17 @@
 
         <div class='events__container'>
 <div class='events__posts'>
-	<?php if ( have_posts() ) : ?>
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-				get_template_part( 'template-parts/content-posts' );
+             <?php
+        if ($search_query->have_posts()) {
+            while ($search_query->have_posts()) {
+            $search_query->the_post(); 
+            get_template_part( 'template-parts/content-posts' );
+            }
+        } else { echo '<p class="events__title"> Нічого не знайдено.</p>';}
+        wp_reset_postdata(); ?>
 
-			endwhile;
-		endif;
-		?>
-<?php
+	<?php
+
 
 $posts_per_page = 6;
 
