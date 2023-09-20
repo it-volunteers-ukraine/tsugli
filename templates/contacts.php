@@ -1,123 +1,84 @@
 <?php
-/*
-Template Name: contacts
-*/
-get_header();
+	/*
+	Template Name: contacts
+	*/
+	get_header();
 ?>
 
-<?php
-  if (have_posts() ) {
-    while (have_posts()) {
-        the_post();
-        the_content();
-    }
-  }
 
-?>
+<main class="container">
+    <h1 class='visually-hidden'>Зв'яжіться з нами</h1>
+	<?php get_template_part( 'template-parts/hero' ); ?>
 
-<?php if( get_field('contacts_header_image') ): ?>
-  <div class='header-image'>
-    <div class='wrapper--center'>
-      <div class='content-container'>
-        <h1>
-          <?php
-            the_title();
-          ?>
-        </h1>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
+    <!--        Social links-->
+    <section class="section">
+        <div class="socials">
+            <ul>
+                <li class="social-box">
+                    <div class="messengers">
+                        <a href="viber://chat?number=+380978955553" rel="noopener noreferrer" target="_blank">
+                            <svg>
+                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/+30978955553" rel="noopener noreferrer" target="_blank">
+                            <svg>
+                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/+380978955553" rel="noopener noreferrer" target="_blank">
+                            <svg>
+                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-whatsapp"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <span> (097) 895 55 53</span>
+                </li>
 
 
-<?php
-  $formDescription = get_field('contact_form_description');
-  $formHeader = get_field('contact_form_header');
-  $formShortcode = get_field('contact_form_shortcode');
-  $adress = get_field('adress');
-?>
-  <div class='wrapper--center'>
-    <div class='content-container'>
+                <li>
+                    <a class="social-box" href="tel:+380937451349" target="_blank">
+                        <svg>
+                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-carbon_phone"></use>
+                        </svg>
+                        <span>(093) 745 13 49</span>
+                    </a>
+                </li>
 
-      <?php
-        wp_nav_menu(
-          array(
-            'menu' => 'contacts',
-            'theme_location' => 'contacts',
-            'items_wrap' => '<ul id ="contacts__list" class ="contacts__list">%3$s</ul>',
-          )
-        )
-      ?>
+                <li>
+                    <a class="social-box" href="mailto:tsugli.ngo@gmail.com" rel="noopener noreferrer"
+                       target="_blank">
+                        <svg>
+                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-mail"></use>
+                        </svg>
+                        <span>tsugli.ngo@gmail.com</span>
+                    </a>
+                </li>
 
-      <div class='form-map__container'>
-        <div class='form__container'>
-          <h2><?php echo $formHeader;?></h2>
-          <p><?php echo $formDescription;?></p>
-          <?php echo do_shortcode($formShortcode);?>
+                <li>
+                    <a class="social-box" href="https://www.instagram.com/shche_tsugli/" rel="noopener noreferrer"
+                       target="_blank">
+                        <svg>
+                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-instagram"></use>
+                        </svg>
+                        <span>shche_tsugli</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="social-box" href="https://www.facebook.com/shche.tsugli/" rel="noopener noreferrer"
+                       target="_blank"
+                    >
+                        <svg>
+                            <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-fb"></use>
+                        </svg>
+                        <span>shche.tsugli</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class='map__container'>
-          <?php if( $adress ) : ?>
-            <div class='adress'>
-              <img src='<?php echo get_template_directory_uri(); ?>/assets/images/location_icon.svg'/>
-              <p><?php echo $adress; ?></p>
-            </div>
-          <?php endif; ?>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-<style>
-/*Temporary using separate svg files, looking for an approach to use svg sprite in pseudo elements
-*/
-
-/*Header background image*/
-/*Pseudo elements for the contacts menu*/
-  .contacts__item--messengers:before {
-    width: 180px;
-    content: url('<?php echo get_template_directory_uri(); ?>/assets/images/messengers_icon.svg');
-  }
-  .contacts__item--phone:before {
-    content: url('<?php echo get_template_directory_uri(); ?>/assets/images/phone_icon.svg');
-  }
-  .contacts__item--email:before {
-    content: url('<?php echo get_template_directory_uri(); ?>/assets/images/email_icon.svg');
-  }
-  .contacts__item--instagram:before {
-    content: url('<?php echo get_template_directory_uri(); ?>/assets/images/instagram_icon.svg');
-  }
-  .contacts__item--facebook:before {
-    content: url('<?php echo get_template_directory_uri(); ?>/assets/images/facebook_icon.svg');
-  }
-
-/*Pseudo elements for the contacts form inputs*/
-  span[data-name='your-name']:after {
-    content: url('<?php echo get_template_directory_uri(); ?>/assets/images/input_avatar_icon.svg');
-  }
-
-  span[data-name='your-email']:after {
-    content: url('<?php echo get_template_directory_uri(); ?>/assets/images/input_email_icon.svg');
-  }
-
-  span[data-name='your-number']:after {
-    content: url('<?php echo get_template_directory_uri(); ?>/assets/images/input_phone_icon.svg');
-  }
-
-  span[data-name='your-message']:after {
-    content: url('<?php echo get_template_directory_uri(); ?>/assets/images/input_pen_icon.svg');
-  }
-
-/*Pseudo element for form button */
-
-.wpcf7-submit:after {
-  content: url('<?php echo get_template_directory_uri(); ?>/assets/images/button_arrow_icon.svg');
-}
-
-.header-image {
-  background-image: url('<?php the_field('contacts_header_image'); ?>');
-}
-
-</style>
+    </section>
+</main>
 
 <?php get_footer(); ?>
+

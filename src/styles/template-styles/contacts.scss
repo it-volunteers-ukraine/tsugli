@@ -1,347 +1,102 @@
 @import "../variables.scss";
 
-@mixin wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
+a {
+  color: inherit;
 }
 
-@mixin background-container {
-
-  display: flex;
-
-  border-radius: $container-border-radius;
+.socials {
+  margin-bottom: 72px;
+  padding: 16px;
   background-color: $accent-color;
+  border-radius: $container-border-radius;
   box-shadow: $container-shadow;
-}
-
-@mixin input-inside-icon {
-  display: inline;
-  position: absolute;
-  left: 400px;
-  top: 4px;
-
-  @media screen and (max-width: $tablet1) {
-    left: 310px;
-  }
-
-  @media screen and (max-width: $mobile) {
-    left: 250px;
-  }
-}
-
-.page-wrapper {
-  position: relative;
-}
-
-.content-container {
-  width: 100%;
-  max-width: 1280px;
-}
-
-.menu-contacts-menu-container,
-.wrapper--center {
-  @include wrapper;
-
-  a {
-    color: $primary-color;
-  }
-
-  a:visited {
-    color: $primary-color;
-  }
-}
-
-.contacts__list {
-  @include background-container;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 132px 32px 132px 32px;
-  padding: 64px;
-
-  list-style-type: none;
-  text-decoration: none;
-
   font-family: $fira;
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: 2%;
 
-
-  @media screen and (max-width: $tablet2) {
-    font-size: 21px;
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 80px;
     padding: 32px;
-    margin: 80px 32px 80px 32px;
+    font-size: 21px;
   }
 
-  @media screen and (max-width: $mobile) {
-    font-size: 16px;
-    letter-spacing: 0.42px;
-    line-height: 26px;
-
-    padding: 0 16px 16px 16px;
-    margin: 72px 16px 72px 16px;
-
-    justify-content: flex-start;
-  }
-}
-
-.contacts__item {
-  text-align: center;
-
-  @media screen and (max-width: $tablet1) {
-    margin-top: 32px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 132px;
+    padding: 64px 80px;
+    font-size: 24px;
   }
 
-  @media screen and (max-width: $mobile) {
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet1) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 48px;
+    }
+    @media screen and (min-width: $tablet2) {
+      justify-content: space-between;
+      gap: 24px;
+    }
+  }
+
+  svg {
+    margin-right: 16px;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    fill: $primary-color;
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+      transform: scale(1.1);
+    }
+
+    @media screen and (min-width: $tablet1) {
+      margin-right: 0;
+      padding: 0;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  span {
+    @media screen and (min-width: $tablet1) {
+      margin-top: 16px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-top: 24px;
+    }
+  }
+
+  .messengers {
+    @media screen and (min-width: $tablet1) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .social-box {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top: 16px;
-  }
-
-}
-
-.contacts__item:before {
-  display: block;
-  width: 44px;
-  height: 44px;
-  background-repeat: no-repeat;
-  margin: 0 auto 24px auto;
-
-  @media screen and (max-width: $tablet2) {
     margin-bottom: 16px;
-  }
 
-  @media screen and (max-width: $mobile) {
-    transform: scale(0.75);
-    margin-bottom: 0;
-  }
-}
-
-.contacts__item--messengers:before {
-  @media screen and (max-width: $mobile) {
-    margin-left: -20px;
-  }
-}
-
-.form-map__container {
-  @include background-container;
-
-  margin: 0 82px 0 32px;
-  padding: 40px 64px;
-
-  color: $secondary-color;
-  font-family: $fira;
-
-  @media screen and (max-width: $tablet2) {
-    flex-direction: column-reverse;
-    margin: 0 32px 0 32px;
-  }
-
-  @media screen and (max-width: $tablet1) {
-    padding: 40px 2%;
-  }
-
-  @media screen and (max-width: $mobile) {
-    padding: 40px 16px;
-  }
-}
-
-.form__container {
-
-  width: 50%;
-
-  p {
-    width: 100%;
-    margin-top: 32px;
-    display: inline-block;
-  }
-
-  h2 {
-    font-family: $amatic;
-    font-size: 56px;
-    font-weight: bold;
-  }
-
-  .wpcf7-form-control-wrap {
-    display: inline-flex;
-    flex-wrap: wrap;
-  }
-
-  .wpcf7-email,
-  .wpcf7-text,
-  .wpcf7-number,
-  .wpcf7-textarea {
-    line-height: 22px;
-    padding: 8px;
-    width: 444px;
-    margin-top: 5px;
-    border-radius: $input-border-radius;
-
-    @media screen and (max-width: $tablet1) {
-      width: 350px;
+    @media screen and (min-width: $tablet1) {
+      flex-direction: column;
+      margin-bottom: 0;
     }
+    @media screen and (min-width: $desktop) {
+      justify-content: space-between;
 
-    @media screen and (max-width: $mobile) {
-      width: 290px;
-    }
-  }
-
-  .wpcf7-response-output {
-    border-color: $error !important;
-    border-radius: $input-border-radius !important;
-    width: 420px !important;
-  }
-
-  .wpcf7-not-valid {
-    border-color: $error !important;
-  }
-
-  .wpcf7-not-valid-tip {
-    color: $error !important;
-    margin-top: 5px;
-    display: inline-block;
-    width: 80%;
-  }
-
-  //Better put main button styles in mixins
-
-  .wpcf7-submit {
-    display: inline-flex;
-    justify-content: center;
-    padding: 16px 44px 16px 24px;
-    margin-bottom: 24px;
-    width: 100%;
-    max-width: 150px;
-    background-color: $secondary-color;
-    color: $button-color;
-    font-size: 20px;
-    letter-spacing: 0.4px;
-    font-weight: 700;
-    border-radius: 8px;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-      background-color: $primary-color;
-      cursor: pointer;
-    }
-
-    &:after {
-      z-index: 1000;
-      display: inline;
-      position: absolute;
-    }
-  }
-
-  @media screen and (max-width: $tablet2) {
-    width: 100%;
-    margin-top: 32px;
-    text-align: center;
-
-    p {
-      width: 440px;
-      text-align: start;
-    }
-
-    p:last-of-type {
-      text-align: center;
-      margin-left: 10%;
-    }
-
-    >p:last-of-type {
-      width: 80%;
-      margin-left: 0;
-    }
-  }
-
-  @media screen and (max-width: $tablet1) {
-    p {
-      margin-left: 0;
-    }
-  }
-
-  @media screen and (max-width: $mobile) {
-    width: 100%;
-    margin-top: 32px;
-    text-align: start;
-
-    p {
-      width: calc(100% - 32px);
     }
   }
 }
 
-span[data-name='your-name']:after,
-span[data-name='your-email']:after,
-span[data-name='your-number']:after,
-span[data-name='your-message']:after {
-  @include input-inside-icon;
-}
-
-.map__container {
-  font-size: 21px;
-  margin-top: 10px;
-  width: 50%;
-
-}
-
-.adress {
-  display: flex;
-
-  img {
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
-  }
-
-  @media screen and (max-width: $tablet1) {
-    margin-left: 5%;
-  }
-}
-
-.header-image {
-  background-size: cover;
-  height: 574px;
-  width: 100%;
-
-  h1 {
-    font-size: 70px;
-    font-weight: bold;
-    margin-top: 80px;
-  }
-
-  @media screen and (max-width: 1280px) {
-    h1 {
-      margin-left: 5%;
-    }
-  }
-
-
-  @media screen and (max-width: $tablet2) {
-    height: 296px;
-
-    h1 {
-      font-size: 48px;
-      margin-top: 32px;
-    }
-  }
-
-  @media screen and (max-width: $tablet1) {
-    height: 233px;
-  }
-
-  @media screen and (max-width: $mobile) {
-    background-size: cover;
-    height: 196px;
-
-    h1 {
-      font-size: 40px;
-      margin-top: 25px;
-    }
-  }
+.contact {
+  background-color: $accent-color;
+  border-radius: $container-border-radius;
 }
