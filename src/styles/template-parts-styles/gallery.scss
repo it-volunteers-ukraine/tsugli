@@ -18,13 +18,7 @@
   background-color: $accent-color;
   box-shadow: 0px 7px 15px 1px rgba(0, 0, 0, 0.25);
   @media screen and (min-width: $tablet1) {
-    padding-bottom: 612px;
-  }
-  @media screen and (min-width: $tablet2) {
-    padding-bottom: 614px;
-  }
-  @media screen and (min-width: $desktop) {
-    padding-bottom: 780px;
+    padding: 64px 0 24px;
   }
 }
 
@@ -63,30 +57,37 @@
 .gallery__container {
   display: none;
   width: 100%;
+  margin-bottom: 10px;
   @media screen and (min-width: $tablet1) {
+    margin-left: -32px;
+    margin-right: -32px;
     width: $tablet1;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
-    position: absolute;
-    left: 0;
-    top: 64px;
-    max-height: 486px;
     overflow: hidden;
+  }
+
+  @media screen and (max-width: 1919px) {
+    height: 486px;
   }
 
   @media screen and (min-width: $tablet2) {
     width: $tablet2;
+    margin-left: -36px;
+    margin-right: -36px;
   }
   @media screen and (min-width: $desktop) {
-    max-height: 652px;
     width: $desktop;
+    margin-left: -320px;
+    margin-right: -320px;
+    height: 652px;
   }
 }
 
 .gallery__link {
-  width: 245px;
+  width: 210px;
   height: 235px;
   cursor: zoom-in;
 
@@ -97,6 +98,11 @@
   @media screen and (min-width: $desktop) {
     width: 460px;
     height: 318px;
+  }
+  @media screen and (max-width: 1919px) {
+    &:nth-child(even) {
+      width: 150px;
+    }
   }
 }
 
@@ -111,4 +117,49 @@
   .gallery__link:hover & {
     transform: scale(1.03);
   }
+}
+
+.gallery-pagination {
+  display: none;
+  @media screen and (min-width: $tablet1) {
+    display: block;
+  }
+}
+
+.gallery-pagination__list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.gallery-pagination__list li {
+  text-align: center;
+  cursor: pointer;
+}
+
+.gallery-pagination__list li a {
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50px;
+  border: 1px solid #cdcac1;
+  color: #cdcac1;
+  font-family: $fira;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: $primary-color;
+  }
+}
+
+.gallery-pagination__list li .is-active {
+  color: $accent-color;
+  background-color: $primary-color;
 }

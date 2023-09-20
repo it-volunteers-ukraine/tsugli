@@ -7,7 +7,7 @@
  </section>
 
     <section class='events section'>
- <h2 class="events__title">
+ <h2 class="events-title">
     <?php printf( esc_html__( 'Категорія: %s', 'tsugli' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?>
 
      </h2> 

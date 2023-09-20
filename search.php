@@ -7,7 +7,7 @@
  </section>
 
     <section class='events section'>
- <h2 class="events__title">
+ <h2 class="events-title">
         <?php printf( esc_html__( 'Результат пошуку за фразою: %s', 'tsugli' ), '<span>' . get_search_query() . '</span>' ); ?>
         <?php $search_query = new WP_Query( array( 's' => get_search_query(), 'post_type' => 'post' ) ); ?>
       </h2>         <div class='events__container'>

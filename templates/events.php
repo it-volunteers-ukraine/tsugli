@@ -13,7 +13,7 @@ get_header();
 
 
     <section class='events section'>
-        <p class="events__title"><?php the_field('text') ?></p>
+        <p class="events-title"><?php the_field('text') ?></p>
         <div class='events__container'>
 <div class='events__posts'>
 	<?php if ( have_posts() ) : ?>

@@ -16,9 +16,9 @@ get_header();
       <h1 class="hero__title"><?php the_field('hero-title', '17');?></h1>
  </section>
 
-        <div class='events__container section'>
+        <div class='article__container section'>
 
-<div class='events__posts '>
+<div class='article__post '>
 
 		<?php
 		while ( have_posts() ) :

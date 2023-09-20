@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-.events__container {
+.article__container {
   @media screen and (min-width: $tablet1) {
     display: flex;
     gap: 16px;
@@ -11,7 +11,7 @@
   }
 }
 
-.events__posts {
+.article__post {
   @media screen and (max-width: 767px) {
     margin-bottom: 72px;
   }
