@@ -18,10 +18,10 @@
              <svg  width="24px" height="24px">
               <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-folder"></use>
              </svg>
-            <span><?php the_category(', '); ?></span>
+          <?php the_category(', '); ?>
           </li>  
 
-          <li class=" article__item events__category">
+          <li class="article__item">
              <svg  width="24px" height="24px">
                <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-calendar"></use>
              </svg>

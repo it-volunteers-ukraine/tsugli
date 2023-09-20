@@ -46,8 +46,8 @@
   border-top-left-radius: $container-border-radius;
 
   @media screen and (min-width: $tablet1) {
-    width: 640px;
-    height: 400px;
+    width: 360px;
+    height: 300px;
   }
 
   @media screen and (min-width: $tablet2) {
@@ -83,9 +83,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+
+  @media screen and (min-width: $tablet2) {
+    justify-content: space-between;
+  }
 }
 
 .article__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: $fira;
   font-size: 16px;
   font-weight: 500;
@@ -94,7 +101,8 @@
   color: $secondary-color;
 }
 
-.article__item--orange {
+.article__item--orange,
+.article__item--orange a {
   color: $orange-text-color;
 }
 

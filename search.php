@@ -19,7 +19,7 @@
             $search_query->the_post(); 
             get_template_part( 'template-parts/content', 'search' );
             }
-        } else { echo '<li class="events__title"> Нічого не знайдено.</li>';}
+        } else { echo '<li class="events-title events-title--search"> Нічого не знайдено.</li>';}
         wp_reset_postdata(); ?>
     </ul>
 </div>
