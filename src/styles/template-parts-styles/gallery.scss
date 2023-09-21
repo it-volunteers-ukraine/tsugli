@@ -65,6 +65,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-content: baseline;
+
     gap: 16px;
     overflow: hidden;
   }
@@ -95,6 +97,7 @@
     width: 320px;
     height: 235px;
   }
+
   @media screen and (min-width: $desktop) {
     width: 460px;
     height: 318px;

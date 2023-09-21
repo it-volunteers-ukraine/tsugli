@@ -57,8 +57,10 @@ get_header();
  </section>
 
  <section class="gallery section">
-        <div class="gallery-home__wrapper ">
-          <h2 class="gallery__title"><?php the_field('gallery-text'); ?></h2>
+   <div class="gallery-home__wrapper ">
+
+          <div class="gallery__head">
+              <h2 class="gallery__title"><?php the_field('gallery-text'); ?></h2>
               <ul class="gallery__buttons">
                 <li>
                   <button class="gallery__button" data-category="museum">Музей-Хаб</button>
@@ -77,8 +79,9 @@ get_header();
                 </li>
               </ul>
               <div class="swiper-pagination"></div>
+          </div>
 
-        </div>
+
 
 <?php if(have_rows('gallery')):?>
         <div class="gallery-home__container">
@@ -86,16 +89,29 @@ get_header();
                 <?php   
         $image=get_sub_field('img');
         $category = get_sub_field('category'); 
-        ?>
+        $alt = get_sub_field('alt');
+      ?>
 
           <a class="gallery__link gallery__item" data-category="<?php echo $category; ?>"  href="<?php echo $image['url']; ?>">
-            <img class="gallery__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" data-source="<?php echo $image['url']; ?>"/>
+            <img class="gallery__image" src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>"  data-source="<?php echo $image['url']; ?>"/>
           </a>
 
 <?php endwhile; ?>
-       </div>
 <?php endif; ?> 
+    </div>
 
+  <div class="gallery-pagination">
+    <ul class="gallery-pagination__list">
+        <?php
+        $total_images = count(get_field('gallery')); // Отримуємо загальну кількість зображень
+        $images_per_page = 12; // Кількість зображень на сторінці
+        $total_pages = ceil($total_images / $images_per_page); // Загальна кількість сторінок
+
+        for ($i = 1; $i <= $total_pages; $i++) {
+            echo '<li><a  "href="#" data-page="' . $i . '">' . $i . '</a></li>';
+        }
+        ?>
+  </div>
 
 <?php if (have_rows('gallery')) : ?>
     <div class="galerry-home__container--mob swiper-gallery">
@@ -104,13 +120,15 @@ get_header();
                 <?php
                 $image = get_sub_field('img');
                 $category = get_sub_field('category');
+                $alt = get_sub_field('alt');
                 ?>
 
                 <div class="gallery__item swiper-slide" data-category="<?php echo $category; ?>">
-                    <img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>" />
                 </div>
                 
             <?php endwhile; ?>
+
         </div>
     </div>
 <?php endif; ?>

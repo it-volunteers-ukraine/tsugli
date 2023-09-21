@@ -16,7 +16,10 @@
 
        </div>
  <?php endif; ?> 
-<div class="gallery-pagination">
+    </ul>
+
+    
+    <div class="gallery-pagination">
     <ul class="gallery-pagination__list">
         <?php
         $total_images = count(get_field('gallery')); // Отримуємо загальну кількість зображень
@@ -27,7 +30,6 @@
             echo '<li><a  "href="#" data-page="' . $i . '">' . $i . '</a></li>';
         }
         ?>
-    </ul>
 </div>
 
 <?php if (have_rows('gallery')) : ?>
