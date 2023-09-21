@@ -501,8 +501,9 @@
   }
 }
 
-.gallery-pagination {
+.gallery-pagination__box {
   display: none;
+
   @media screen and (min-width: $tablet1) {
     display: block;
   }

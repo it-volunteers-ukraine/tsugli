@@ -100,7 +100,7 @@ get_header();
 <?php endif; ?> 
     </div>
 
-  <div class="gallery-pagination">
+  <div class="gallery-pagination__box">
     <ul class="gallery-pagination__list">
         <?php
         $total_images = count(get_field('gallery')); // Отримуємо загальну кількість зображень

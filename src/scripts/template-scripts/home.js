@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
   var imagesPerPage = 12; // Кількість зображень на сторінці
   var $galleryContainer = $(".gallery-home__container");
-  var $paginationLinks = $(".gallery-pagination a");
+  var $paginationLinks = $(".gallery-pagination__box a");
 
   // Приховуємо всі зображення
   $galleryContainer.find(".gallery__item").hide();
@@ -29,17 +29,17 @@ jQuery(document).ready(function ($) {
       $galleryContainer.find(".gallery__item:lt(" + imagesPerPage + ")").show();
 
       // Показуємо пагінацію при активній категорії "Всі"
-      $(".gallery-pagination").show();
+      $(".gallery-pagination__box").show();
 
       // Перевірка кількості зображень
       totalImages = $galleryContainer.find(".gallery__item").length;
 
       if (totalImages <= imagesPerPage) {
-        $(".gallery-pagination").hide(); // Ховаємо пагінацію, якщо кількість зображень менша або дорівнює imagesPerPage
+        $(".gallery-pagination__box").hide(); // Ховаємо пагінацію, якщо кількість зображень менша або дорівнює imagesPerPage
       }
     } else {
       // Приховуємо пагінацію при інших категоріях
-      $(".gallery-pagination").hide();
+      $(".gallery-pagination__box").hide();
 
       // Показуємо зображення, що відповідають вибраній категорії
       $galleryContainer
