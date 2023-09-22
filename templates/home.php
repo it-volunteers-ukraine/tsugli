@@ -83,7 +83,7 @@ get_header();
 
 
 <?php if(have_rows('gallery')):?>
-        <div class="gallery-home__container">
+        <div class="gallery-home__container lightBox">
         <?php while(have_rows('gallery')): the_row();?>
                 <?php   
         $image=get_sub_field('img');

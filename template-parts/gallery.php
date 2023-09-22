@@ -1,7 +1,7 @@
 <section class= "gallery section">
 <div class= "gallery__wrapper">
 <?php if(have_rows('gallery')):?>
-        <div class="gallery__container">
+        <div class="gallery__container lightBox">
         <?php while(have_rows('gallery')): the_row();?>
                 <?php   
         $image=get_sub_field('gallery-img');
