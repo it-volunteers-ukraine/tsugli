@@ -1,9 +1,6 @@
 @import "../variables.scss";
 
-a {
-  color: inherit;
-}
-
+//social links block
 .socials {
   margin-bottom: 72px;
   padding: 16px;
@@ -11,23 +8,24 @@ a {
   border-radius: $container-border-radius;
   box-shadow: $container-shadow;
   font-family: $fira;
-
   @media screen and (min-width: $tablet1) {
     margin-bottom: 80px;
     padding: 32px;
     font-size: 21px;
   }
-
   @media screen and (min-width: $desktop) {
     margin-bottom: 132px;
     padding: 64px 80px;
     font-size: 24px;
   }
 
+  a {
+    color: inherit;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
-
     @media screen and (min-width: $tablet1) {
       flex-direction: row;
       align-items: center;
@@ -49,16 +47,15 @@ a {
     fill: $primary-color;
     transform: scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover, &:focus {
-      transform: scale(1.1);
-    }
-
     @media screen and (min-width: $tablet1) {
       margin-right: 0;
       padding: 0;
       width: 36px;
       height: 36px;
+    }
+
+    &:hover, &:focus {
+      transform: scale(1.1);
     }
   }
 
@@ -84,7 +81,6 @@ a {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
-
     @media screen and (min-width: $tablet1) {
       flex-direction: column;
       margin-bottom: 0;
@@ -96,7 +92,188 @@ a {
   }
 }
 
+// contact form + location map
 .contact {
+  margin-bottom: 72px;
+  padding: 24px 16px 32px;
   background-color: $accent-color;
   border-radius: $container-border-radius;
+  box-shadow: $container-shadow;
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 80px;
+    padding: 32px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 296px;
+    margin-right: 50px;
+    padding: 40px 64px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  svg {
+    margin-right: 28px;
+    width: 30px;
+    height: 30px;
+    fill: $primary-color;
+    @media screen and (min-width: $tablet1) {
+      margin-right: 33px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .location-wrapper {
+
+  }
+
+  .form-wrapper {
+    max-width: 460px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $tablet1) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 64px;
+      align-items: flex-start;
+    }
+  }
+
+  .address {
+    max-width: 640px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: $fira;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 24px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 21px;
+      margin-bottom: 32px;
+    }
+    @media screen and (min-width: $tablet2) {
+      margin: 0 auto 24px;
+    }
+    @media screen and (min-width: $desktop) {
+      max-width: unset;
+    }
+  }
+
+  .map {
+    margin-bottom: 32px;
+    height: 400px;
+    box-shadow: $container-shadow;
+    border-radius: $container-border-radius;
+    overflow: hidden;
+    @media screen and (min-width: $desktop) {
+      margin-right: -114px;
+      height: 660px;
+      margin-bottom: -90px;
+    }
+  }
+
+  .wpcf7 {
+    width: 100%;
+  }
+
+  form {
+    margin-bottom: 0;
+
+    .wpcf7-form-control {
+      width: 100%;
+      min-height: 56px;
+      margin-bottom: 30px;
+      padding: 8px 48px 8px 14px;
+      border-radius: $container-border-radius;
+      border-color: $secondary-color;
+      font-family: $fira;
+      background-position: right 8px top 8px;
+      background-repeat: no-repeat;
+
+      &.wpcf7-text, &.wpcf7-textarea {
+        color: $primary-color;
+      }
+
+      &.input-name {
+        background-image: url("../../../assets/images/input_avatar_icon.svg");
+      }
+
+      &.input-email {
+        background-image: url("../../../assets/images/input_email_icon.svg");
+      }
+
+      &.input-telephone {
+        background-image: url("../../../assets/images/input_phone_icon.svg");
+      }
+
+      &.input-message {
+        margin-bottom: 16px;
+        background-image: url("../../../assets/images/input_pen_icon.svg");
+      }
+    }
+
+    span .wpcf7-not-valid {
+      border: 1px solid $error;
+    }
+
+    .wpcf7-not-valid-tip {
+      top: 36px;
+      color: $error;
+    }
+
+    input[type=submit] {
+      width: fit-content;
+      margin-bottom: 0;
+      border: none;
+      background-color: $secondary-color;
+      color: $button-color;
+      font-family: $amatic;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.48px;
+      cursor: pointer;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      background-image: url("../../../assets/images/button_arrow_icon.svg");
+      background-position: right 16px top 50%;
+      background-repeat: no-repeat;
+      @media screen and (min-width: $tablet1) {
+        display: block;
+        margin: 0 auto;
+      }
+      @media screen and (min-width: $desktop) {
+        margin: 0;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $primary-color;
+      }
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  .form-title {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 1.12px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 56px;
+    }
+  }
+
+  .form-text {
+    margin-bottom: 20px;
+    line-height: 137.5%;
+    letter-spacing: 0.32px;
+    color: $secondary-color;
+    font-family: $fira;
+  }
 }
