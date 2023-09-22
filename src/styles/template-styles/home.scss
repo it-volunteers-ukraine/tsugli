@@ -389,11 +389,19 @@
   }
 }
 
-.gallery {
+.gallery-mob {
   position: relative;
   margin-bottom: 72px;
-
   @media screen and (min-width: $tablet1) {
+    display: none;
+  }
+}
+
+.gallery-desktop {
+  position: relative;
+  display: none;
+  @media screen and (min-width: $tablet1) {
+    display: block;
     margin-bottom: 80px;
   }
 
@@ -421,14 +429,13 @@
 }
 
 .gallery__head {
-  @media screen and (min-width: $tablet1) {
-    display: flex;
-    gap: 8px;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-  }
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
 }
+
 .gallery__title {
   color: $primary-color;
   font-size: 48px;
@@ -502,10 +509,17 @@
 }
 
 .gallery-pagination__box {
-  display: none;
-
-  @media screen and (min-width: $tablet1) {
-    display: block;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    margin: -1px;
   }
 }
 
@@ -554,14 +568,10 @@
 }
 
 .galerry-home__container--mob {
-  display: block;
   position: absolute;
   bottom: 44px;
   left: 0;
   overflow: hidden;
-  @media screen and (min-width: $tablet1) {
-    display: none;
-  }
 }
 
 .gallery__wrap.swiper-wrapper {
@@ -596,21 +606,18 @@
 }
 
 .gallery-home__container {
-  display: none;
   width: 100%;
-  @media screen and (min-width: $tablet1) {
-    width: $tablet1;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: baseline;
-    gap: 16px;
-    margin-left: -50px;
-    margin-right: -50px;
-    margin-bottom: 10px;
-    overflow: hidden;
-    height: 737px;
-  }
+  width: $tablet1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: baseline;
+  gap: 16px;
+  margin-left: -50px;
+  margin-right: -50px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  height: 737px;
 
   @media screen and (min-width: $tablet2) {
     width: $tablet2;

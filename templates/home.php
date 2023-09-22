@@ -9,7 +9,7 @@ get_header();
     <h1 class="title">Коні породи Щербаті Цуглі</h1>
     <h2 class="hero-home__title"><?php the_field('hero-title'); ?></h2>
     <p class="hero__text"><?php the_field('hero-text'); ?></p>
-    <a class="hero__button" href="<?php echo get_permalink(12); ?>"><?php the_field('hero-button'); ?> 
+    <a class="hero__button" href="<?php echo get_permalink(7); ?>"><?php the_field('hero-button'); ?> 
         <svg class="hero__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
@@ -17,7 +17,7 @@ get_header();
 </section> 
 
 <section class="activities ">
-     <div class="swiper swiper-activities">
+     <div class="swiper">
     <ul class="activities__list swiper-wrapper">
         
         <li class="activities__item swiper-slide">
@@ -56,7 +56,7 @@ get_header();
 </div>
  </section>
 
- <section class="gallery section">
+ <section class="gallery-desktop  section">
    <div class="gallery-home__wrapper ">
 
           <div class="gallery__head">
@@ -78,8 +78,7 @@ get_header();
                   <button class="gallery__button active" data-category="all">Всі</button>
                 </li>
               </ul>
-              <div class="swiper-pagination"></div>
-          </div>
+           </div>
 
 
 
@@ -100,18 +99,42 @@ get_header();
 <?php endif; ?> 
     </div>
 
-  <div class="gallery-pagination__box">
-    <ul class="gallery-pagination__list">
-        <?php
-        $total_images = count(get_field('gallery')); // Отримуємо загальну кількість зображень
-        $images_per_page = 12; // Кількість зображень на сторінці
-        $total_pages = ceil($total_images / $images_per_page); // Загальна кількість сторінок
+        <div class="gallery-pagination__box">
+          <ul class="gallery-pagination__list">
+              <?php
+              $total_images = count(get_field('gallery')); 
+              $images_per_page = 12; 
+              $total_pages = ceil($total_images / $images_per_page); 
 
-        for ($i = 1; $i <= $total_pages; $i++) {
-            echo '<li><a  "href="#" data-page="' . $i . '">' . $i . '</a></li>';
-        }
-        ?>
-  </div>
+              for ($i = 1; $i <= $total_pages; $i++) {
+                  echo '<li><a  "href="#" data-page="' . $i . '">' . $i . '</a></li>';
+              }
+              ?>
+        </div>
+</section>
+
+
+ <section class="gallery-mob section">
+        <div class="gallery-home__wrapper ">
+          <h2 class="gallery__title"><?php the_field('gallery-text'); ?></h2>
+              <ul class="gallery__buttons">
+                <li>
+                  <button class="gallery__button" data-category="museum">Музей-Хаб</button>
+                </li>
+                <li>
+                  <button class="gallery__button" data-category="horses">Поліські Коні</button>
+                </li>
+                <li>
+                  <button class="gallery__button" data-category="events">Події</button>
+                </li>
+                <li>
+                  <button class="gallery__button" data-category="excursions">Екскурсії</button>
+                </li>
+                <li>
+                  <button class="gallery__button active" data-category="all">Всі</button>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
 
 <?php if (have_rows('gallery')) : ?>
     <div class="galerry-home__container--mob swiper-gallery">
@@ -120,15 +143,13 @@ get_header();
                 <?php
                 $image = get_sub_field('img');
                 $category = get_sub_field('category');
-                $alt = get_sub_field('alt');
                 ?>
 
                 <div class="gallery__item swiper-slide" data-category="<?php echo $category; ?>">
-                    <img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>" />
+                    <img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                 </div>
                 
             <?php endwhile; ?>
-
         </div>
     </div>
 <?php endif; ?>

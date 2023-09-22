@@ -1,117 +1,23 @@
-jQuery(document).ready(function ($) {
-  var imagesPerPage = 12; // Кількість зображень на сторінці
-  var $galleryContainer = $(".gallery-home__container");
-  var $paginationLinks = $(".gallery-pagination__box a");
-
-  // Приховуємо всі зображення
-  $galleryContainer.find(".gallery__item").hide();
-
-  // Показуємо перші 8 зображень
-  $galleryContainer.find(".gallery__item:lt(" + imagesPerPage + ")").show();
-
-  // Додаємо клас is-active до першої кнопки пагінації при завантаженні сторінки
-  $paginationLinks.first().addClass("is-active");
-
-  // Перевірка кількості зображень
-  var totalImages = $galleryContainer.find(".gallery__item").length;
-
-  if (totalImages <= imagesPerPage) {
-    $(".gallery-pagination").hide(); // Ховаємо пагінацію, якщо кількість зображень менша або дорівнює imagesPerPage
-  }
-
-  // Filter
-  function filterImagesByCategory(category) {
-    // Приховуємо всі зображення
-    $galleryContainer.find(".gallery__item").hide();
-
-    if (category === "all") {
-      // Показуємо всі зображення, якщо вибрана категорія "Всі"
-      $galleryContainer.find(".gallery__item:lt(" + imagesPerPage + ")").show();
-
-      // Показуємо пагінацію при активній категорії "Всі"
-      $(".gallery-pagination__box").show();
-
-      // Перевірка кількості зображень
-      totalImages = $galleryContainer.find(".gallery__item").length;
-
-      if (totalImages <= imagesPerPage) {
-        $(".gallery-pagination__box").hide(); // Ховаємо пагінацію, якщо кількість зображень менша або дорівнює imagesPerPage
-      }
-    } else {
-      // Приховуємо пагінацію при інших категоріях
-      $(".gallery-pagination__box").hide();
-
-      // Показуємо зображення, що відповідають вибраній категорії
-      $galleryContainer
-        .find(
-          ".gallery__item[data-category='" +
-            category +
-            "']:lt(" +
-            imagesPerPage +
-            ")"
-        )
-        .show();
-    }
-  }
-
-  // Вішаємо обробник кліків на кнопки категорій
-  $(".gallery__buttons").on("click", ".gallery__button", function () {
-    var category = $(this).data("category");
-
-    // Видаляємо клас is-active з усіх кнопок категорій
-    $(".gallery__buttons .gallery__button").removeClass("active");
-
-    // Додаємо клас is-active до обраної кнопки категорії
-    $(this).addClass("active");
-
-    // Викликаємо функцію фільтрації для відображення зображень відповідно до категорії
-    filterImagesByCategory(category);
-  });
-
-  // Викликаємо функцію фільтрації для відображення всіх зображень при завантаженні сторінки
-  filterImagesByCategory("all");
-
-  // Вішаємо обробник кліків на пагінаційні посилання
-  $paginationLinks.on("click", function (e) {
-    e.preventDefault();
-    var page = $(this).data("page");
-    var startIndex = (page - 1) * imagesPerPage;
-    var endIndex = startIndex + imagesPerPage;
-
-    // Приховуємо всі зображення
-    $galleryContainer.find(".gallery__item").hide();
-
-    // Показуємо зображення від startIndex до endIndex
-    $galleryContainer.find(".gallery__item").slice(startIndex, endIndex).show();
-
-    // Видаляємо клас is-active з усіх кнопок пагінації
-    $paginationLinks.removeClass("is-active");
-
-    // Додаємо клас is-open до активної кнопки пагінації
-    $(this).addClass("is-active");
-  });
-});
-
-
 // Swiper
 const swiper = new Swiper(".swiper", {
   slidesPerView: 1.51,
   spaceBetween: 16,
+  allowTouchMove: true,
+
   breakpoints: {
     768: {
       slidesPerView: 3,
       spaceBetween: 32,
+      allowTouchMove: false,
     },
     992: {
+      slidesPerView: 3,
       spaceBetween: 44,
+      allowTouchMove: false,
     },
   },
 });
-
-const screenWidth = window.innerWidth;
-swiper.allowTouchMove = screenWidth <= 768;
-
-const swiperGallery = new Swiper(".swiper-gallery", {
+const swiperHomeGallery = new Swiper(".swiper-gallery", {
   slidesPerView: 1.29,
   spaceBetween: 10,
   pagination: {
@@ -120,9 +26,36 @@ const swiperGallery = new Swiper(".swiper-gallery", {
   },
 });
 
+// Галерея
+const galleryButtons = document.querySelectorAll(".gallery__button");
+const galleryItems = document.querySelectorAll(".gallery__item");
+
+galleryButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const category = button.getAttribute("data-category");
+
+    galleryButtons.forEach(function (btn) {
+      btn.classList.remove("active");
+    });
+    button.classList.add("active");
+
+    galleryItems.forEach(function (item) {
+      const itemCategories = item.getAttribute("data-category");
+
+      if (category === "all" || itemCategories.includes(category)) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+    swiperHomeGallery.slideTo(0);
+    swiperHomeGallery.update();
+  });
+});
+
 // LightBox
-const galleryContainer = document.querySelector(".gallery-home__container");
-galleryContainer.addEventListener("click", onImageClick);
+const galleryHome = document.querySelector(".gallery-home__container");
+galleryHome.addEventListener("click", onImageClick);
 
 function onImageClick(event) {
   event.preventDefault();
@@ -144,10 +77,10 @@ function onOpenModalWindow(event) {
     >`,
     {
       onShow: (instance) => {
-        galleryContainer.addEventListener("keydown", onEscPress);
+        galleryHome.addEventListener("keydown", onEscPress);
       },
       onClose: (instance) => {
-        galleryContainer.removeEventListener("keydown", onEscPress);
+        galleryHome.removeEventListener("keydown", onEscPress);
       },
     }
   );

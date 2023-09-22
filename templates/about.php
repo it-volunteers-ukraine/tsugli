@@ -48,7 +48,7 @@ get_header();
 
     <p class="about__text truncated"><?php  the_field('museum-text')?></p>
         <label class="about__button" for="expanded1" role="button">Читати Далі</label>
-           <a href="<?php echo get_permalink(19); ?>" class="about__link"><?php the_field('museum-button')?>     
+           <a href="<?php echo get_permalink(13); ?>" class="about__link"><?php the_field('museum-button')?>     
        <svg class="posts__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
@@ -67,7 +67,7 @@ get_header();
     <p class="about__text truncated"><?php  the_field('horses-text')?></p>
     <label class="about__button" for="expanded2" role="button">Читати Далі</label>
 
-        <a href="<?php echo get_permalink(14); ?>" class="about__link"><?php  the_field('horses-button')?>     
+        <a href="<?php echo get_permalink(11); ?>" class="about__link"><?php  the_field('horses-button')?>     
        <svg class="posts__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
@@ -86,7 +86,7 @@ get_header();
     <p class="about__text truncated"><?php  the_field('nature-text')?></p>
     <label class="about__button" for="expanded3" role="button">Читати Далі</label>
     
-        <a href="<?php echo get_permalink(19); ?>" class="about__link"><?php  the_field('nature-button')?>     
+        <a href="<?php echo get_permalink(13); ?>" class="about__link"><?php  the_field('nature-button')?>     
        <svg class="posts__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
@@ -99,7 +99,7 @@ get_header();
   <div class="about-gallery__container">
 
      <h3 class="about__title about-gallery__title"><?php  the_field('gallery-title')?></h3>
-    <a class="about-gallery__button" href="<?php echo get_permalink(12); ?>"><?php the_field('gallery-button'); ?> 
+    <a class="about-gallery__button" href="<?php echo esc_attr(get_field('instagram', 18));?>"><?php the_field('gallery-button'); ?> 
       <svg class="about-gallery__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
