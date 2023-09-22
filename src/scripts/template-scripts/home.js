@@ -55,19 +55,19 @@ galleryButtons.forEach(function (button) {
 
 // LightBox
 const galleryHome = document.querySelector(".gallery-home__container");
-galleryHome.addEventListener("click", onImageClick);
+galleryHome.addEventListener("click", onImageHomeClick);
 
-function onImageClick(event) {
+function onImageHomeClick(event) {
   event.preventDefault();
 
   if (event.target.nodeName !== "IMG") {
     return;
   } else {
-    onOpenModalWindow(event);
+    onOpenModalHomeWindow(event);
   }
 }
 
-function onOpenModalWindow(event) {
+function onOpenModalHomeWindow(event) {
   const instance = basicLightbox.create(
     `
     <img
