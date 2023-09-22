@@ -90,6 +90,12 @@
 
     }
   }
+
+  a.social-box:hover {
+    svg {
+      transform: scale(1.2);
+    }
+  }
 }
 
 // contact form + location map
