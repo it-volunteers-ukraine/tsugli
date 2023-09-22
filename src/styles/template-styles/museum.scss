@@ -147,3 +147,20 @@
     }
   }
 }
+
+.events-section {
+  margin-bottom: 160px;
+
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 218px;
+  }
+
+  @media screen and (min-width: $tablet2) {
+    padding-bottom: 290px;
+    margin-bottom: 225px;
+  }
+  
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 335px;
+  }
+}

@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="container">
+	<main id="primary" class="main container">
 
  <section class="hero section" style="background:linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img', '17'); ?>);  background-size: cover; background-repeat: no-repeat; background-position: center;">
       <h1 class="hero__title"><?php the_field('hero-title', '17');?></h1>
@@ -50,7 +50,9 @@ get_header();
 
 </div>
 
-	</main><!-- #main -->
+    <?php get_template_part( 'template-parts/buttonTop'); ?>
+
+	</main>
 
 <?php
 get_sidebar();

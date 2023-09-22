@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 .events {
-  margin-bottom: 126px;
+  margin-bottom: 156px;
 
   @media screen and (min-width: $tablet1) {
     margin-bottom: 218px;
@@ -42,10 +42,10 @@
 .events__container {
   @media screen and (min-width: $tablet1) {
     display: flex;
+    justify-content: space-between;
     gap: 16px;
   }
   @media screen and (min-width: $tablet2) {
-    display: flex;
     gap: 24px;
   }
 }

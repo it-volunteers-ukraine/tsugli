@@ -6,7 +6,7 @@ get_header();
 
 ?>
 
-<main class='container'>
+<main class='main container'>
     <h1 class='visually-hidden'>Події та заходи </h1>
     
   <?php get_template_part( 'template-parts/hero'); ?>
@@ -60,6 +60,8 @@ echo '</div>';
 
         </div>
     </section>
+
+ <?php get_template_part( 'template-parts/buttonTop'); ?>
 </main>
 
 <?php get_footer(); ?>

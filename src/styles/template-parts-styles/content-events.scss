@@ -10,17 +10,15 @@
 
   @media screen and (min-width: $tablet1) {
     padding: 24px 64px 1035px;
-    margin-bottom: 225px;
   }
 
   @media screen and (min-width: $tablet2) {
     padding: 24px 64px 225px;
-    margin-bottom: 522px;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: $desktop) {
     padding: 24px 64px 285px;
-    margin-bottom: 553px;
   }
 }
 

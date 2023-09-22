@@ -4,7 +4,7 @@ Template Name: about
 */
 get_header();
 ?>
-<main class="container">
+<main class="main container">
         <h1 class='visually-hidden'>Основними напрямки  діяльності організації Щербаті Цуглі  </h1>
   <?php get_template_part( 'template-parts/hero'); ?>
 
@@ -136,6 +136,9 @@ get_header();
 </section>
 
     </div>
+
+    <?php get_template_part( 'template-parts/buttonTop'); ?>
+
 </main>
 
 

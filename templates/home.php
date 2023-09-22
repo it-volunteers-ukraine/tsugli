@@ -4,7 +4,7 @@ Template Name: home
 */
 get_header();
 ?>
-<main class="container" >
+<main class="main container" >
 <section class="hero-home section" style="background: linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img') ?>); background-size: cover; background-repeat: no-repeat; background-position: center; ">
     <h1 class="title">Коні породи Щербаті Цуглі</h1>
     <h2 class="hero-home__title"><?php the_field('hero-title'); ?></h2>
@@ -156,7 +156,7 @@ get_header();
 
 </section>
 
-<section class="section ">
+<section class="section events-section ">
 		<?php if ( have_posts() ) : ?>
 
 				<?php
@@ -168,6 +168,9 @@ get_header();
 		endif;
 		?>
 </section>
+
+<?php get_template_part( 'template-parts/buttonTop'); ?>
+
 </main>
 
 <?php get_footer(); ?>
