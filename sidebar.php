@@ -20,17 +20,21 @@ if ( ! is_active_sidebar( 'sidebar' ) ) {
 
 <div class="sidebar__section">
 	<h3 class="sidebar__title">Категорії</h3>
+  <ul class="categories__list sidebar__wrapp">
+
 		<?php
-$categories = get_categories();
+$categories = get_categories(); ?>
+<li class="categories__item categories__item--contrast"><a href="<?php echo get_permalink(17); ?>">
+<span>Всі категорії</span> 
+<span class="categories__count categories__count--contrast"><?php echo count($categories); ?></span></a></li>
 
-echo '<ul class="categories__list sidebar__wrapp">';
-echo '<li class="categories__item categories__item--contrast"><a href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '"><span>Всі категорії</span> <span class="categories__count categories__count--contrast">' . count($categories) . '</span></a></li>'; // Ссылка на все категории
-
+<?php
 foreach ($categories as $category) {
     echo '<li class="categories__item"><a href="' . get_category_link($category->term_id) . '"><span>' . $category->name . '</span> <span class="categories__count">' . $category->count . '</span></a></li>';
 }
-echo '</ul>';
 ?>
+</ul>
+
 </div>
 
 <div class="sidebar__section">

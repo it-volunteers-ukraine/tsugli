@@ -1,0 +1,15 @@
+@import "./template-parts-styles/hero.scss";
+@import "./template-parts-styles/content-posts.scss";
+@import "./template-styles/events.scss";
+
+.events-title--search {
+  @media screen and (min-width: $tablet1) {
+    width: 424px;
+  }
+  @media screen and (min-width: $tablet2) {
+    width: 640px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 840px;
+  }
+}

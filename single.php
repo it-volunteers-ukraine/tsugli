@@ -10,7 +10,15 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="main container">
+
+ <section class="hero section" style="background:linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img', '17'); ?>);  background-size: cover; background-repeat: no-repeat; background-position: center;">
+      <h1 class="hero__title"><?php the_field('hero-title', '17');?></h1>
+ </section>
+
+        <div class='article__container section'>
+
+<div class='article__post '>
 
 		<?php
 		while ( have_posts() ) :
@@ -33,7 +41,18 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-	</main><!-- #main -->
+
+</div>
+
+	<div class='events__sidebar'>
+		<?php get_sidebar(); ?>
+	</div>
+
+</div>
+
+    <?php get_template_part( 'template-parts/buttonTop'); ?>
+
+	</main>
 
 <?php
 get_sidebar();

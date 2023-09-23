@@ -21,9 +21,9 @@
 
 .about-history {
   padding: 16px;
-  border-radius: 8px;
+  border-radius: $container-border-radius;
   background: $accent-color;
-  box-shadow: 0px 7px 15px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: $container-shadow;
 
   @media screen and (min-width: $tablet1) {
     display: flex;
@@ -162,7 +162,7 @@
   flex-direction: column;
   gap: 26px;
   padding: 221px 16px 32px;
-  border-radius: 8px;
+  border-radius: $container-border-radius;
   background: $accent-color;
   margin-top: 43px;
 
@@ -185,9 +185,9 @@
 .about__img {
   position: absolute;
 
-  border-radius: 8px;
+  border-radius: $container-border-radius;
   overflow: hidden;
-  box-shadow: 0px 7px 15px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: $container-shadow;
 
   @media screen and (max-width: 767px) {
     left: 16px;
@@ -257,7 +257,7 @@
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.4px;
-  border-radius: 8px;
+  border-radius: $container-border-radius;
   border: none;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
@@ -371,7 +371,7 @@
 
 .about-gallery__container {
   padding: 24px 8px;
-  border-radius: 8px;
+  border-radius: $container-border-radius;
   background: $accent-color;
   @media screen and (min-width: $tablet1) {
     display: flex;
@@ -403,7 +403,7 @@
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.48px;
-  border-radius: 8px;
+  border-radius: $container-border-radius;
   border: 1px solid $secondary-color;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
   fill: currentColor;
