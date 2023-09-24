@@ -1,39 +1,34 @@
 @import "./variables.scss";
-
-.article__container {
+.article-section {
+  margin-bottom: 160px;
   @media screen and (min-width: $tablet1) {
     display: flex;
-    gap: 16px;
+    justify-content: space-between;
+    margin-bottom: 218px;
   }
+
   @media screen and (min-width: $tablet2) {
-    display: flex;
-    gap: 24px;
+    margin-bottom: 225px;
   }
 }
+.article__container {
+  padding: 24px 16px;
+  border-radius: $container-border-radius;
+  background: $accent-color;
+  box-shadow: $container-shadow;
 
-.article__post {
   @media screen and (max-width: 767px) {
     margin-bottom: 72px;
+  }
+  @media screen and (min-width: $tablet1) {
+    padding: 24px 32px;
+    max-width: 424px;
   }
   @media screen and (min-width: $tablet2) {
     max-width: 640px;
   }
   @media screen and (min-width: $desktop) {
     max-width: 840px;
-  }
-}
-
-.article__wrapper {
-  padding: 24px 16px;
-  border-radius: $container-border-radius;
-  background: $accent-color;
-  box-shadow: $container-shadow;
-
-  @media screen and (min-width: $tablet1) {
-    padding: 24px 32px;
-  }
-
-  @media screen and (min-width: $desktop) {
     padding: 32px;
   }
 }
