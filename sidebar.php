@@ -25,8 +25,8 @@ if ( ! is_active_sidebar( 'sidebar' ) ) {
 		<?php
 $categories = get_categories(); ?>
 <li class="categories__item categories__item--contrast"><a href="<?php echo get_permalink(17); ?>">
-<span>Всі категорії</span> 
-<span class="categories__count categories__count--contrast"><?php echo count($categories); ?></span></a></li>
+<span>Всі </span> 
+    <span class="categories__count categories__count--contrast"><?php echo wp_count_posts()->publish; ?></span>
 
 <?php
 foreach ($categories as $category) {
