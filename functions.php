@@ -191,6 +191,22 @@ function register_tsugli_sidebar(){
 
 // Comments
 
+
+function tsugli_comments($comment, $args, $depth) {
+    $author_name = get_comment_author();
+    $comment_date = get_comment_date();
+    $comment_text = get_comment_text();
+
+    echo '<li class="comment__item">';
+    echo '<div class="comment__info">';
+    echo '<span class="comment__autor">' . esc_html($author_name) . '</span>';
+    echo '<span class="comment__date">' . esc_html($comment_date) . '</span>';
+    echo '</div>';
+    echo '<span class="comment__text">' . esc_html($comment_text). '</span>';
+    echo '</li>';
+}
+
+
 add_action( 'comment_form_fields', 'tsugli_change_all_fields_order', 25 );
  
 function tsugli_change_all_fields_order( $comment_fields ) {
