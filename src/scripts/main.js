@@ -1,5 +1,8 @@
 const galleryHome = document.querySelector(".lightBox");
-galleryHome.addEventListener("click", onImageHomeClick);
+
+if (galleryHome) {
+  galleryHome.addEventListener("click", onImageHomeClick);
+}
 
 function onImageHomeClick(event) {
   event.preventDefault();
@@ -15,7 +18,7 @@ function onOpenModalHomeWindow(event) {
   const instance = basicLightbox.create(
     `
     <img
-    src = "${event.target.dataset.source}"
+    src="${event.target.dataset.source}"
     width="800" 
     height="600"
     >`,

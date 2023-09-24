@@ -233,7 +233,6 @@ function tsugli_comment_form_defaults($defaults) {
 }
 
 
-// Видаляємо лейбл "Коментар"
 add_filter('comment_form_defaults', 'tsugli_remove_comment_form_label');
 
 function tsugli_remove_comment_form_label($defaults) {

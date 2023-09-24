@@ -29,6 +29,10 @@
   border-bottom: 1px solid #cdcac1;
 }
 
+.children {
+  padding-left: 24px;
+}
+
 .comment__info {
   display: flex;
   justify-content: space-between;
@@ -151,4 +155,40 @@
   &:focus {
     background-color: $primary-color;
   }
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-comment {
+  position: relative;
+}
+
+.comment-form-author::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 8px;
+  right: 8px;
+  background-image: url(../../assets/images/input_avatar_icon.svg);
+}
+
+.comment-form-email::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 8px;
+  right: 8px;
+  background-image: url(../../assets/images/input_email_icon.svg);
+}
+
+.comment-form-comment::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 8px;
+  right: 8px;
+  background-image: url(../../assets/images/input_pen_icon.svg);
 }
