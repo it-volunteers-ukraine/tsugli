@@ -6,14 +6,14 @@ get_header();
 
 ?>
 
-<main class='container'>
+<main class='main container'>
     <h1 class='visually-hidden'>Події та заходи </h1>
     
   <?php get_template_part( 'template-parts/hero'); ?>
 
 
     <section class='events section'>
-        <p class="events__title"><?php the_field('text') ?></p>
+        <p class="events-title"><?php the_field('text') ?></p>
         <div class='events__container'>
 <div class='events__posts'>
 	<?php if ( have_posts() ) : ?>
@@ -60,6 +60,8 @@ echo '</div>';
 
         </div>
     </section>
+
+ <?php get_template_part( 'template-parts/buttonTop'); ?>
 </main>
 
 <?php get_footer(); ?>

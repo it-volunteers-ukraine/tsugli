@@ -35,7 +35,7 @@
     padding: 0 320px;
   }
 }
- 
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -47,4 +47,8 @@
   clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+.main {
+  position: relative;
 }

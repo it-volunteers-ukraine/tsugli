@@ -1,4 +1,20 @@
 @import "../variables.scss";
+.events-section {
+  margin-bottom: 160px;
+
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 218px;
+  }
+
+  @media screen and (min-width: $tablet2) {
+    padding-bottom: 290px;
+    margin-bottom: 225px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 335px;
+  }
+}
 
 .hero-home {
   height: 396px;
@@ -106,7 +122,7 @@
   font-weight: 700;
   letter-spacing: 0.4px;
 
-  border-radius: 8px;
+  border-radius: $container-border-radius;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 
@@ -176,9 +192,9 @@
 
 .swiper-slide {
   text-align: center;
-  border-radius: 8px;
+  border-radius: $container-border-radius;
   background-color: $accent-color;
-  box-shadow: 0px 7px 15px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: $container-shadow;
 
   @media screen and (max-width: 767px) {
     width: 232px;
@@ -275,7 +291,7 @@
 .about-us__container {
   padding: 16px;
   background-color: $accent-color;
-  border-radius: 8px;
+  border-radius: $container-border-radius;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
 
   @media screen and (min-width: $tablet1) {
@@ -389,11 +405,19 @@
   }
 }
 
-.gallery {
+.gallery-mob {
   position: relative;
   margin-bottom: 72px;
-
   @media screen and (min-width: $tablet1) {
+    display: none;
+  }
+}
+
+.gallery-desktop {
+  position: relative;
+  display: none;
+  @media screen and (min-width: $tablet1) {
+    display: block;
     margin-bottom: 80px;
   }
 
@@ -404,24 +428,28 @@
 
 .gallery-home__wrapper {
   padding: 16px 16px 12px;
-  border-radius: 8px;
+  border-radius: $container-border-radius;
   background: $accent-color;
-  box-shadow: 0px 7px 15px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: $container-shadow;
   @media screen and (min-width: $tablet1) {
-    display: flex;
-    gap: 8px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 18px 805px;
+    padding: 24px 18px;
   }
 
   @media screen and (min-width: $tablet2) {
-    padding: 24px 24px 826px;
+    padding: 24px;
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 24px 64px 1075px;
+    padding: 24px 64px;
   }
+}
+
+.gallery__head {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .gallery__title {
@@ -496,6 +524,59 @@
   }
 }
 
+.gallery-pagination__box {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+}
+
+.gallery-pagination__list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.gallery-pagination__list li {
+  text-align: center;
+  cursor: pointer;
+}
+
+.gallery-pagination__list li a {
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50px;
+  border: 1px solid #cdcac1;
+  color: #cdcac1;
+  font-family: $fira;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: $primary-color;
+  }
+}
+
+.gallery-pagination__list li .is-active {
+  color: $accent-color;
+  background-color: $primary-color;
+}
+
 .active {
   border: 1px solid $secondary-color;
   background-color: $secondary-color;
@@ -503,14 +584,10 @@
 }
 
 .galerry-home__container--mob {
-  display: block;
   position: absolute;
   bottom: 44px;
   left: 0;
   overflow: hidden;
-  @media screen and (min-width: $tablet1) {
-    display: none;
-  }
 }
 
 .gallery__wrap.swiper-wrapper {
@@ -545,30 +622,34 @@
 }
 
 .gallery-home__container {
-  display: none;
   width: 100%;
-  @media screen and (min-width: $tablet1) {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    position: absolute;
-    left: 0;
-    top: 98px;
-    max-height: 737px;
-    overflow: hidden;
-  }
+  width: $tablet1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: baseline;
+  gap: 16px;
+  margin-left: -50px;
+  margin-right: -50px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  height: 737px;
+
   @media screen and (min-width: $tablet2) {
-    top: 119px;
+    width: $tablet2;
+    margin-left: -60px;
+    margin-right: -60px;
   }
   @media screen and (min-width: $desktop) {
-    max-height: 986px;
-    top: 120px;
+    height: 986px;
+    width: $desktop;
+    margin-left: -384px;
+    margin-right: -384px;
   }
 }
 
 .gallery__link {
-  width: 245px;
+  width: 210px;
   height: 235px;
   cursor: zoom-in;
 
@@ -576,9 +657,16 @@
     width: 320px;
     height: 235px;
   }
+
   @media screen and (min-width: $desktop) {
     width: 460px;
     height: 318px;
+  }
+
+  @media screen and (max-width: 1919px) {
+    &:nth-child(even) {
+      width: 150px;
+    }
   }
 }
 

@@ -4,7 +4,7 @@ Template Name: horses
 */
 get_header();
 ?>
-<main class="container">
+<main class="main container">
     <h1 class='visually-hidden'>Коні української породи Щербаті Цуглі  </h1>
         
   <?php get_template_part( 'template-parts/hero'); ?>
@@ -32,6 +32,8 @@ get_header();
 </div>
 
 </section>
+
+<?php get_template_part( 'template-parts/buttonTop'); ?>
 
 </main>
 

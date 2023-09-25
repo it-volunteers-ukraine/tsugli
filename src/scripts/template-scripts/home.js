@@ -1,21 +1,23 @@
+// Swiper
 const swiper = new Swiper(".swiper", {
   slidesPerView: 1.51,
   spaceBetween: 16,
+  allowTouchMove: true,
+
   breakpoints: {
     768: {
       slidesPerView: 3,
       spaceBetween: 32,
+      allowTouchMove: false,
     },
     992: {
+      slidesPerView: 3,
       spaceBetween: 44,
+      allowTouchMove: false,
     },
   },
 });
-
-const screenWidth = window.innerWidth;
-swiper.allowTouchMove = screenWidth <= 768;
-
-const swiperGallery = new Swiper(".swiper-gallery", {
+const swiperHomeGallery = new Swiper(".swiper-gallery", {
   slidesPerView: 1.29,
   spaceBetween: 10,
   pagination: {
@@ -46,48 +48,7 @@ galleryButtons.forEach(function (button) {
         item.style.display = "none";
       }
     });
-    swiperGallery.slideTo(0);
-    swiperGallery.update();
+    swiperHomeGallery.slideTo(0);
+    swiperHomeGallery.update();
   });
 });
-
-// LightBox
-const galleryContainer = document.querySelector(".gallery__container");
-galleryContainer.addEventListener("click", onImageClick);
-
-function onImageClick(event) {
-  event.preventDefault();
-
-  if (event.target.nodeName !== "IMG") {
-    return;
-  } else {
-    onOpenModalWindow(event);
-  }
-}
-
-function onOpenModalWindow(event) {
-  const instance = basicLightbox.create(
-    `
-    <img
-    src = "${event.target.dataset.source}"
-    width="800" 
-    height="600"
-    >`,
-    {
-      onShow: (instance) => {
-        galleryContainer.addEventListener("keydown", onEscPress);
-      },
-      onClose: (instance) => {
-        galleryContainer.removeEventListener("keydown", onEscPress);
-      },
-    }
-  );
-
-  instance.show();
-
-  function onEscPress(event) {
-    if (event.code === "Escape") {
-      instance.close();
-    }
-  }
-}

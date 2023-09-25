@@ -49,37 +49,37 @@
 
         <div class="footer-info">
 
-           <?php echo do_shortcode('[contact-form-7 id="e76af3c" title="Контактна форма"]'); ?>
+           <?php echo do_shortcode('[contact-form-7 id="d7c96d9" title="Контактна форма-футер"]'); ?>
 
                              <ul class="footer-networks">
                                 <li class="footer-networks__item" >
-                                    <a href="#">
+                                    <a href="<?php echo esc_attr(get_field('viber', 18));?>" aria-label="Посилання на вайбер">
                                     <svg class="footer-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="footer-networks__item">
-                                    <a href="#">
+                                    <a href="<?php echo esc_attr(get_field('facebook', 18));?>"aria-label="Посилання на фейсбук">
                                     <svg class="footer-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-fb"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="footer-networks__item">
-                                    <a href="#"
+                                    <a href="mailto: <?php echo esc_attr(get_field('email', 18));?>" aria-label="Посилання на адресу електорнної пошти"
                                     ><svg class="footer-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-mail"></use></svg></a>
                                 </li>
                                 <li class="footer-networks__item">
-                                    <a href="#">
+                                    <a href="<?php echo esc_attr(get_field('instagram', 18));?>" aria-label="Посилання на інстаграм">
                                     <svg class="footer-networks__icon" width="44px" height="44px">
                                     <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-instagram"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="footer-networks__item">
-                                    <a href="#">
+                                    <a href="<?php echo esc_attr(get_field('whatsapp', 18));?>" aria-label="Посилання на вотсапп">
                                     <svg class="footer-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-whatsapp"></use></svg></a>
                                 </li>

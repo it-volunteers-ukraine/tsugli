@@ -5,7 +5,7 @@ Template Name: museum
 
 get_header();
 ?>
-<main class="container">
+<main class="main container">
     <h1 class='visually-hidden'>Музей</h1>
 <?php get_template_part( 'template-parts/hero'); ?>
 
@@ -25,7 +25,7 @@ get_header();
 
 <?php get_template_part( 'template-parts/gallery'); ?>
 
-<section class="section ">
+<section class="events-section section ">
 		<?php if ( have_posts() ) : ?>
 
 				<?php
@@ -37,6 +37,8 @@ get_header();
 		endif;
 		?>
 </section>
+
+<?php get_template_part( 'template-parts/buttonTop'); ?>
 
 
 </main>

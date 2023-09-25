@@ -1,8 +1,7 @@
 <section class= "gallery section">
 <div class= "gallery__wrapper">
-
-        <?php if(have_rows('gallery')):?>
-        <div class="gallery__container">
+<?php if(have_rows('gallery')):?>
+        <div class="gallery__container lightBox">
         <?php while(have_rows('gallery')): the_row();?>
                 <?php   
         $image=get_sub_field('gallery-img');
@@ -14,9 +13,24 @@
           </a>
 
 <?php endwhile; ?>
-       </div>
-<?php endif; ?> 
 
+       </div>
+ <?php endif; ?> 
+    </ul>
+
+    
+    <div class="gallery-pagination">
+    <ul class="gallery-pagination__list">
+        <?php
+        $total_images = count(get_field('gallery')); // Отримуємо загальну кількість зображень
+        $images_per_page = 8; // Кількість зображень на сторінці
+        $total_pages = ceil($total_images / $images_per_page); // Загальна кількість сторінок
+
+        for ($i = 1; $i <= $total_pages; $i++) {
+            echo '<li><a  "href="#" data-page="' . $i . '">' . $i . '</a></li>';
+        }
+        ?>
+</div>
 
 <?php if (have_rows('gallery')) : ?>
     <div class="galerry__container--mob swiper-gallery">

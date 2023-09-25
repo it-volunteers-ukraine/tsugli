@@ -32,6 +32,7 @@ function stylesTemplatesParts() {
 }
 function styles() {
   return src("src/styles/main.scss")
+    .pipe(plumber())
     .pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"] }))
     .pipe(scss({ outputStyle: "compressed" }))
     .pipe(dest("assets/styles"));

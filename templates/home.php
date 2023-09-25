@@ -4,12 +4,12 @@ Template Name: home
 */
 get_header();
 ?>
-<main class="container" >
+<main class="main container" >
 <section class="hero-home section" style="background: linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img') ?>); background-size: cover; background-repeat: no-repeat; background-position: center; ">
     <h1 class="title">Коні породи Щербаті Цуглі</h1>
     <h2 class="hero-home__title"><?php the_field('hero-title'); ?></h2>
     <p class="hero__text"><?php the_field('hero-text'); ?></p>
-    <a class="hero__button" href="<?php echo get_permalink(12); ?>"><?php the_field('hero-button'); ?> 
+    <a class="hero__button" href="<?php echo get_permalink(7); ?>"><?php the_field('hero-button'); ?> 
         <svg class="hero__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
@@ -17,7 +17,7 @@ get_header();
 </section> 
 
 <section class="activities ">
-     <div class="swiper swiper-activities">
+     <div class="swiper">
     <ul class="activities__list swiper-wrapper">
         
         <li class="activities__item swiper-slide">
@@ -56,7 +56,65 @@ get_header();
 </div>
  </section>
 
- <section class="gallery section">
+ <section class="gallery-desktop  section">
+   <div class="gallery-home__wrapper ">
+
+          <div class="gallery__head">
+              <h2 class="gallery__title"><?php the_field('gallery-text'); ?></h2>
+              <ul class="gallery__buttons">
+                <li>
+                  <button class="gallery__button" data-category="museum">Музей-Хаб</button>
+                </li>
+                <li>
+                  <button class="gallery__button" data-category="horses">Поліські Коні</button>
+                </li>
+                <li>
+                  <button class="gallery__button" data-category="events">Події</button>
+                </li>
+                <li>
+                  <button class="gallery__button" data-category="excursions">Екскурсії</button>
+                </li>
+                <li>
+                  <button class="gallery__button active" data-category="all">Всі</button>
+                </li>
+              </ul>
+           </div>
+
+
+
+<?php if(have_rows('gallery')):?>
+        <div class="gallery-home__container lightBox">
+        <?php while(have_rows('gallery')): the_row();?>
+                <?php   
+        $image=get_sub_field('img');
+        $category = get_sub_field('category'); 
+        $alt = get_sub_field('alt');
+      ?>
+
+          <a class="gallery__link gallery__item" data-category="<?php echo $category; ?>"  href="<?php echo $image['url']; ?>">
+            <img class="gallery__image" src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>"  data-source="<?php echo $image['url']; ?>"/>
+          </a>
+
+<?php endwhile; ?>
+<?php endif; ?> 
+    </div>
+
+        <div class="gallery-pagination__box">
+          <ul class="gallery-pagination__list">
+              <?php
+              $total_images = count(get_field('gallery')); 
+              $images_per_page = 12; 
+              $total_pages = ceil($total_images / $images_per_page); 
+
+              for ($i = 1; $i <= $total_pages; $i++) {
+                  echo '<li><a  "href="#" data-page="' . $i . '">' . $i . '</a></li>';
+              }
+              ?>
+        </div>
+</section>
+
+
+ <section class="gallery-mob section">
         <div class="gallery-home__wrapper ">
           <h2 class="gallery__title"><?php the_field('gallery-text'); ?></h2>
               <ul class="gallery__buttons">
@@ -78,25 +136,6 @@ get_header();
               </ul>
               <div class="swiper-pagination"></div>
 
-        </div>
-
-<?php if(have_rows('gallery')):?>
-        <div class="gallery-home__container">
-        <?php while(have_rows('gallery')): the_row();?>
-                <?php   
-        $image=get_sub_field('img');
-        $category = get_sub_field('category'); 
-        ?>
-
-          <a class="gallery__link gallery__item" data-category="<?php echo $category; ?>"  href="<?php echo $image['url']; ?>">
-            <img class="gallery__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" data-source="<?php echo $image['url']; ?>"/>
-          </a>
-
-<?php endwhile; ?>
-       </div>
-<?php endif; ?> 
-
-
 <?php if (have_rows('gallery')) : ?>
     <div class="galerry-home__container--mob swiper-gallery">
         <div class="gallery__wrap swiper-wrapper">
@@ -117,7 +156,7 @@ get_header();
 
 </section>
 
-<section class="section ">
+<section class="section events-section ">
 		<?php if ( have_posts() ) : ?>
 
 				<?php
@@ -129,6 +168,9 @@ get_header();
 		endif;
 		?>
 </section>
+
+<?php get_template_part( 'template-parts/buttonTop'); ?>
+
 </main>
 
 <?php get_footer(); ?>

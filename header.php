@@ -17,8 +17,6 @@
                             echo get_custom_logo();
                         }
                     ?>  
-
-
                 <button  class="button-menu is-open"
                     type="button"
                     aria-controls="menu-container"
@@ -28,8 +26,7 @@
                         <use class="button-menu__cros" href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-x"></use>
                     </svg>
                 </button>     
-                    
-                 
+                                     
                  <div class="menu-container" id="menu-container" data-menu>
 
                     <nav class="nav-menu"> 
@@ -47,46 +44,46 @@ Temporary put # instead of <?php echo esc_attr(get_field('instagram_link', 16));
                             ?>   
                     </nav> 
                     <div class="header__mobile">
-                                <a class="header__button" href="<?php echo get_permalink(38); ?>"
+                                <a class="header__button" href="<?php echo get_permalink(20); ?>"
                                     >Задонатити
                                 </a>   
 
                                 <ul class="header-networks">
                                 <li class="header-networks__item" >
-                                    <a href="#">
+                                    <a href="<?php echo esc_attr(get_field('viber', 18));?>" aria-label="Посилання на вайбер">
                                     <svg class="header-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="header-networks__item">
-                                    <a href="#">
-                                    <svg class="header-networks__icon" width="44px" height="44px">
+                                    <a href="<?php echo esc_attr(get_field('facebook', 18));?>" aria-label="Посилання на фейсбук">
+                                    <svg class="header-networks__icon" width="44px" height="44px" >
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-fb"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="header-networks__item">
-                                    <a href="#"
+                                    <a href="mailto: <?php echo esc_attr(get_field('email', 18));?>" aria-label="Посилання на адресу електорнної пошти"
                                     ><svg class="header-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-mail"></use></svg></a>
                                 </li>
                                 <li class="header-networks__item">
-                                    <a href="#">
+                                    <a href="<?php echo esc_attr(get_field('instagram', 18));?>" aria-label="Посилання на інстаграм">
                                     <svg class="header-networks__icon" width="44px" height="44px">
                                     <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-instagram"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="header-networks__item">
-                                    <a href="#">
+                                    <a href="<?php echo esc_attr(get_field('whatsapp', 18));?>" aria-label="Посилання на вотсапп">
                                     <svg class="header-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-whatsapp"></use></svg></a>
                                 </li>
                                 </ul>
                                 </div>
                      </div>
-                    <a class="header__link" href="<?php echo get_permalink(38); ?>"
+                    <a class="header__link" href="<?php echo get_permalink(20); ?>"
                      >Задонатити
                             <svg class="offering__icon" width="24px" height="24px">
                                 <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
