@@ -87,7 +87,6 @@
     }
     @media screen and (min-width: $desktop) {
       justify-content: space-between;
-
     }
   }
 
@@ -100,37 +99,37 @@
 
 // contact form + location map
 .contact {
-  margin-bottom: 72px;
+  margin-bottom: 160px;
   padding: 24px 16px 32px;
   background-color: $accent-color;
   border-radius: $container-border-radius;
   box-shadow: $container-shadow;
   @media screen and (min-width: $tablet1) {
-    margin-bottom: 80px;
     padding: 32px;
   }
   @media screen and (min-width: $desktop) {
-    margin-bottom: 296px;
-    margin-right: 50px;
-    padding: 40px 64px;
+    margin-bottom: 263px;
+    margin-right: 64px;
+    padding: 40px 24px 40px 64px;
     display: flex;
     flex-direction: row-reverse;
   }
 
   svg {
-    margin-right: 28px;
+    margin-right: 24px;
     width: 30px;
     height: 30px;
     fill: $primary-color;
     @media screen and (min-width: $tablet1) {
-      margin-right: 33px;
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
     }
   }
 
   .location-wrapper {
-
+    @media screen and (min-width: $desktop) {
+      min-width: 540px;
+    }
   }
 
   .form-wrapper {
@@ -143,8 +142,9 @@
       align-items: center;
     }
     @media screen and (min-width: $desktop) {
-      margin-right: 64px;
-      align-items: flex-start;
+      padding-right: 64px;
+      align-items: stretch;
+      min-width: 508px;
     }
   }
 
@@ -176,9 +176,9 @@
     border-radius: $container-border-radius;
     overflow: hidden;
     @media screen and (min-width: $desktop) {
-      margin-right: -114px;
-      height: 660px;
-      margin-bottom: -90px;
+      margin-right: -88px;
+      height: 670px;
+      margin-bottom: -100px;
     }
   }
 
