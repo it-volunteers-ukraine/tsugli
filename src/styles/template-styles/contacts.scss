@@ -1,340 +1,285 @@
 @import "../variables.scss";
 
-@mixin wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-@mixin background-container {
-  display: flex;
-
-  border-radius: $container-border-radius;
+//social links block
+.socials {
+  margin-bottom: 72px;
+  padding: 16px;
   background-color: $accent-color;
+  border-radius: $container-border-radius;
   box-shadow: $container-shadow;
-}
-
-@mixin input-inside-icon {
-  display: inline;
-  position: absolute;
-  left: 400px;
-  top: 4px;
-
-  @media screen and (max-width: $tablet1) {
-    left: 310px;
+  font-family: $fira;
+  @media screen and (min-width: $tablet1) {
+    margin-bottom: 80px;
+    padding: 32px;
+    font-size: 21px;
   }
-
-  @media screen and (max-width: $mobile) {
-    left: 250px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 132px;
+    padding: 64px 80px;
+    font-size: 24px;
   }
-}
-
-.page-wrapper {
-  position: relative;
-}
-
-.content-container {
-  width: 100%;
-  max-width: 1280px;
-}
-
-.menu-contacts-menu-container,
-.wrapper--center {
-  @include wrapper;
 
   a {
-    color: $primary-color;
+    color: inherit;
   }
 
-  a:visited {
-    color: $primary-color;
-  }
-}
-
-.contacts__list {
-  @include background-container;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 132px 32px 132px 32px;
-  padding: 64px;
-
-  list-style-type: none;
-  text-decoration: none;
-
-  font-family: $fira;
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: 2%;
-
-  @media screen and (max-width: $tablet2) {
-    font-size: 21px;
-    padding: 32px;
-    margin: 80px 32px 80px 32px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $tablet1) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 48px;
+    }
+    @media screen and (min-width: $tablet2) {
+      justify-content: space-between;
+      gap: 24px;
+    }
   }
 
-  @media screen and (max-width: $mobile) {
-    font-size: 16px;
-    letter-spacing: 0.42px;
-    line-height: 26px;
+  svg {
+    margin-right: 16px;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    fill: $primary-color;
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: $tablet1) {
+      margin-right: 0;
+      padding: 0;
+      width: 36px;
+      height: 36px;
+    }
 
-    padding: 0 16px 16px 16px;
-    margin: 72px 16px 72px 16px;
-
-    justify-content: flex-start;
+    &:hover, &:focus {
+      transform: scale(1.1);
+    }
   }
-}
 
-.contacts__item {
-  text-align: center;
-
-  @media screen and (max-width: $tablet1) {
-    margin-top: 32px;
+  span {
+    @media screen and (min-width: $tablet1) {
+      margin-top: 16px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-top: 24px;
+    }
   }
 
-  @media screen and (max-width: $mobile) {
+  .messengers {
+    @media screen and (min-width: $tablet1) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .social-box {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top: 16px;
-  }
-}
-
-.contacts__item:before {
-  display: block;
-  width: 44px;
-  height: 44px;
-  background-repeat: no-repeat;
-  margin: 0 auto 24px auto;
-
-  @media screen and (max-width: $tablet2) {
     margin-bottom: 16px;
-  }
-
-  @media screen and (max-width: $mobile) {
-    transform: scale(0.75);
-    margin-bottom: 0;
-  }
-}
-
-.contacts__item--messengers:before {
-  @media screen and (max-width: $mobile) {
-    margin-left: -20px;
-  }
-}
-
-.form-map__container {
-  @include background-container;
-
-  margin: 0 82px 0 32px;
-  padding: 40px 64px;
-
-  color: $secondary-color;
-  font-family: $fira;
-
-  @media screen and (max-width: $tablet2) {
-    flex-direction: column-reverse;
-    margin: 0 32px 0 32px;
-  }
-
-  @media screen and (max-width: $tablet1) {
-    padding: 40px 2%;
-  }
-
-  @media screen and (max-width: $mobile) {
-    padding: 40px 16px;
-  }
-}
-
-.form__container {
-  width: 50%;
-
-  p {
-    width: 100%;
-    margin-top: 32px;
-    display: inline-block;
-  }
-
-  h2 {
-    font-family: $amatic;
-    font-size: 56px;
-    font-weight: bold;
-  }
-
-  .wpcf7-form-control-wrap {
-    display: inline-flex;
-    flex-wrap: wrap;
-  }
-
-  .wpcf7-email,
-  .wpcf7-text,
-  .wpcf7-number,
-  .wpcf7-textarea {
-    line-height: 22px;
-    padding: 8px;
-    width: 444px;
-    margin-top: 5px;
-    border-radius: $input-border-radius;
-
-    @media screen and (max-width: $tablet1) {
-      width: 350px;
+    @media screen and (min-width: $tablet1) {
+      flex-direction: column;
+      margin-bottom: 0;
     }
-
-    @media screen and (max-width: $mobile) {
-      width: 290px;
+    @media screen and (min-width: $desktop) {
+      justify-content: space-between;
     }
   }
 
-  .wpcf7-response-output {
-    border-color: $error !important;
-    border-radius: $input-border-radius !important;
-    width: 420px !important;
+  a.social-box:hover {
+    svg {
+      transform: scale(1.2);
+    }
+  }
+}
+
+// contact form + location map
+.contact {
+  margin-bottom: 160px;
+  padding: 24px 16px 32px;
+  background-color: $accent-color;
+  border-radius: $container-border-radius;
+  box-shadow: $container-shadow;
+  @media screen and (min-width: $tablet1) {
+    padding: 32px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 263px;
+    margin-right: 64px;
+    padding: 40px 24px 40px 64px;
+    display: flex;
+    flex-direction: row-reverse;
   }
 
-  .wpcf7-not-valid {
-    border-color: $error !important;
+  svg {
+    margin-right: 24px;
+    width: 30px;
+    height: 30px;
+    fill: $primary-color;
+    @media screen and (min-width: $tablet1) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
-  .wpcf7-not-valid-tip {
-    color: $error !important;
-    margin-top: 5px;
-    display: inline-block;
-    width: 80%;
+  .location-wrapper {
+    @media screen and (min-width: $desktop) {
+      min-width: 540px;
+    }
   }
 
-  //Better put main button styles in mixins
+  .form-wrapper {
+    max-width: 460px;
+    margin: 0 auto;
 
-  .wpcf7-submit {
-    display: inline-flex;
-    justify-content: center;
-    padding: 16px 44px 16px 24px;
+    @media screen and (min-width: $tablet1) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-right: 64px;
+      align-items: stretch;
+      min-width: 508px;
+    }
+  }
+
+  .address {
+    max-width: 640px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: $fira;
+    font-size: 18px;
+    line-height: 26px;
     margin-bottom: 24px;
-    width: 100%;
-    max-width: 150px;
-    background-color: $secondary-color;
-    color: $button-color;
-    font-size: 20px;
-    letter-spacing: 0.4px;
-    font-weight: 700;
+    @media screen and (min-width: $tablet1) {
+      font-size: 21px;
+      margin-bottom: 32px;
+    }
+    @media screen and (min-width: $tablet2) {
+      margin: 0 auto 24px;
+    }
+    @media screen and (min-width: $desktop) {
+      max-width: unset;
+    }
+  }
+
+  .map {
+    margin-bottom: 32px;
+    height: 400px;
+    box-shadow: $container-shadow;
     border-radius: $container-border-radius;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    @media screen and (min-width: $desktop) {
+      margin-right: -88px;
+      height: 670px;
+      margin-bottom: -100px;
+    }
+  }
 
-    &:hover,
-    &:focus {
-      background-color: $primary-color;
+  .wpcf7 {
+    width: 100%;
+  }
+
+  form {
+    margin-bottom: 0;
+
+    .wpcf7-form-control {
+      width: 100%;
+      min-height: 56px;
+      margin-bottom: 30px;
+      padding: 8px 48px 8px 14px;
+      border-radius: $container-border-radius;
+      border-color: $secondary-color;
+      font-family: $fira;
+      background-position: right 8px top 8px;
+      background-repeat: no-repeat;
+
+      &.wpcf7-text, &.wpcf7-textarea {
+        color: $primary-color;
+      }
+
+      &.input-name {
+        background-image: url("../../../assets/images/input_avatar_icon.svg");
+      }
+
+      &.input-email {
+        background-image: url("../../../assets/images/input_email_icon.svg");
+      }
+
+      &.input-telephone {
+        background-image: url("../../../assets/images/input_phone_icon.svg");
+      }
+
+      &.input-message {
+        margin-bottom: 16px;
+        background-image: url("../../../assets/images/input_pen_icon.svg");
+      }
+    }
+
+    span .wpcf7-not-valid {
+      border: 1px solid $error;
+    }
+
+    .wpcf7-not-valid-tip {
+      top: 36px;
+      color: $error;
+    }
+
+    input[type=submit] {
+      width: fit-content;
+      margin-bottom: 0;
+      border: none;
+      background-color: $secondary-color;
+      color: $button-color;
+      font-family: $amatic;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.48px;
       cursor: pointer;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      background-image: url("../../../assets/images/button_arrow_icon.svg");
+      background-position: right 16px top 50%;
+      background-repeat: no-repeat;
+      @media screen and (min-width: $tablet1) {
+        display: block;
+        margin: 0 auto;
+      }
+      @media screen and (min-width: $desktop) {
+        margin: 0;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $primary-color;
+      }
     }
 
-    &:after {
-      z-index: 1000;
-      display: inline;
-      position: absolute;
-    }
-  }
-
-  @media screen and (max-width: $tablet2) {
-    width: 100%;
-    margin-top: 32px;
-    text-align: center;
-
-    p {
-      width: 440px;
-      text-align: start;
-    }
-
-    p:last-of-type {
-      text-align: center;
-      margin-left: 10%;
-    }
-
-    > p:last-of-type {
-      width: 80%;
-      margin-left: 0;
+    br {
+      display: none;
     }
   }
 
-  @media screen and (max-width: $tablet1) {
-    p {
-      margin-left: 0;
+  .form-title {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 1.12px;
+    @media screen and (min-width: $tablet1) {
+      font-size: 56px;
     }
   }
 
-  @media screen and (max-width: $mobile) {
-    width: 100%;
-    margin-top: 32px;
-    text-align: start;
-
-    p {
-      width: calc(100% - 32px);
-    }
-  }
-}
-
-span[data-name="your-name"]:after,
-span[data-name="your-email"]:after,
-span[data-name="your-number"]:after,
-span[data-name="your-message"]:after {
-  @include input-inside-icon;
-}
-
-.map__container {
-  font-size: 21px;
-  margin-top: 10px;
-  width: 50%;
-}
-
-.adress {
-  display: flex;
-
-  img {
-    width: 44px;
-    height: 44px;
-    margin-right: 10px;
-  }
-
-  @media screen and (max-width: $tablet1) {
-    margin-left: 5%;
-  }
-}
-
-.header-image {
-  background-size: cover;
-  height: 574px;
-  width: 100%;
-
-  h1 {
-    font-size: 70px;
-    font-weight: bold;
-    margin-top: 80px;
-  }
-
-  @media screen and (max-width: 1280px) {
-    h1 {
-      margin-left: 5%;
-    }
-  }
-
-  @media screen and (max-width: $tablet2) {
-    height: 296px;
-
-    h1 {
-      font-size: 48px;
-      margin-top: 32px;
-    }
-  }
-
-  @media screen and (max-width: $tablet1) {
-    height: 233px;
-  }
-
-  @media screen and (max-width: $mobile) {
-    background-size: cover;
-    height: 196px;
-
-    h1 {
-      font-size: 40px;
-      margin-top: 25px;
-    }
+  .form-text {
+    margin-bottom: 20px;
+    line-height: 137.5%;
+    letter-spacing: 0.32px;
+    color: $secondary-color;
+    font-family: $fira;
   }
 }
