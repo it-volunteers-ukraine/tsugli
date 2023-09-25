@@ -30,8 +30,10 @@ const closeBtn = document.querySelector(".pop-up__button");
 document.addEventListener(
   "wpcf7mailsent",
   (e) => {
-    console.log(e.detail);
-    popUp.style.display = "block";
+    const formId = e.detail.contactFormId;
+    if (formId === 148) {
+      popUp.style.display = "block";
+    }
   },
   false
 );

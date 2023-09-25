@@ -103,7 +103,7 @@ foreach ($categories as $category) {
 	<h3 class="sidebar__title">Підпишись</h3>
 	<div class="sidebar-form sidebar__wrapp">
 		<p class="sidebar-form__text">Будь у курсі, не пропусти цікаві події.</p>
-		<?php echo do_shortcode('[contact-form-7 id="e76af3c" title="Контактна форма"]'); ?>
+		<?php echo do_shortcode('[contact-form-7 id="d7c96d9" title="Контактна форма-футер"]'); ?>
 	</div>
 </div>
 
