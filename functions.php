@@ -35,7 +35,7 @@ function wp_it_volunteers_scripts() {
   wp_enqueue_style( 'toastify-style','https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css', array('main') );
 
 
-  wp_enqueue_script( 'wp-it-volunteers-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array(), false, true );
+  wp_enqueue_script( 'wp-it-volunteers-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array('swiper-scripts'), false, true );
   wp_enqueue_script( 'swiper-scripts', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', array(), false, true );
   wp_enqueue_script( 'lightbox-scripts', 'https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js', array(), false, true );
   wp_enqueue_script( 'toastify-scripts', 'https://cdn.jsdelivr.net/npm/toastify-js', array(), false, true );
@@ -189,4 +189,54 @@ function register_tsugli_sidebar(){
 		) );
 }
 
+// Comments
+
+
+function tsugli_comments($comment, $args, $depth) {
+    $author_name = get_comment_author();
+    $comment_date = get_comment_date();
+    $comment_text = get_comment_text();
+
+    echo '<li class="comment__item">';
+    echo '<div class="comment__info">';
+    echo '<span class="comment__autor">' . esc_html($author_name) . '</span>';
+    echo '<span class="comment__date">' . esc_html($comment_date) . '</span>';
+    echo '</div>';
+    echo '<span class="comment__text">' . esc_html($comment_text). '</span>';
+    echo '</li>';
+}
+
+
+add_action( 'comment_form_fields', 'tsugli_change_all_fields_order', 25 );
+ 
+function tsugli_change_all_fields_order( $comment_fields ) {
+ 
+	$order = array( 'author', 'email', 'comment' );
+ 
+	$new_fields = array();
+ 
+	foreach( $order as $index ) {
+		$new_fields[ $index ] = $comment_fields[ $index ];
+	}
+ 
+	return $new_fields;
+ 
+}
+
+add_filter('comment_form_defaults', 'tsugli_comment_form_defaults');
+
+function tsugli_comment_form_defaults($defaults) {
+    $defaults['comment_field'] = '<div class="comment-form-comment">
+        <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="*Текст"></textarea>
+        </div>';
+    return $defaults;
+}
+
+
+add_filter('comment_form_defaults', 'tsugli_remove_comment_form_label');
+
+function tsugli_remove_comment_form_label($defaults) {
+    $defaults['comment_notes_before'] = '';
+    return $defaults;
+}
 

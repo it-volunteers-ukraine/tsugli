@@ -60,7 +60,7 @@
                                     </a>
                                 </li>
                                 <li class="footer-networks__item">
-                                    <a href="<?php echo esc_attr(get_field('facebook', 18));?>"aria-label="Посилання на фейсбук">
+                                    <a href="<?php echo esc_attr(get_field('facebook', 18));?>" target="_blank" aria-label="Посилання на фейсбук">
                                     <svg class="footer-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-fb"></use>
                                     </svg>
@@ -72,14 +72,14 @@
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-mail"></use></svg></a>
                                 </li>
                                 <li class="footer-networks__item">
-                                    <a href="<?php echo esc_attr(get_field('instagram', 18));?>" aria-label="Посилання на інстаграм">
+                                    <a href="<?php echo esc_attr(get_field('instagram', 18));?>" target="_blank" aria-label="Посилання на інстаграм">
                                     <svg class="footer-networks__icon" width="44px" height="44px">
                                     <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-instagram"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="footer-networks__item">
-                                    <a href="<?php echo esc_attr(get_field('whatsapp', 18));?>" aria-label="Посилання на вотсапп">
+                                    <a href="<?php echo esc_attr(get_field('whatsapp', 18));?>" target="_blank" aria-label="Посилання на вотсапп">
                                     <svg class="footer-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-whatsapp"></use></svg></a>
                                 </li>
