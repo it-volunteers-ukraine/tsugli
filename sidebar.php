@@ -25,8 +25,8 @@ if ( ! is_active_sidebar( 'sidebar' ) ) {
 		<?php
 $categories = get_categories(); ?>
 <li class="categories__item categories__item--contrast"><a href="<?php echo get_permalink(17); ?>">
-<span>Всі категорії</span> 
-<span class="categories__count categories__count--contrast"><?php echo count($categories); ?></span></a></li>
+<span>Всі </span> 
+    <span class="categories__count categories__count--contrast"><?php echo wp_count_posts()->publish; ?></span>
 
 <?php
 foreach ($categories as $category) {
@@ -103,7 +103,7 @@ foreach ($categories as $category) {
 	<h3 class="sidebar__title">Підпишись</h3>
 	<div class="sidebar-form sidebar__wrapp">
 		<p class="sidebar-form__text">Будь у курсі, не пропусти цікаві події.</p>
-		<?php echo do_shortcode('[contact-form-7 id="e76af3c" title="Контактна форма"]'); ?>
+		<?php echo do_shortcode('[contact-form-7 id="d7c96d9" title="Контактна форма-футер"]'); ?>
 	</div>
 </div>
 
@@ -114,7 +114,7 @@ foreach ($categories as $category) {
 			<div class="sidebar-donate__img">
           <img  src="<?php bloginfo('template_url'); ?>/assets/images/pov-woman-feeds-wild-horse 1.jpg" alt="Жінка з рук кормить коня ">
 	</div>
-	    <a class="sidebar-donate__link" href="<?php echo get_permalink(11112); ?>">Задонатити
+	    <a class="sidebar-donate__link" href="<?php echo get_permalink(20); ?>">Задонатити
         <svg class="events__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
