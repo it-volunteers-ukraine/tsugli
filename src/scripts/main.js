@@ -40,3 +40,9 @@ function onOpenModalHomeWindow(event) {
     }
   }
 }
+
+// Swiper
+const articleSwiper = new Swiper(".swiper-article", {
+  slidesPerView: "auto",
+  spaceBetween: 16,
+});

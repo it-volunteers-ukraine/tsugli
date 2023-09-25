@@ -31,33 +31,33 @@ get_header();
 	<span class="article-header__text" >Поділитися</span>
 	 <ul class="article-header__list">
                                 <li class="article-header__item" >
-                                    <a href="#" aria-label="Поділитися у вайбер">
+                                    <a href="viber://forward?text=<?php the_permalink(); ?>" aria-label="Поділитися у вайбер">
                                     <svg class="article-header__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="article-header__item">
-                                    <a href="#" aria-label="Поділитися у фейсбук">
-                                    <svg class="article-header__icon" width="44px" height="44px" >
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" aria-label="Поділитися у фейсбук">
+                         			<svg class="article-header__icon" width="44px" height="44px" >
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-fb"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="article-header__item">
-                                    <a href="#" aria-label="Поділитися через електорнну пошту"
+                                    <a href="mailto:?subject=Заголовок листа&body=<?php the_permalink(); ?>" aria-label="Поділитися через електорнну пошту"
                                     ><svg class="article-header__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-mail"></use></svg></a>
                                 </li>
                                 <li class="article-header__item">
-                                    <a href="#" aria-label="Поділитися у інстаграм">
+                                    <a href="<?php echo esc_attr(get_field('instagram', 18));?>" target="_blank" aria-label="Поділитися у інстаграм">
                                     <svg class="article-header__icon" width="44px" height="44px">
                                     <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-instagram"></use>
                                     </svg>
                                     </a>
                                 </li>
                                 <li class="article-header__item">
-                                    <a href="#"aria-label="Поділитися у вотсапп">
+                                    <a href="https://wa.me/?text=<?php the_permalink(); ?>" target="_blank" aria-label="Поділитися у вотсапп">
                                     <svg class="article-header__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-whatsapp"></use></svg></a>
                                 </li>
@@ -76,8 +76,11 @@ get_header();
 				comments_template('/comments.php');
 			endif;
 
-		endwhile; // End of the loop.
+		endwhile; 
 		?>
+
+
+
 </div>
 
 	<div class='events__sidebar'>
