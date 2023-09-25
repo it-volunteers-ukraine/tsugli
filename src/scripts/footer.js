@@ -29,11 +29,8 @@ const closeBtn = document.querySelector(".pop-up__button");
 
 document.addEventListener(
   "wpcf7mailsent",
-  (e) => {
-    const formId = e.detail.contactFormId;
-    if (formId === 148) {
-      popUp.style.display = "block";
-    }
+  () => {
+    popUp.style.display = "block";
   },
   false
 );
