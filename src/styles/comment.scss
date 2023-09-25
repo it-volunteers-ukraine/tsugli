@@ -139,7 +139,8 @@
 }
 
 .comment__submit {
-  padding: 12px 24px;
+  position: relative;
+  padding: 14px 40px 14px 18px;
   color: $button-color;
   font-size: 20px;
   font-weight: 700;
@@ -155,6 +156,16 @@
   &:focus {
     background-color: $primary-color;
   }
+}
+
+.comment__submit::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  right: 12px;
+  background-image: url(../../assets/images/button_arrow_icon.svg);
 }
 
 .comment-form-author,

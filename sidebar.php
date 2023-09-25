@@ -114,7 +114,7 @@ foreach ($categories as $category) {
 			<div class="sidebar-donate__img">
           <img  src="<?php bloginfo('template_url'); ?>/assets/images/pov-woman-feeds-wild-horse 1.jpg" alt="Жінка з рук кормить коня ">
 	</div>
-	    <a class="sidebar-donate__link" href="<?php echo get_permalink(11112); ?>">Задонатити
+	    <a class="sidebar-donate__link" href="<?php echo get_permalink(20); ?>">Задонатити
         <svg class="events__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>

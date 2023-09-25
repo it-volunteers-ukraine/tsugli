@@ -21,11 +21,11 @@ get_header();
 <div class='article__container'>
 
 <div class="article-header">
-<button type="button"  class="article-header__button" aria-label="Кнопка для поверенення на сторінку назад">
+<a  href="<?php echo get_permalink(16); ?>" class="article-header__button" aria-label="Кнопка для поверенення на сторінку подій">
   <svg width="24px" height="24px">
      <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
   </svg>
-</button>
+</a>
 
 <div class="article-header__networks">
 	<span class="article-header__text" >Поділитися</span>
@@ -71,14 +71,7 @@ get_header();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			// the_post_navigation(
-			// 	array(
-			// 		'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'wp-it-volunteers' ) . '</span> <span class="nav-title">%title</span>',
-			// 		'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'wp-it-volunteers' ) . '</span> <span class="nav-title">%title</span>',
-			// 	)
-			// );
-
-				// If comments are open or we have at least one comment, load up the comment template.
+					// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template('/comments.php');
 			endif;

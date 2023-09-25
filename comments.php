@@ -4,7 +4,7 @@ $commentsCount = get_comments_number();
 if ($commentsCount > 0) : ?>
     <h4 class="comments__title"> Коментарі (<?php echo $commentsCount; ?>) </h4>
 <?php else: ?>
-    <h3 class="comments__title"> Ще немає коментарів</h3>
+    <h3 class="comments__title"> Ще немає коментарів...</h3>
 <?php endif; ?>
 
 <?php 
@@ -22,7 +22,7 @@ if ($commentsCount > 0) : ?>
     comment_form(array(
         'fields' => array(
             'author' => '<div class="comments__inputs"><div class="comment-form-author">' . 
-              '<input id="author" name="author" placeholder="Ім\'я" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30" required /></div>',
+              '<input id="author" name="author" placeholder="*Ім\'я" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30" required /></div>',
             'email'  => '<div class="comment-form-email">' .
                '<input id="email" name="email" placeholder="*Email" type="email" value="' . esc_attr($commenter['comment_author_email']) . '" size="30" required /></div></div>',
         ),

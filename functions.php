@@ -227,7 +227,7 @@ add_filter('comment_form_defaults', 'tsugli_comment_form_defaults');
 
 function tsugli_comment_form_defaults($defaults) {
     $defaults['comment_field'] = '<div class="comment-form-comment">
-        <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Текст"></textarea>
+        <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="*Текст"></textarea>
         </div>';
     return $defaults;
 }
