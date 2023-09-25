@@ -239,11 +239,12 @@
   height: 196px;
 
   @media screen and (min-width: $tablet1) {
+    width: 235px;
     height: 213px;
   }
   @media screen and (min-width: $tablet2) {
-    width: 320px;
-    height: 362px;
+    width: 340px;
+    height: 330px;
   }
 
   @media screen and (min-width: $desktop) {
