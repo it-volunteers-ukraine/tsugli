@@ -17,19 +17,19 @@
                 <li class="social-box">
                     <div class="messengers">
                         <a href="<?php the_field( 'viber' ); ?>" rel="noopener noreferrer"
-                           target="_blank">
+                           target="_blank" aria-label="Зв'язатись за допомогою мессенджера Вайбер">
                             <svg>
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
                             </svg>
                         </a>
                         <a href="<?php the_field( 'telegram' ); ?>" rel="noopener noreferrer"
-                           target="_blank">
+                           target="_blank" aria-label="Зв'язатись за допомогою мессенджера Телеграм">
                             <svg>
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-telegram"></use>
                             </svg>
                         </a>
                         <a href="<?php the_field( 'whatsapp' ); ?>" rel="noopener noreferrer"
-                           target="_blank">
+                           target="_blank" aria-label="Зв'язатись за допомогою мессенджера Вотсапп">
                             <svg>
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-whatsapp"></use>
                             </svg>
@@ -39,7 +39,8 @@
                 </li>
 
                 <li>
-                    <a class="social-box" href="tel:<?php the_field( 'telephone' ); ?>" target="_blank">
+                    <a class="social-box" href="tel:<?php the_field( 'telephone' ); ?>" target="_blank"
+                       aria-label="Зв'язатись за допомогою телефону">
                         <svg>
                             <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-carbon_phone"></use>
                         </svg>
@@ -48,8 +49,9 @@
                 </li>
 
                 <li>
-                    <a class="social-box" href="mailto:<?php the_field( 'email' ); ?>" rel="noopener noreferrer"
-                       target="_blank">
+                    <a class="social-box" href="mailto:<?php the_field( 'email' ); ?>"
+                       rel="noopener noreferrer"
+                       target="_blank" aria-label="Зв'язатись за допомогою електронної пошти">
                         <svg>
                             <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-mail"></use>
                         </svg>
@@ -60,7 +62,7 @@
                 <li>
                     <a class="social-box" href="<?php the_field( 'instagram' ); ?>/"
                        rel="noopener noreferrer"
-                       target="_blank">
+                       target="_blank" aria-label="Перейти на сторінку в Інстаграм">
                         <svg>
                             <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-instagram"></use>
                         </svg>
@@ -71,7 +73,7 @@
                 <li>
                     <a class="social-box" href="<?php the_field( 'facebook' ) ?>/"
                        rel="noopener noreferrer"
-                       target="_blank"
+                       target="_blank" aria-label="Перейти на сторінку в Фейсбук"
                     >
                         <svg>
                             <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-fb"></use>
