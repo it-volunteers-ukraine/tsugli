@@ -1,3 +1,7 @@
+.comments__header {
+  position: relative;
+}
+
 .comments__title {
   color: $button-color;
   font-size: 32px;
@@ -13,13 +17,39 @@
   }
 }
 
-.comment__list {
+
+.comments-button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: 12px;
+  right: 8px;
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+  fill: $accent-color;
+  cursor: pointer;
+
+  transform: rotate(90deg);
+  @media screen and (min-width: $tablet2) {
+    display: none;
+  }
+}
+
+.comments-button.is-open {
+  transform: rotate(270deg);
+}
+
+.comment__list.is-open {
   display: flex;
+}
+.comment__list {
+  display: none;
   flex-direction: column;
   gap: 24px;
   margin-bottom: 24px;
-
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet2) {
+    display: flex;
     margin-bottom: 32px;
   }
 }

@@ -240,3 +240,9 @@ function tsugli_remove_comment_form_label($defaults) {
     return $defaults;
 }
 
+
+function change_comment_moderation() {
+  update_option('comment_moderation', 0);
+}
+
+add_action('init', 'change_comment_moderation');
