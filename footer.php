@@ -14,7 +14,7 @@
     </div>
   
   
-    <a href="<?php the_permalink(); ?>" class="pop-up__link">До Подій    
+    <a href="<?php echo get_permalink(16); ?>" class="pop-up__link">До Подій    
        <svg class="pop-up__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>

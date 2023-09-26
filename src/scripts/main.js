@@ -6,7 +6,6 @@ if (galleryHome) {
 
 function onImageHomeClick(event) {
   event.preventDefault();
-
   if (event.target.nodeName !== "IMG") {
     return;
   } else {
