@@ -16,19 +16,19 @@
             <ul>
                 <li class="social-box">
                     <div class="messengers">
-                        <a href="viber://chat?number=<?php the_field( 'messengers' ); ?>" rel="noopener noreferrer"
+                        <a href="<?php the_field( 'viber' ); ?>" rel="noopener noreferrer"
                            target="_blank">
                             <svg>
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
                             </svg>
                         </a>
-                        <a href="https://t.me/<?php the_field( 'messengers' ); ?>" rel="noopener noreferrer"
+                        <a href="<?php the_field( 'telegram' ); ?>" rel="noopener noreferrer"
                            target="_blank">
                             <svg>
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-telegram"></use>
                             </svg>
                         </a>
-                        <a href="https://wa.me/<?php the_field( 'messengers' ); ?>" rel="noopener noreferrer"
+                        <a href="<?php the_field( 'whatsapp' ); ?>" rel="noopener noreferrer"
                            target="_blank">
                             <svg>
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-whatsapp"></use>
@@ -58,25 +58,25 @@
                 </li>
 
                 <li>
-                    <a class="social-box" href="https://www.instagram.com/<?php the_field( 'instagram' ); ?>/"
+                    <a class="social-box" href="<?php the_field( 'instagram' ); ?>/"
                        rel="noopener noreferrer"
                        target="_blank">
                         <svg>
                             <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-instagram"></use>
                         </svg>
-                        <span><?php the_field( 'instagram' ); ?></span>
+                        <span><?php the_field( 'instagram_display' ); ?></span>
                     </a>
                 </li>
 
                 <li>
-                    <a class="social-box" href="https://www.facebook.com/<?php the_field( 'facebook' ) ?>/"
+                    <a class="social-box" href="<?php the_field( 'facebook' ) ?>/"
                        rel="noopener noreferrer"
                        target="_blank"
                     >
                         <svg>
                             <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-fb"></use>
                         </svg>
-                        <span><?php the_field( 'facebook' ); ?></span>
+                        <span><?php the_field( 'facebook_display' ); ?></span>
                     </a>
                 </li>
             </ul>
@@ -111,7 +111,7 @@
                 <h2 class="form-title"><?php the_field( 'form_title' ) ?></h2>
                 <p class="form-text"><?php the_field( 'form_text' ) ?></p>
 
-				<?php echo do_shortcode( '[contact-form-7 id="01ba850" title="Контактна форма - сторінка контактів"]' ); ?>
+				<?php echo do_shortcode( '[contact-form-7 id="290315b" title="Контактна форма - сторінка контактів"]' ); ?>
             </div>
         </div>
     </section>
