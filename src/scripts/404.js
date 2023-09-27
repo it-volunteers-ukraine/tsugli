@@ -6,8 +6,7 @@ function startCountdown(seconds) {
     seconds--;
 
     if (seconds < 0) {
-      // Якщо відлік завершився, робимо редірект
-      window.location.href = "/?page_id=9"; // Замініть це на фактичний URL-адресу вашої сторінки
+      window.location.href = "/?page_id=5";
     } else {
       setTimeout(updateCountdown, 1000);
     }
@@ -15,6 +14,4 @@ function startCountdown(seconds) {
 
   updateCountdown();
 }
-
-// Почати відлік з 10 секунд
 startCountdown(10);
