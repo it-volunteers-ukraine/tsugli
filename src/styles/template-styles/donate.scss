@@ -1,3 +1,110 @@
-.donate {
-  color: blue;
+@import "../variables.scss";
+
+.donate__section {
+  margin-bottom: 180px;
+
+  @media screen and (min-width: $tablet1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 255px;
+  }
+}
+
+.donate__section img {
+  display: none;
+
+  @media screen and (min-width: $tablet1) {
+    display: block;
+    margin-right: -170px;
+    z-index: 1;
+    width: 245px;
+    height: 245px;
+  }
+}
+
+.donate__container {
+  background-color: $accent-color;
+  border-radius: $container-border-radius;
+  padding: 40px 24px;
+
+  @media screen and (min-width: $tablet1) {
+    padding: 60px 24px 60px 190px;
+  }
+
+  @media screen and (min-width: $tablet1) {
+    padding: 80px 36px 80px 190px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 100px 36px 80px 280px;
+  }
+}
+
+.donate__title {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: $tablet1) {
+    font-size: 48px;
+    letter-spacing: 0.96px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 70px;
+    line-height: 0.91;
+    letter-spacing: 1.4px;
+    margin-bottom: 40px;
+  }
+}
+
+.donate__text {
+  font-family: $fira;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: 0.32px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: $tablet2) {
+    font-size: 28px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 34px;
+  }
+}
+
+.donate__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 15px 11px 23px;
+  color: $secondary-color;
+  fill: currentColor;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  border-radius: $container-border-radius;
+  border: 1px solid $secondary-color;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-color;
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet1) {
+    padding: 15px 15px 15px 23px;
+    font-size: 24px;
+  }
 }
