@@ -15,7 +15,7 @@ get_header();
         <div class="donate__container">
 			<p class="donate__title"><?php the_field('text'); ?> </p>
 			<!-- <div class="donate__text">секунд Ви будете перенаправлені на Головну сторінку.</div> -->
-            <a class="donate__link" href="<?php the_field('link'); ?> ">Задонатити
+            <a class="donate__link" href="<?php the_field('link'); ?> "><?php the_field('button'); ?> 
                 <svg class="offering__icon" width="24px" height="24px">
                     <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
                 </svg>
