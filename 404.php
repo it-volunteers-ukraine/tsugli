@@ -16,7 +16,7 @@ get_header();
      	 <img src="<?php bloginfo('template_url'); ?>/assets/images/horse-big.svg" alt="Кумедний кінь">
         <div class="not-found__container">
 			<p class="not-found__title">Ой-йой! Такої сторінки не знайдено!</p>
-			<div class="not-found__text" id="timer">Через <span id="countdown">10</span> секунд ви будете перенаправлені на Головну сторінку.</div>
+			<div class="not-found__text" id="timer">Через <span id="countdown">10</span> секунд Ви будете перенаправлені на Головну сторінку.</div>
 		</div>
 	</section>
 		    
