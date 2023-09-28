@@ -12,6 +12,6 @@ function startCountdown(seconds) {
     }
   }
 
-  updateCountdown();
+  if (countdownElement) updateCountdown();
 }
 startCountdown(10);

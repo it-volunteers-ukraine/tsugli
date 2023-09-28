@@ -21,7 +21,7 @@ if ( ! is_active_sidebar( 'sidebar' ) ) {
 <div class="sidebar__section">
   <div class="categories__header">
  	  <h3 class="sidebar__title">Категорії</h3>
-    <button type="button"   class="categories-button" aria-label="Кнопка для розгортання, згортання коментарів">
+    <button type="button"   class="categories-button" aria-label="Кнопка для розгортання, згортання меню катергорій">
       <svg width="24px" height="24px">
         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
       </svg>
@@ -48,7 +48,7 @@ foreach ($categories as $category) {
 <div class="sidebar__section">
    <div class="latest-posts__header">
    <h3 class="sidebar__title">Останні Пости</h3>
-    <button type="button"   class="latest-posts-button" aria-label="Кнопка для розгортання, згортання коментарів">
+    <button type="button"   class="latest-posts-button" aria-label="Кнопка для розгортання, згортання останніх постів">
       <svg width="24px" height="24px">
         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
       </svg>

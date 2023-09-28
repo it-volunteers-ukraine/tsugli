@@ -27,10 +27,56 @@ get_header();
 
 <section class="horses-video section">
 <div class="horses-video__wrapper">
+  
+  
+<?php if(have_rows('video-gallery')):?>
+       <div class="horses-video__container videoLightBox swiper-video">
+        <div class="swiper-wrapper">
+        <?php while(have_rows('video-gallery')): the_row();?>
+                <?php   
+        $video=get_sub_field('video');
+        $title = get_sub_field('video-title');
+        $text = get_sub_field('video-text');
+        ?>
+      <div class="horses-video__card swiper-slide">
+        <div class="horses-video__content">
+          <video data-source="<?php echo $video['url']; ?>" >
+			     <source src="<?php echo $video['url']; ?>" type="video/mp4"  >
+          </video>
 
+          <!-- data-source="<?php echo $video['url']; ?>" -->
+          
+          <img class="horses-video__icon" src="<?php bloginfo('template_url'); ?>/assets/images/btn_video.svg" width="82px" height="82px" alt="Іконка програвання плеєра">
 
+       </div>
+
+        <div class="horses-video__box">
+            <h3 class="horses-video__title"><?php echo $title; ?></h3>
+            <p class="horses__text"><?php echo $text; ?></p>
+       </div>
+  
+      </div>
+
+    
+<?php endwhile; ?>
+       </div>
+       </div>
+ <?php endif; ?> 
+ 
+<div class="horses-video__pagination">
+  <button class="horses-video__button button-prev">
+     <svg  class="icon__prev" width="24px" height="24px" aria-label="Кнопка назад для гортання відео">
+          <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow-right"></use>
+       </svg>
+  </button>
+  <button class="horses-video__button button-next"> 
+    <svg  width="24px" height="24px" aria-label="Кнопка вперед для гортання відео">
+          <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow-right"></use>
+    </svg>
+  </button>
 </div>
 
+</div>
 </section>
 
 <?php get_template_part( 'template-parts/buttonTop'); ?>
