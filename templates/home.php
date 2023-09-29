@@ -6,7 +6,7 @@ get_header();
 ?>
 <main class="main container" >
 <section class="hero-home section" style="background: linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img') ?>); background-size: cover; background-repeat: no-repeat; background-position: center; ">
-    <h1 class="title">Коні породи Щербаті Цуглі</h1>
+    <h1 class="visually-hidden">Коні породи Щербаті Цуглі</h1>
     <h2 class="hero-home__title"><?php the_field('hero-title'); ?></h2>
     <p class="hero__text"><?php the_field('hero-text'); ?></p>
     <a class="hero__button" href="<?php echo get_permalink(7); ?>"><?php the_field('hero-button'); ?> 

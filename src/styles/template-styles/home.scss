@@ -17,6 +17,8 @@
   }
 }
 
+// Hero
+
 .hero-home {
   height: 396px;
   padding-top: 90px;
@@ -43,19 +45,6 @@
     height: 889px;
     padding-top: 135px;
   }
-}
-
-.title {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(50%);
-  margin: -1px;
 }
 
 .hero-home__title {
@@ -154,6 +143,8 @@
     display: block;
   }
 }
+
+// Activities
 
 .activities {
   position: relative;
@@ -269,6 +260,8 @@
     letter-spacing: 0.78px;
   }
 }
+
+// About-us
 
 .about-us {
   margin-top: 72px;
@@ -405,6 +398,8 @@
     height: 76px;
   }
 }
+
+// Gallery
 
 .gallery-mob {
   position: relative;
