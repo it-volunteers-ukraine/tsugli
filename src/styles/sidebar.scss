@@ -337,7 +337,7 @@
 
 .sidebar-donate__link {
   display: flex;
-  width: 164px;
+  width: fit-content;
   padding: 12px 12px 12px 18px;
   justify-content: center;
   align-items: center;
@@ -357,6 +357,10 @@
   &:hover,
   &:focus {
     background-color: $primary-color;
+  }
+
+  @media screen and (min-width: $tablet1) {
+    gap: 8px;
   }
 }
 

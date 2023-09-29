@@ -113,7 +113,7 @@
   align-items: center;
   gap: 4px;
   padding: 16px 24px;
-  width: 144px;
+  width: fit-content;
   color: $accent-color;
   background-color: $secondary-color;
   fill: currentColor;
@@ -133,6 +133,7 @@
   }
 
   @media screen and (min-width: $tablet1) {
+    gap: 8px;
     padding: 16px 16px 16px 24px;
     font-size: 24px;
     font-style: normal;
