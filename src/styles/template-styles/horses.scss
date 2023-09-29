@@ -211,7 +211,10 @@
 
 .horses-video__content {
   position: relative;
-
+  background-image: url(../../../assets/images/no-photo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 320px;
   height: 297px;
   overflow: hidden;
@@ -237,7 +240,7 @@
 }
 
 .horses-video__content video {
-  width: 100%;
+  width: auto;
   height: 100%;
   object-fit: cover;
   cursor: pointer;

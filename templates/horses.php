@@ -40,12 +40,11 @@ get_header();
         ?>
       <div class="horses-video__card swiper-slide">
         <div class="horses-video__content">
-          <video data-source="<?php echo $video['url']; ?>" >
+          <video data-source="<?php echo $video['url']; ?>">
 			     <source src="<?php echo $video['url']; ?>" type="video/mp4"  >
           </video>
 
-          <!-- data-source="<?php echo $video['url']; ?>" -->
-          
+       
           <img class="horses-video__icon" src="<?php bloginfo('template_url'); ?>/assets/images/btn_video.svg" width="82px" height="82px" alt="Іконка програвання плеєра">
 
        </div>

@@ -99,7 +99,7 @@ get_header();
   <div class="about-gallery__container">
 
      <h3 class="about__title about-gallery__title"><?php  the_field('gallery-title')?></h3>
-    <a class="about-gallery__button" href="<?php echo esc_attr(get_field('instagram', 18));?>"><?php the_field('gallery-button'); ?> 
+    <a class="about-gallery__button" target="_blank" href="<?php echo esc_attr(get_field('instagram', 18));?>"><?php the_field('gallery-button'); ?> 
       <svg class="about-gallery__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
