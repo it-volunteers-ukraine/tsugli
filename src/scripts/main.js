@@ -6,7 +6,6 @@ if (galleryHome) {
 
 function onImageHomeClick(event) {
   event.preventDefault();
-
   if (event.target.nodeName !== "IMG") {
     return;
   } else {
@@ -41,13 +40,3 @@ function onOpenModalHomeWindow(event) {
   }
 }
 
-// Swiper
-const articleSwiper = new Swiper(".swiper-article", {
-  slidesPerView: "auto",
-  spaceBetween: 16,
-  breakpoints: {
-    992: {
-      spaceBetween: 24,
-    },
-  },
-});

@@ -1,4 +1,4 @@
-@import "../variables.scss";
+@import "./variables.scss";
 
 .button-top {
   position: absolute;
@@ -20,6 +20,7 @@
   }
   @media screen and (min-width: $desktop) {
     right: 320px;
+    bottom: -140px;
   }
 
   &:hover,

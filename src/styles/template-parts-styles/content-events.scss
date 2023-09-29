@@ -37,6 +37,7 @@
 .events__button {
   display: inline-flex;
   align-items: center;
+  gap: 4px;
   padding: 11px 15px 11px 23px;
   color: $secondary-color;
   fill: currentColor;
@@ -57,6 +58,7 @@
   }
 
   @media screen and (min-width: $tablet1) {
+    gap: 8px;
     padding: 15px 15px 15px 23px;
     font-size: 24px;
   }
@@ -237,7 +239,7 @@
 
 .events__link {
   display: flex;
-  width: 164px;
+  width: fit-content;
   padding: 11px 11px 11px 17px;
   justify-content: center;
   align-items: center;

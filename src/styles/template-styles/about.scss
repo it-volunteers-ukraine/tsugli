@@ -15,9 +15,169 @@
   }
   @media screen and (min-width: $desktop) {
     gap: 132px;
-    margin-bottom: 207px;
+    margin-bottom: 255px;
   }
 }
+
+.about__section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 221px 16px 32px;
+  border-radius: $container-border-radius;
+  background: $accent-color;
+  margin-top: 43px;
+
+  @media screen and (min-width: $tablet1) {
+    padding: 94px 44px 32px;
+    margin-top: 208px;
+  }
+
+  @media screen and (min-width: $tablet2) {
+    padding-top: 118px;
+    margin-top: 278px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 48px 64px 64px;
+    margin-top: 0;
+  }
+}
+
+.about__img {
+  position: absolute;
+
+  border-radius: $container-border-radius;
+  overflow: hidden;
+  box-shadow: $container-shadow;
+
+  @media screen and (max-width: 767px) {
+    left: 16px;
+    top: -43px;
+    width: 298px;
+    height: 240px;
+  }
+  @media screen and (min-width: $tablet1) and (max-width: 991px) {
+    width: 640px;
+    height: 280px;
+    top: -208px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  @media screen and (min-width: $tablet2) and (max-width: 1919px) {
+    width: 840px;
+    height: 362px;
+    top: -278px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.about__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__title {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  @media screen and (min-width: $desktop) {
+    font-size: 48px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.about__text {
+  @extend %text;
+}
+
+.about__button {
+  color: $orange-text-color;
+  text-align: end;
+  font-family: $fira;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  @media screen and (min-width: $tablet1) {
+    display: none;
+  }
+}
+
+.about__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 24px;
+  width: fit-content;
+  color: $accent-color;
+  background-color: $secondary-color;
+  fill: currentColor;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  border-radius: $container-border-radius;
+  border: none;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none; /* Додайте стиль для посилання (необов'язково) */
+
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+  }
+
+  @media screen and (min-width: $tablet1) {
+    gap: 8px;
+    padding: 16px 16px 16px 24px;
+    font-size: 24px;
+    font-style: normal;
+    letter-spacing: 0.48px;
+  }
+}
+
+.box {
+  @media screen and (max-width: 767px) {
+    input {
+      opacity: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    input:focus ~ label {
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    input:checked + p {
+      -webkit-line-clamp: unset;
+    }
+
+    input:checked ~ label,
+    p:not(.truncated) ~ label {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $tablet1) {
+    input {
+      display: none;
+    }
+  }
+}
+
+// History
 
 .about-history {
   padding: 16px;
@@ -156,162 +316,7 @@
   @extend %text;
 }
 
-.about__section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-  padding: 221px 16px 32px;
-  border-radius: $container-border-radius;
-  background: $accent-color;
-  margin-top: 43px;
-
-  @media screen and (min-width: $tablet1) {
-    padding: 94px 44px 32px;
-    margin-top: 208px;
-  }
-
-  @media screen and (min-width: $tablet2) {
-    padding-top: 118px;
-    margin-top: 278px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    padding: 48px 64px 64px;
-    margin-top: 0;
-  }
-}
-
-.about__img {
-  position: absolute;
-
-  border-radius: $container-border-radius;
-  overflow: hidden;
-  box-shadow: $container-shadow;
-
-  @media screen and (max-width: 767px) {
-    left: 16px;
-    top: -43px;
-    width: 298px;
-    height: 240px;
-  }
-  @media screen and (min-width: $tablet1) and (max-width: 991px) {
-    width: 640px;
-    height: 280px;
-    top: -208px;
-    left: 50%;
-    transform: translate(-50%);
-  }
-  @media screen and (min-width: $tablet2) and (max-width: 1919px) {
-    width: 840px;
-    height: 362px;
-    top: -278px;
-    left: 50%;
-    transform: translate(-50%);
-  }
-}
-
-.about__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.about__title {
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  @media screen and (min-width: $desktop) {
-    font-size: 48px;
-    letter-spacing: 0.96px;
-  }
-}
-
-.about__text {
-  @extend %text;
-}
-
-.about__button {
-  color: $orange-text-color;
-  text-align: end;
-  font-family: $fira;
-  font-size: 18px;
-  font-weight: 500;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  @media screen and (min-width: $tablet1) {
-    display: none;
-  }
-}
-
-.about__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 16px 24px;
-  width: 144px;
-  color: $accent-color;
-  background-color: $secondary-color;
-  fill: currentColor;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.4px;
-  border-radius: $container-border-radius;
-  border: none;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none; /* Додайте стиль для посилання (необов'язково) */
-
-  &:hover,
-  &:focus {
-    background-color: $primary-color;
-  }
-
-  @media screen and (min-width: $tablet1) {
-    padding: 16px 16px 16px 24px;
-    font-size: 24px;
-    font-style: normal;
-    letter-spacing: 0.48px;
-  }
-}
-
-.box {
-  @media screen and (max-width: 767px) {
-    input {
-      opacity: 0;
-      position: absolute;
-      pointer-events: none;
-    }
-
-    p {
-      display: -webkit-box;
-      -webkit-line-clamp: 6;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    input:focus ~ label {
-      outline: -webkit-focus-ring-color auto 5px;
-    }
-
-    input:checked + p {
-      -webkit-line-clamp: unset;
-    }
-
-    input:checked ~ label,
-    p:not(.truncated) ~ label {
-      display: none;
-    }
-  }
-
-  @media screen and (min-width: $tablet1) {
-    input {
-      display: none;
-    }
-  }
-}
+// Museum
 
 .about_museum {
   @media screen and (min-width: $desktop) {
@@ -319,6 +324,7 @@
     margin-right: 332px;
   }
 }
+
 .museum__img {
   @media screen and (min-width: $desktop) {
     right: -332px;
@@ -328,6 +334,8 @@
     height: 501px;
   }
 }
+
+// Horses
 
 .about__horses {
   @media screen and (min-width: $desktop) {
@@ -345,6 +353,8 @@
     height: 657px;
   }
 }
+
+// Nature
 
 .about__nature {
   @media screen and (min-width: $desktop) {

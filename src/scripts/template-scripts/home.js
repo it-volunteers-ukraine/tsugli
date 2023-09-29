@@ -17,6 +17,7 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
 const swiperHomeGallery = new Swiper(".swiper-gallery", {
   slidesPerView: 1.29,
   spaceBetween: 10,
@@ -52,3 +53,4 @@ galleryButtons.forEach(function (button) {
     swiperHomeGallery.update();
   });
 });
+

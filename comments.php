@@ -2,9 +2,9 @@
 $commentsCount = get_comments_number();
 
 if ($commentsCount > 0) : ?>
-<div>
-    <h4 class="comments__title"> Коментарі (<?php echo $commentsCount; ?>) </h4>
-<button type="button" id="buttonTop" class="button-top" aria-label="Кнопка для переміщення на початок сторінки">
+<div class="comments__header">
+ <h4 class="comments__title"> Коментарі (<?php echo $commentsCount; ?>) </h4>
+<button type="button"   class="comments-button" aria-label="Кнопка для розгортання, згортання коментарів">
   <svg width="24px" height="24px">
      <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
   </svg>

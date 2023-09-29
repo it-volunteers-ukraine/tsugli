@@ -7,6 +7,7 @@
   @media screen and (min-width: $tablet1) {
     margin-bottom: 80px;
   }
+
   @media screen and (min-width: $tablet2) {
     margin-bottom: 90px;
   }
@@ -15,6 +16,7 @@
     margin-bottom: 132px;
   }
 }
+
 .museum__section {
   position: relative;
   display: flex;
@@ -55,6 +57,7 @@
     width: 298px;
     height: 240px;
   }
+
   @media screen and (min-width: $tablet1) and (max-width: 991px) {
     width: 640px;
     height: 280px;
@@ -62,6 +65,7 @@
     left: 50%;
     transform: translate(-50%);
   }
+
   @media screen and (min-width: $tablet2) and (max-width: 1919px) {
     width: 840px;
     height: 362px;
@@ -69,6 +73,7 @@
     left: 50%;
     transform: translate(-50%);
   }
+
   @media screen and (min-width: $desktop) {
     left: -332px;
     top: 50%;
@@ -159,8 +164,9 @@
     padding-bottom: 290px;
     margin-bottom: 225px;
   }
-  
+
   @media screen and (min-width: $desktop) {
     padding-bottom: 335px;
+    margin-bottom: 255px;
   }
 }

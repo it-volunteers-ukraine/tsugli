@@ -26,14 +26,19 @@ document.addEventListener("wpcf7mailfailed", handleWpcf7Invalid, false);
 
 const popUp = document.querySelector(".pop-up");
 const closeBtn = document.querySelector(".pop-up__button");
+const popUpText = document.querySelector(".pop-up__text");
 
 document.addEventListener(
   "wpcf7mailsent",
   (e) => {
     const formId = e.detail.contactFormId;
-    if (formId === 148) {
-      popUp.style.display = "block";
+    if (formId === 141) {
+      popUpText.textContent = "Ви успішно підписалися на розсилку.";
+    } else {
+      popUpText.textContent = "Ми обов'язково зв'яжемося з вами.";
     }
+
+    popUp.style.display = "block";
   },
   false
 );

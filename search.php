@@ -2,8 +2,8 @@
 <main class='main container'>
     <h1 class='visually-hidden'>Події та заходи </h1>
     
- <section class="hero section" style="background:linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img', '17'); ?>);  background-size: cover; background-repeat: no-repeat; background-position: center;">
-      <h1 class="hero__title"><?php the_field('hero-title', '17');?></h1>
+ <section class="hero section" style="background:linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img', '16'); ?>);  background-size: cover; background-repeat: no-repeat; background-position: center;">
+      <h1 class="hero__title"><?php the_field('hero-title', '16');?></h1>
  </section>
 
     <section class='events section'>

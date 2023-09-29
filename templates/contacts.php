@@ -5,7 +5,7 @@
 	get_header();
 ?>
 
-<main class="container">
+<main class="container main">
 
     <h1 class='visually-hidden'>Зв'яжіться з нами</h1>
 	<?php get_template_part( 'template-parts/hero' ); ?>
@@ -117,6 +117,8 @@
             </div>
         </div>
     </section>
+
+ <?php get_template_part( 'template-parts/buttonTop'); ?>
 
 </main>
 
