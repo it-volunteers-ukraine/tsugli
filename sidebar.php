@@ -61,10 +61,6 @@ foreach ($categories as $category) {
 
             $myposts = get_posts([ 
               'posts_per_page' => 5,
-              'order' => 'DESC',  
-              'orderby' => 'date',  
-              'paged' => get_query_var('paged') ? get_query_var('paged') : 1 
-
             ]);
 
             if( $myposts ){
