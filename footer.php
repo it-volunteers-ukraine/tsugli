@@ -10,7 +10,7 @@
     <p class="pop-up__greetings">Вітаємо!</p>
     <p class="pop-up__text"></p>
     <div  class="pop-up__img">
-          <img  src="<?php bloginfo('template_url'); ?>/assets/images/pov-woman-feeds-wild-horse 1.jpg" alt="Жінка з рук кормить коня ">
+          <img  src="<?php bloginfo('template_url'); ?>/assets/images/wild-horse.jpg" alt="Жінка з рук кормить коня ">
     </div>
   
   
