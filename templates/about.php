@@ -107,29 +107,29 @@ get_header();
 
       <div class="about-gallery__wrapper about-swiper">
 
-        <ul class="about-gallery__list swiper-wrapper">
+        <div class="about-gallery__list swiper-wrapper">
             
-           <li class="about-gallery__item swiper-slide">
+           <div class="about-gallery__item swiper-slide">
              <div class="about-gallery__img">
-               <img src='<?php  the_field('img_1')?>' alt='<?php  the_field('alt_1')?>'/>
+               <img src='<?php  the_field('img_1')?>' alt='<?php  the_field('alt_1')?>' loading="lazy"/>
              </div>
-           </li>
-           <li class="about-gallery__item swiper-slide">
+           </div>
+           <div class="about-gallery__item swiper-slide">
              <div class="about-gallery__img">
-               <img src='<?php  the_field('img_2')?>' alt='<?php  the_field('alt_2')?>'/>
+               <img src='<?php  the_field('img_2')?>' alt='<?php  the_field('alt_2')?>' loading="lazy"/>
              </div>
-           </li>
-           <li class="about-gallery__item swiper-slide">
+           </div>
+           <div class="about-gallery__item swiper-slide">
              <div class="about-gallery__img">
-               <img src='<?php  the_field('img_3')?>' alt='<?php  the_field('alt_3')?>'/>
+               <img src='<?php  the_field('img_3')?>' alt='<?php  the_field('alt_3')?>' loading="lazy"/>
              </div>
-           </li>
-           <li class="about-gallery__item swiper-slide">
+           </div>
+           <div class="about-gallery__item swiper-slide">
              <div class="about-gallery__img">
-               <img src='<?php  the_field('img_4')?>' alt='<?php  the_field('alt_4')?>'/>
+               <img src='<?php  the_field('img_4')?>' alt='<?php  the_field('alt_4')?>' loading="lazy"/>
              </div>
-           </li>
-         </ul>
+           </div>
+         </div>
       </div>
   </div>
    
