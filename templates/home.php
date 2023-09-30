@@ -6,7 +6,7 @@ get_header();
 ?>
 <main class="main container" >
 <section class="hero-home section" style="background: linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img') ?>); background-size: cover; background-repeat: no-repeat; background-position: center; ">
-    <h1 class="visually-hidden">Коні породи Щербаті Цуглі</h1>
+    <h1 class="visually-hidden">Коні української Поліської породи</h1>
     <h2 class="hero-home__title"><?php the_field('hero-title'); ?></h2>
     <p class="hero__text"><?php the_field('hero-text'); ?></p>
     <a class="hero__button" href="<?php echo get_permalink(7); ?>"><?php the_field('hero-button'); ?> 
@@ -18,30 +18,30 @@ get_header();
 
 <section class="activities ">
      <div class="swiper">
-    <ul class="activities__list swiper-wrapper">
+    <div class="activities__list swiper-wrapper">
         
-        <li class="activities__item swiper-slide">
+        <div class="activities__item swiper-slide">
         <div class="activities__img">
             <img src='<?php  the_field('img_1')?>' alt='<?php  the_field('alt_1')?>'/>
         </div>
         <p class="activities__text"><?php  the_field('text_1')?></p>
-        </li>
+        </div>
 
-        <li class="activities__item swiper-slide" >
+        <div class="activities__item swiper-slide" >
         <div class="activities__img">
             <img src='<?php  the_field('img_2')?>' alt='<?php  the_field('alt_2')?>'/>
         </div>
         <p class="activities__text"><?php  the_field('text_2')?></p>
-        </li>
+        </div>
 
-        <li class="activities__item swiper-slide">
+        <div class="activities__item swiper-slide">
         <div class="activities__img">
             <img src='<?php  the_field('img_3')?>' alt='<?php  the_field('alt_3')?>'/>
         </div>
         <p class="activities__text"><?php  the_field('text_3')?></p>
-        </li>
+        </div>
 
-    </ul> 
+</div> 
      </div>
 </section>
 
@@ -107,7 +107,7 @@ get_header();
               $total_pages = ceil($total_images / $images_per_page); 
 
               for ($i = 1; $i <= $total_pages; $i++) {
-                  echo '<li><a  "href="#" data-page="' . $i . '">' . $i . '</a></li>';
+                  echo '<li><a  " data-page="' . $i . '">' . $i . '</a></li>';
               }
               ?>
         </div>
@@ -146,7 +146,7 @@ get_header();
                 ?>
 
                 <div class="gallery__item swiper-slide" data-category="<?php echo $category; ?>">
-                    <img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" loading="lazy"/>
                 </div>
                 
             <?php endwhile; ?>

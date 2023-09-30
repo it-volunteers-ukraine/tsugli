@@ -7,7 +7,7 @@
 
 <main class="container main">
 
-    <h1 class='visually-hidden'>Зв'яжіться з нами</h1>
+    <h1 class='visually-hidden'>Адреса, контакти ГО Щербаті Цуглі</h1>
 	<?php get_template_part( 'template-parts/hero' ); ?>
 
     <!--        Social links-->

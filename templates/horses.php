@@ -5,7 +5,7 @@ Template Name: horses
 get_header();
 ?>
 <main class="main container">
-    <h1 class='visually-hidden'>Коні української породи Щербаті Цуглі  </h1>
+    <h1 class='visually-hidden'>Поліський кінь-унікальна аборигенна порода</h1>
         
   <?php get_template_part( 'template-parts/hero'); ?>
 

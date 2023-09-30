@@ -5,7 +5,7 @@ Template Name: about
 get_header();
 ?>
 <main class="main container">
-        <h1 class='visually-hidden'>Основними напрямки  діяльності організації Щербаті Цуглі  </h1>
+        <h1 class='visually-hidden'>Основні напрямки  діяльності громадської організації Щербаті Цуглі  </h1>
   <?php get_template_part( 'template-parts/hero'); ?>
 
 

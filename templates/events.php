@@ -7,7 +7,7 @@ get_header();
 ?>
 
 <main class='main container'>
-    <h1 class='visually-hidden'>Події та заходи </h1>
+    <h1 class='visually-hidden'>Найцікавіші події та заходи </h1>
     
   <?php get_template_part( 'template-parts/hero'); ?>
 
