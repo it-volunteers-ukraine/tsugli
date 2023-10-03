@@ -1,8 +1,8 @@
 .wrapper {
   width: 100vw;
   background: url("../../assets/images/bg.jpg");
-  background-size: 100vw;
-  background-repeat: repeat-y;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 .header {
