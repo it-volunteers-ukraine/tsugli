@@ -5,7 +5,7 @@ Template Name: about
 get_header();
 ?>
 <main class="main container">
-        <h1 class='visually-hidden'>Основними напрямки  діяльності організації Щербаті Цуглі  </h1>
+        <h1 class='visually-hidden'>Основні напрямки  діяльності громадської організації Щербаті Цуглі  </h1>
   <?php get_template_part( 'template-parts/hero'); ?>
 
 
@@ -99,7 +99,7 @@ get_header();
   <div class="about-gallery__container">
 
      <h3 class="about__title about-gallery__title"><?php  the_field('gallery-title')?></h3>
-    <a class="about-gallery__button" href="<?php echo esc_attr(get_field('instagram', 18));?>"><?php the_field('gallery-button'); ?> 
+    <a class="about-gallery__button" target="_blank" href="<?php echo esc_attr(get_field('instagram', 18));?>"><?php the_field('gallery-button'); ?> 
       <svg class="about-gallery__icon" width="24px" height="24px">
           <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
        </svg>
@@ -107,29 +107,29 @@ get_header();
 
       <div class="about-gallery__wrapper about-swiper">
 
-        <ul class="about-gallery__list swiper-wrapper">
+        <div class="about-gallery__list swiper-wrapper">
             
-           <li class="about-gallery__item swiper-slide">
+           <div class="about-gallery__item swiper-slide">
              <div class="about-gallery__img">
-               <img src='<?php  the_field('img_1')?>' alt='<?php  the_field('alt_1')?>'/>
+               <img src='<?php  the_field('img_1')?>' alt='<?php  the_field('alt_1')?>' loading="lazy"/>
              </div>
-           </li>
-           <li class="about-gallery__item swiper-slide">
+           </div>
+           <div class="about-gallery__item swiper-slide">
              <div class="about-gallery__img">
-               <img src='<?php  the_field('img_2')?>' alt='<?php  the_field('alt_2')?>'/>
+               <img src='<?php  the_field('img_2')?>' alt='<?php  the_field('alt_2')?>' loading="lazy"/>
              </div>
-           </li>
-           <li class="about-gallery__item swiper-slide">
+           </div>
+           <div class="about-gallery__item swiper-slide">
              <div class="about-gallery__img">
-               <img src='<?php  the_field('img_3')?>' alt='<?php  the_field('alt_3')?>'/>
+               <img src='<?php  the_field('img_3')?>' alt='<?php  the_field('alt_3')?>' loading="lazy"/>
              </div>
-           </li>
-           <li class="about-gallery__item swiper-slide">
+           </div>
+           <div class="about-gallery__item swiper-slide">
              <div class="about-gallery__img">
-               <img src='<?php  the_field('img_4')?>' alt='<?php  the_field('alt_4')?>'/>
+               <img src='<?php  the_field('img_4')?>' alt='<?php  the_field('alt_4')?>' loading="lazy"/>
              </div>
-           </li>
-         </ul>
+           </div>
+         </div>
       </div>
   </div>
    

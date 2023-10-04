@@ -9,7 +9,7 @@
         ?>
 
           <a class="gallery__link gallery__item"  href="<?php echo $image['url']; ?>">
-            <img class="gallery__image" src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>" data-source="<?php echo $image['url']; ?>"/>
+            <img class="gallery__image" src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>" data-source="<?php echo $image['url']; ?>" loading="lazy"/>
           </a>
 
 <?php endwhile; ?>
@@ -27,7 +27,7 @@
         $total_pages = ceil($total_images / $images_per_page); // Загальна кількість сторінок
 
         for ($i = 1; $i <= $total_pages; $i++) {
-            echo '<li><a  "href="#" data-page="' . $i . '">' . $i . '</a></li>';
+            echo '<li><a  "data-page="' . $i . '">' . $i . '</a></li>';
         }
         ?>
 </div>
@@ -42,7 +42,7 @@
                 ?>
 
                 <div class="gallery__item swiper-slide" >
-                    <img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>" />
+                    <img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $alt; ?>" loading="lazy"/>
                 </div>
                 
             <?php endwhile; ?>

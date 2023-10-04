@@ -6,7 +6,7 @@ Template Name: museum
 get_header();
 ?>
 <main class="main container">
-    <h1 class='visually-hidden'>Музей</h1>
+    <h1 class='visually-hidden'> Музей - проєкт зі збереження та відтворення зразків народної культури України</h1>
 <?php get_template_part( 'template-parts/hero'); ?>
 
 <section class="section museum">
