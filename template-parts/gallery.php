@@ -27,7 +27,7 @@
         $total_pages = ceil($total_images / $images_per_page); // Загальна кількість сторінок
 
         for ($i = 1; $i <= $total_pages; $i++) {
-            echo '<li><a  "data-page="' . $i . '">' . $i . '</a></li>';
+            echo '<li><a  " data-page="' . $i . '">' . $i . '</a></li>';
         }
         ?>
 </div>
