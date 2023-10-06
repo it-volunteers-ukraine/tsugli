@@ -38,7 +38,7 @@ if ($commentsCount > 0) : ?>
                </div>
             <button type="submit" id="submit-comment" class="comment__submit">Відправити</button>',
             'submit_button' => '', 
-            'title_reply' => '<h4 class="comments__add">Додати коментар</h4><p class="comments__call">Поділіться Вашими враженнями.</p>', 
+            'title_reply' => '<h4 class="comments__add">Додати коментар</h4><p class="comments__call">Поділіться Вашими враженнями</p>', 
     ));
     ?>
 </div>
