@@ -5,11 +5,11 @@ Template Name: museum
 
 get_header();
 ?>
-<main class="main container">
+<main class="main">
     <h1 class='visually-hidden'> Музей - проєкт зі збереження та відтворення зразків народної культури України</h1>
 <?php get_template_part( 'template-parts/hero'); ?>
 
-<section class="section museum">
+<section class="section museum container">
     <div class="museum__section box ">
         <div class="museum__img">
         <img src="<?php  the_field('img')?>" alt="<?php  the_field('alt')?>"/>
@@ -25,7 +25,7 @@ get_header();
 
 <?php get_template_part( 'template-parts/gallery'); ?>
 
-<section class="events-section section ">
+<section class="events-section section container">
 		<?php if ( have_posts() ) : ?>
 
 				<?php

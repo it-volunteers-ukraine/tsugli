@@ -1,4 +1,4 @@
-<section class= "gallery section">
+<section class= "gallery section container">
 <div class= "gallery__wrapper">
 <?php if(have_rows('gallery')):?>
         <div class="gallery__container lightBox">

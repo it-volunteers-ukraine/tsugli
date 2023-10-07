@@ -5,12 +5,12 @@ Template Name: donate
 get_header();
 ?>
 
-<main id="primary" class="container main">
+<main id="primary" class="main">
         <h1 class='visually-hidden'>Задонатити </h1>
     
   <?php get_template_part( 'template-parts/hero'); ?>
 
-	<section class="donate__section section">
+	<section class="donate__section section container">
             <?php if (get_field('qr')) : ?>
                 <img src="<?php the_field('qr'); ?>" alt="QR - код">
             <?php else : ?>

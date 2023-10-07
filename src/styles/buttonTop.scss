@@ -1,9 +1,14 @@
 @import "./variables.scss";
 
+.button-top-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .button-top {
   position: absolute;
   right: 16px;
-  bottom: -100px;
+  bottom: 54px;
   width: 40px;
   height: 40px;
   padding: 8px;
@@ -16,11 +21,11 @@
 
   @media screen and (min-width: $tablet1) {
     right: 32px;
-    bottom: -110px;
+    bottom: 90px;
   }
   @media screen and (min-width: $desktop) {
     right: 320px;
-    bottom: -140px;
+    bottom: -120px;
   }
 
   &:hover,

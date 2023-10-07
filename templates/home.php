@@ -4,19 +4,21 @@ Template Name: home
 */
 get_header();
 ?>
-<main class="main container" >
-<section class="hero-home section" style="background: linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img') ?>); background-size: cover; background-repeat: no-repeat; background-position: center; ">
-    <h1 class="visually-hidden">Коні української Поліської породи</h1>
-    <h2 class="hero-home__title"><?php the_field('hero-title'); ?></h2>
-    <p class="hero__text"><?php the_field('hero-text'); ?></p>
-    <a class="hero__button" href="<?php echo get_permalink(7); ?>"><?php the_field('hero-button'); ?> 
-        <svg class="hero__icon" width="24px" height="24px">
-          <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
-       </svg>
-    </a>
+<main class="main" >
+<section class="hero-home" style="background: linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img') ?>); background-size: cover; background-repeat: no-repeat; background-position: center; ">
+   <div class="container section">
+       <h1 class="visually-hidden">Коні української Поліської породи</h1>
+       <h2 class="hero-home__title"><?php the_field('hero-title'); ?></h2>
+       <p class="hero__text"><?php the_field('hero-text'); ?></p>
+       <a class="hero__button" href="<?php echo get_permalink(7); ?>"><?php the_field('hero-button'); ?>
+           <svg class="hero__icon" width="24px" height="24px">
+               <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow"></use>
+           </svg>
+       </a>
+   </div>
 </section> 
 
-<section class="activities ">
+<section class="activities container">
      <div class="swiper">
     <div class="activities__list swiper-wrapper">
         
@@ -45,7 +47,7 @@ get_header();
      </div>
 </section>
 
-<section class="about-us section">
+<section class="about-us section container">
     <div class="about-us__container">
         <div class="about-us__logo">
             <img src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Логотип" class='about-us__sign'>
@@ -56,7 +58,7 @@ get_header();
 </div>
  </section>
 
- <section class="gallery-desktop  section">
+ <section class="gallery-desktop  section container">
    <div class="gallery-home__wrapper ">
 
           <div class="gallery__head">
@@ -114,7 +116,7 @@ get_header();
 </section>
 
 
- <section class="gallery-mob section">
+ <section class="gallery-mob section container">
         <div class="gallery-home__wrapper ">
           <h2 class="gallery__title"><?php the_field('gallery-text'); ?></h2>
               <ul class="gallery__buttons">
@@ -156,7 +158,7 @@ get_header();
 
 </section>
 
-<section class="section events-section ">
+<section class="section events-section container">
 		<?php if ( have_posts() ) : ?>
 
 				<?php

@@ -4,13 +4,12 @@ Template Name: horses
 */
 get_header();
 ?>
-<main class="main container">
+<main class="main">
     <h1 class='visually-hidden'>Поліський кінь-унікальна аборигенна порода</h1>
         
   <?php get_template_part( 'template-parts/hero'); ?>
 
-
-    <section class="section horses">
+    <section class="section horses container">
     <div class="horses__section box">
      <div class="horses__img">
        <img src="<?php  the_field('img')?>" alt="<?php the_field('alt')?> "/>
@@ -25,7 +24,7 @@ get_header();
 
 <?php get_template_part( 'template-parts/gallery'); ?>
 
-<section class="horses-video section">
+<section class="horses-video section container">
 <div class="horses-video__wrapper">
   
   
