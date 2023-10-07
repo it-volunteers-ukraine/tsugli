@@ -146,7 +146,7 @@ get_header();
                 ?>
 
                 <div class="gallery__item swiper-slide" data-category="<?php echo $category; ?>">
-                    <img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" loading="lazy"/>
+                    <img class="gallery__img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                 </div>
                 
             <?php endwhile; ?>
