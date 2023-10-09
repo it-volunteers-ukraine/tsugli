@@ -592,11 +592,9 @@
   bottom: 44px;
   left: 0;
   overflow: hidden;
+  width: 100%;
 }
 
-.gallery__wrap.swiper-wrapper {
-  width: 360px;
-}
 .gallery__item.swiper-slide {
   width: 276px;
   height: 219px;

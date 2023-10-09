@@ -42,6 +42,5 @@ jQuery(document).ready(function ($) {
 
 // Swiper
 const swiperGallery = new Swiper(".swiper-gallery", {
-  slidesPerView: 1.2,
   spaceBetween: 16,
 });

@@ -5,6 +5,9 @@ const swiper = new Swiper(".swiper", {
   allowTouchMove: true,
 
   breakpoints: {
+    500:{
+      slidesPerView: 2.5,
+    },
     768: {
       slidesPerView: 3,
       spaceBetween: 32,
@@ -19,7 +22,7 @@ const swiper = new Swiper(".swiper", {
 });
 
 const swiperHomeGallery = new Swiper(".swiper-gallery", {
-  slidesPerView: 1.29,
+  slidesPerView: 2.29,
   spaceBetween: 10,
   pagination: {
     el: ".swiper-pagination",

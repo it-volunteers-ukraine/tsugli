@@ -377,12 +377,19 @@
 
 .about-gallery {
   position: relative;
+
+  & .gallery-mob-wrapper{
+    @media screen and (min-width: $tablet1) {
+      position: unset;
+    }
+  }
 }
 
 .about-gallery__container {
   padding: 24px 8px;
   border-radius: $container-border-radius;
   background: $accent-color;
+  width: 100%;
   @media screen and (min-width: $tablet1) {
     display: flex;
     justify-content: space-between;
@@ -404,7 +411,9 @@
 }
 
 .about-gallery__button {
-  display: inline-flex;
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
   align-items: center;
   gap: 8px;
   padding: 15px 15px 15px 23px;
@@ -420,8 +429,8 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media screen and (max-width: 767px) {
-    margin-left: 78px;
+  @media screen and (min-width: $tablet1) {
+    margin: unset;
   }
 
   &:hover,
@@ -434,8 +443,9 @@
 .about-gallery__wrapper {
   position: absolute;
   left: 0;
+  right: 0;
   top: 100px;
-  width: 360px;
+  width: 100%;
   overflow: hidden;
   @media screen and (min-width: $tablet1) {
     width: $tablet1;
@@ -447,8 +457,18 @@
   }
   @media screen and (min-width: $desktop) {
     width: 1440px;
-    left: 240px;
     top: 109px;
+  }
+
+  &.container {
+    @media screen and (max-width: $tablet1) {
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  & .swiper-slide{
+    width: auto;
   }
 }
 

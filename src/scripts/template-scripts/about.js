@@ -14,14 +14,6 @@ checkboxes.forEach((checkbox, index) => {
 });
 
 const swiper = new Swiper(".about-swiper", {
-  slidesPerView: 1.51,
+  slidesPerView: "auto",
   spaceBetween: 16,
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-    },
-    1920: {
-      slidesPerView: 4,
-    },
-  },
 });

@@ -120,27 +120,31 @@
     </section>
 
 
-    <section class="gallery-mob section container">
-        <div class="gallery-home__wrapper ">
-            <h2 class="gallery__title"><?php the_field( 'gallery-text' ); ?></h2>
-            <ul class="gallery__buttons">
-                <li>
-                    <button class="gallery__button" data-category="museum">Музей-Хаб</button>
-                </li>
-                <li>
-                    <button class="gallery__button" data-category="horses">Поліські Коні</button>
-                </li>
-                <li>
-                    <button class="gallery__button" data-category="events">Події</button>
-                </li>
-                <li>
-                    <button class="gallery__button" data-category="excursions">Екскурсії</button>
-                </li>
-                <li>
-                    <button class="gallery__button active" data-category="all">Всі</button>
-                </li>
-            </ul>
-            <div class="swiper-pagination"></div>
+    <section class="gallery-mob">
+        <div class="gallery-mob-wrapper">
+            <div class="section container">
+                <div class="gallery-home__wrapper">
+                    <h2 class="gallery__title"><?php the_field( 'gallery-text' ); ?></h2>
+                    <ul class="gallery__buttons">
+                        <li>
+                            <button class="gallery__button" data-category="museum">Музей-Хаб</button>
+                        </li>
+                        <li>
+                            <button class="gallery__button" data-category="horses">Поліські Коні</button>
+                        </li>
+                        <li>
+                            <button class="gallery__button" data-category="events">Події</button>
+                        </li>
+                        <li>
+                            <button class="gallery__button" data-category="excursions">Екскурсії</button>
+                        </li>
+                        <li>
+                            <button class="gallery__button active" data-category="all">Всі</button>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
 
 			<?php if ( have_rows( 'gallery' ) ) : ?>
                 <div class="galerry-home__container--mob swiper-gallery">
@@ -160,6 +164,8 @@
                     </div>
                 </div>
 			<?php endif; ?>
+
+        </div>
 
     </section>
 
