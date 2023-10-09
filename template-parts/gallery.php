@@ -29,12 +29,11 @@
 							$images_per_page = 8; // Кількість зображень на сторінці
 							$total_pages     = ceil( $total_images / $images_per_page ); // Загальна кількість сторінок
 
-							for ( $i = 1; $i <= $total_pages; $i ++ ) {
-								echo '<li><a  "data-page="' . $i . '">' . $i . '</a></li>';
-							}
-						?>
-                </div>
-            </div>
+        for ($i = 1; $i <= $total_pages; $i++) {
+            echo '<li><a  " data-page="' . $i . '">' . $i . '</a></li>';
+        }
+        ?>
+</div>
 
 			<?php if ( have_rows( 'gallery' ) ) : ?>
                 <div class="galerry__container--mob swiper-gallery">
