@@ -47,22 +47,21 @@
 
 .about__img {
   position: absolute;
-
   border-radius: $container-border-radius;
   overflow: hidden;
   box-shadow: $container-shadow;
 
   @media screen and (max-width: 767px) {
     left: 16px;
+    right: 16px;
     top: -43px;
-    width: 298px;
     height: 240px;
   }
   @media screen and (min-width: $tablet1) and (max-width: 991px) {
     width: 640px;
     height: 280px;
     top: -208px;
-    left: 50%;
+    left: 50%;right: unset;
     transform: translate(-50%);
   }
   @media screen and (min-width: $tablet2) and (max-width: 1919px) {
@@ -201,6 +200,7 @@
 .about-history__logo {
   display: flex;
   gap: 17px;
+  justify-content: center;
 
   @media screen and (max-width: 767px) {
     margin-bottom: 17px;
