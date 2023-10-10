@@ -40,8 +40,11 @@ jQuery(document).ready(function ($) {
   }
 });
 
-// Swiper
-const swiperGallery = new Swiper(".swiper-gallery", {
-  slidesPerView: 1.2,
+const swiperGallery = new Swiper(".swiperGallery", {
   spaceBetween: 16,
+  slidesPerView: "auto",
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
 });

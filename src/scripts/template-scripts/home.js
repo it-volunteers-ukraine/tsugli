@@ -1,10 +1,13 @@
 // Swiper
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".swiperActivities", {
   slidesPerView: 1.51,
   spaceBetween: 16,
   allowTouchMove: true,
 
   breakpoints: {
+    500:{
+      slidesPerView: 2.2,
+    },
     768: {
       slidesPerView: 3,
       spaceBetween: 32,
@@ -18,8 +21,8 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-const swiperHomeGallery = new Swiper(".swiper-gallery", {
-  slidesPerView: 1.29,
+const swiperHomeGallery = new Swiper(".swiperHomeGallery", {
+  slidesPerView: "auto",
   spaceBetween: 10,
   pagination: {
     el: ".swiper-pagination",

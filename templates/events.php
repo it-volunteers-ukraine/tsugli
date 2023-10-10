@@ -6,13 +6,13 @@ get_header();
 
 ?>
 
-<main class='main container'>
+<main class='main'>
     <h1 class='visually-hidden'>Найцікавіші події та заходи </h1>
     
   <?php get_template_part( 'template-parts/hero'); ?>
 
 
-    <section class='events section'>
+    <section class='events section container'>
         <p class="events-title"><?php the_field('text') ?></p>
         <div class='events__container'>
 <div class='events__posts'>

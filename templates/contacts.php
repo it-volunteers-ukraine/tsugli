@@ -5,13 +5,13 @@
 	get_header();
 ?>
 
-<main class="container main">
+<main class="main">
 
     <h1 class='visually-hidden'>Адреса, контакти ГО Щербаті Цуглі</h1>
 	<?php get_template_part( 'template-parts/hero' ); ?>
 
     <!--        Social links-->
-    <section class="section">
+    <section class="section container">
         <div class="socials">
             <ul>
                 <li class="social-box">
@@ -86,7 +86,7 @@
     </section>
 
     <!--    Contact form + location map-->
-    <section class="section">
+    <section class="section container ">
         <div class="contact">
             <div class="location-wrapper">
                 <div class="address">

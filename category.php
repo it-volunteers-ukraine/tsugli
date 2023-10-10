@@ -1,12 +1,14 @@
 <?php get_header();?>
-<main class='main container'>
+<main class='main'>
     <h1 class='visually-hidden'>Події та заходи </h1>
     
  <section class="hero section" style="background:linear-gradient(100deg, #D9D9D9 15.95%, rgba(217, 217, 217, 0.00) 57.19%), url(<?php the_field('hero-img', '16'); ?>);  background-size: cover; background-repeat: no-repeat; background-position: center;">
-      <h1 class="hero__title"><?php the_field('hero-title', '16');?></h1>
+     <div class="container section">
+     <h1 class="hero__title"><?php the_field('hero-title', '16');?></h1>
+     </div>
  </section>
 
-    <section class='events section'>
+    <section class='events section container'>
  <h2 class="events-title">
     <?php printf( esc_html__( 'Категорія: %s', 'tsugli' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?>
 

@@ -2,7 +2,7 @@
   display: flex;
   gap: 16px;
   flex-direction: column;
-  width: 328px;
+  width: 100%;
 
   @media screen and (min-width: $tablet1) {
     width: 264px;
