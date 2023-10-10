@@ -19,7 +19,6 @@
 
                     </div>
 				<?php endif; ?>
-                </ul>
 
 
                 <div class="gallery-pagination">
@@ -29,32 +28,36 @@
 							$images_per_page = 8; // Кількість зображень на сторінці
 							$total_pages     = ceil( $total_images / $images_per_page ); // Загальна кількість сторінок
 
-        for ($i = 1; $i <= $total_pages; $i++) {
-            echo '<li><a  " data-page="' . $i . '">' . $i . '</a></li>';
-        }
-        ?>
-</div>
-
-			<?php if ( have_rows( 'gallery' ) ) : ?>
-                <div class="galerry__container--mob swiper-gallery">
-                    <div class="gallery__wrap swiper-wrapper">
-						<?php while ( have_rows( 'gallery' ) ) : the_row(); ?>
-							<?php
-							$image = get_sub_field( 'gallery-img' );
-							$alt   = get_sub_field( 'gallery-alt' );
-							?>
-
-                            <div class="gallery__item swiper-slide">
-                                <img class="gallery__img" src="<?php echo $image['url']; ?>"
-                                     alt="<?php echo $alt; ?>"
-                                     loading="lazy"/>
-                            </div>
-
-						<?php endwhile; ?>
-                    </div>
+							for ( $i = 1; $i <= $total_pages; $i ++ ) {
+								echo '<li><a  " data-page="' . $i . '">' . $i . '</a></li>';
+							}
+						?>
+                    </ul>
                 </div>
-			<?php endif; ?>
+            </div>
+        </div>
 
+		<?php if ( have_rows( 'gallery' ) ) : ?>
+
+        <!--Mobile carousel-->
+        <div class="swiper swiperGallery">
+            <div class="swiper-wrapper">
+				<?php while ( have_rows( 'gallery' ) ) : the_row(); ?>
+					<?php
+					$image = get_sub_field( 'gallery-img' );
+					$alt   = get_sub_field( 'gallery-alt' );
+					?>
+
+                    <div class="gallery__item swiper-slide">
+                        <img src="<?php echo $image['url']; ?>"
+                             alt="<?php echo $alt; ?>"/>
+                    </div>
+
+				<?php endwhile; ?>
+            </div>
         </div>
     </div>
+
+	<?php endif; ?>
+
 </section>

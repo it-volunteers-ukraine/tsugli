@@ -158,7 +158,7 @@
   }
 }
 
-.swiper {
+.swiperActivities {
   width: 100%;
   @media screen and (max-width: 767px) {
     overflow: hidden;
@@ -588,27 +588,33 @@
   color: $accent-color;
 }
 
-.galerry-home__container--mob {
+.swiper.swiperHomeGallery {
+  max-width: 560px;
+  width: 100%;
   position: absolute;
   bottom: 44px;
   left: 0;
-  overflow: hidden;
-  width: 100%;
+  right: 0;
+
+  @media screen and (min-width: $tablet1) {
+    display: none;
+  }
 }
 
 .gallery__item.swiper-slide {
+  max-width: 276px;
   width: 276px;
   height: 219px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.gallery__img {
-  display: block;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  img{
+    display: block;
+    min-height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .swiper-pagination {

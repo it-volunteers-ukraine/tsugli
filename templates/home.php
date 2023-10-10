@@ -20,7 +20,7 @@
     </section>
 
     <section class="activities container">
-        <div class="swiper">
+        <div class="swiper swiperActivities">
             <div class="activities__list swiper-wrapper">
 
                 <div class="activities__item swiper-slide">
@@ -147,17 +147,16 @@
             </div>
 
 			<?php if ( have_rows( 'gallery' ) ) : ?>
-                <div class="galerry-home__container--mob swiper-gallery">
-                    <div class="gallery__wrap swiper-wrapper">
+                <div class="swiper swiperHomeGallery">
+                    <div class="swiper-wrapper">
 						<?php while ( have_rows( 'gallery' ) ) : the_row(); ?>
 							<?php
 							$image    = get_sub_field( 'img' );
 							$category = get_sub_field( 'category' );
 							?>
-
                             <div class="gallery__item swiper-slide" data-category="<?php echo $category; ?>">
-                                <img class="gallery__img" src="<?php echo $image['url']; ?>"
-                                     alt="<?php echo $image['alt']; ?>" loading="lazy"/>
+                                <img src="<?php echo $image['url']; ?>"
+                                     alt="<?php echo $image['alt']; ?>"/>
                             </div>
 
 						<?php endwhile; ?>
