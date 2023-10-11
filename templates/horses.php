@@ -29,7 +29,7 @@
 
 
 				<?php if ( have_rows( 'video-gallery' ) ): ?>
-                    <div class="horses-video__container videoLightBox swiper-video">
+                    <div class="horses-video__container videoLightBox swiper swiper-video">
                         <div class="swiper-wrapper">
 							<?php while ( have_rows( 'video-gallery' ) ): the_row(); ?>
 								<?php
