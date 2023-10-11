@@ -46,15 +46,14 @@
 
 .museum__img {
   position: absolute;
-
   border-radius: $container-border-radius;
   overflow: hidden;
   box-shadow: $container-shadow;
 
   @media screen and (max-width: 767px) {
     left: 16px;
+    right: 16px;
     top: -43px;
-    width: 298px;
     height: 240px;
   }
 
