@@ -17,7 +17,6 @@
   }
 }
 
-
 .comments-button {
   position: absolute;
   background-color: transparent;
@@ -56,7 +55,7 @@
 
 .comment__item {
   padding-bottom: 16px;
-  border-bottom: 1px solid #cdcac1;
+  border-bottom: 1px solid $pagination-color;
 }
 
 .children {
@@ -78,7 +77,7 @@
 }
 
 .comment__date {
-  color: #cdcac1;
+  color: $pagination-color;
   font-family: $fira;
   font-size: 16px;
   font-weight: 500;
@@ -151,7 +150,7 @@
   line-height: 1.38;
   letter-spacing: 0.32px;
   border-radius: 8px;
-  border: 1px solid #cdcac1;
+  border: 1px solid $pagination-color;
   background: $button-color;
 }
 

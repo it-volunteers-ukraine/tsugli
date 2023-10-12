@@ -40,6 +40,8 @@
   }
 }
 
+// Menu
+
 .footer-menu {
   margin-bottom: 24px;
   @media screen and (min-width: $tablet1) {
@@ -148,8 +150,25 @@
   }
 }
 
+.viber-mob {
+  display: block;
+
+  @media screen and (min-width: $tablet2) {
+    display: none;
+  }
+}
+
+.viber-desk {
+  display: none;
+
+  @media screen and (min-width: $tablet2) {
+    display: block;
+  }
+}
+
 .wpcf7-form {
   position: relative;
+
   @media screen and (min-width: $tablet1) {
     margin-bottom: 24px;
   }
@@ -163,7 +182,7 @@
   width: 100%;
   padding: 17px 52px 17px 14px;
   border-radius: $container-border-radius;
-  border: 1px solid #e4dfd9;
+  border: 1px solid $input-text-color;
   background-color: $button-color;
   font-family: $fira;
   font-size: 16px;
@@ -173,7 +192,7 @@
   outline: none;
 
   &::placeholder {
-    color: #e4dfd9;
+    color: $input-text-color;
     font-family: $fira;
     font-size: 16px;
     font-weight: 400;
