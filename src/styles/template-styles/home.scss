@@ -631,7 +631,6 @@
 }
 
 .gallery-home__container {
-  width: $tablet1;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -644,13 +643,12 @@
   height: 737px;
 
   @media screen and (min-width: $tablet2) {
-    width: $tablet2;
     margin-left: -60px;
     margin-right: -60px;
   }
+
   @media screen and (min-width: $desktop) {
     height: 986px;
-    width: $desktop;
     margin-left: -384px;
     margin-right: -384px;
   }
