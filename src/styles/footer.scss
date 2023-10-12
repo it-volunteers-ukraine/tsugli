@@ -40,6 +40,8 @@
   }
 }
 
+// Menu
+
 .footer-menu {
   margin-bottom: 24px;
   @media screen and (min-width: $tablet1) {
@@ -148,8 +150,25 @@
   }
 }
 
+.viber-mob {
+  display: block;
+
+  @media screen and (min-width: $tablet2) {
+    display: none;
+  }
+}
+
+.viber-desk {
+  display: none;
+
+  @media screen and (min-width: $tablet2) {
+    display: block;
+  }
+}
+
 .wpcf7-form {
   position: relative;
+
   @media screen and (min-width: $tablet1) {
     margin-bottom: 24px;
   }

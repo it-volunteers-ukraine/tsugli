@@ -54,14 +54,14 @@
                             </a>
                             <ul class="header-networks">
                                 <li class="header-networks__item">
-                                    <a href="<?php echo esc_attr( get_field( 'viber', 18 ) ); ?>"
+                                    <a href="viber://add?number=<?php echo esc_attr( get_field( 'viber', 18 ) ); ?>"
                                        aria-label="Посилання на вайбер">
                                         <svg class="header-networks__icon" width="44px" height="44px">
                                             <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
                                         </svg>
                                     </a>
                                 </li>
-                                <li class="header-networks__item">
+                               <li class="header-networks__item">
                                     <a href="<?php echo esc_attr( get_field( 'facebook', 18 ) ); ?>" target="_blank"
                                        aria-label="Посилання на фейсбук">
                                         <svg class="header-networks__icon" width="44px" height="44px">

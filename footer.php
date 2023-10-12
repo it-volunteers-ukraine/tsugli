@@ -52,8 +52,15 @@
            <?php echo do_shortcode('[contact-form-7 id="d7c96d9" title="Контактна форма-футер"]'); ?>
 
                              <ul class="footer-networks">
-                                <li class="footer-networks__item" >
-                                    <a href="<?php echo esc_attr(get_field('viber', 18));?>" aria-label="Посилання на вайбер">
+                                <li class="footer-networks__item viber-mob" >
+                                    <a href="viber://add?number=<?php echo esc_attr(get_field('viber', 18));?>" aria-label="Посилання на вайбер">
+                                    <svg class="footer-networks__icon" width="44px" height="44px">
+                                        <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
+                                    </svg>
+                                    </a>
+                                </li>
+                                  <li class="footer-networks__item viber-desk" >
+                                    <a href="viber://chat?number=<?php echo esc_attr(get_field('viber', 18));?>" aria-label="Посилання на вайбер">
                                     <svg class="footer-networks__icon" width="44px" height="44px">
                                         <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
                                     </svg>

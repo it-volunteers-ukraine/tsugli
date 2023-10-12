@@ -16,7 +16,13 @@
             <ul>
                 <li class="social-box">
                     <div class="messengers">
-                        <a href="<?php the_field( 'viber' ); ?>" rel="noopener noreferrer"
+                        <a class="viber-mob" href="viber://add?number=<?php the_field( 'viber' ); ?>" rel="noopener noreferrer"
+                           target="_blank" aria-label="Зв'язатись за допомогою мессенджера Вайбер">
+                            <svg>
+                                <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
+                            </svg>
+                        </a>
+                       <a class="viber-desk" href="viber://chat?number=<?php the_field( 'viber' ); ?>" rel="noopener noreferrer"
                            target="_blank" aria-label="Зв'язатись за допомогою мессенджера Вайбер">
                             <svg>
                                 <use href="<?php bloginfo( 'template_url' ); ?>/assets/images/symbol-defs.svg#icon-viber"></use>
