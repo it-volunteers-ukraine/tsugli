@@ -82,11 +82,17 @@
     margin-left: -36px;
     margin-right: -36px;
   }
+
   @media screen and (min-width: $desktop) {
     width: $desktop;
+    margin-left: -80px;
+    margin-right: -80px;
+    height: 652px;
+  }
+  @media screen and (min-width: $full) {
+    width: $full;
     margin-left: -320px;
     margin-right: -320px;
-    height: 652px;
   }
 }
 
@@ -101,10 +107,10 @@
   }
 
   @media screen and (min-width: $desktop) {
-    width: 460px;
+    flex-basis: calc((100% - 3 * 16px) / 4);
     height: 318px;
   }
-  @media screen and (max-width: 1919px) {
+  @media screen and (max-width: 1439px) {
     &:nth-child(even) {
       width: 150px;
     }

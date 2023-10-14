@@ -649,6 +649,11 @@
 
   @media screen and (min-width: $desktop) {
     height: 986px;
+    margin-left: -144px;
+    margin-right: -144px;
+  }
+
+  @media screen and (min-width: $full) {
     margin-left: -384px;
     margin-right: -384px;
   }
@@ -665,11 +670,11 @@
   }
 
   @media screen and (min-width: $desktop) {
-    width: 460px;
+    flex-basis: calc((100% - 3 * 16px) / 4);
     height: 318px;
   }
 
-  @media screen and (max-width: 1919px) {
+  @media screen and (max-width: 1439px) {
     &:nth-child(even) {
       width: 150px;
     }

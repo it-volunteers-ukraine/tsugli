@@ -8,7 +8,7 @@ const swiperVideoGallery = new Swiper(".swiper-video", {
       spaceBetween: 32,
       slidesPerView: 2,
     },
-    1920: {
+    1440: {
       slidesPerView: 2,
       spaceBetween: 44,
     },
