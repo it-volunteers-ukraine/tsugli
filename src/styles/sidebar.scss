@@ -191,6 +191,10 @@
   @media screen and (min-width: $tablet2) {
     display: flex;
   }
+
+  @media screen and (min-width: $desktop) {
+    padding-right: 30px;
+  }
 }
 
 .latest-posts__item {
@@ -272,9 +276,13 @@
   align-items: center;
   gap: 8px;
   fill: currentColor;
+
+  @media screen and (min-width: $desktop) {
+    gap: 4px;
+  }
 }
 
-.latest-posts __date {
+.latest-posts__date {
   color: $secondary-color;
 }
 
