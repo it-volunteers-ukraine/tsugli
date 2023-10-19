@@ -100,6 +100,11 @@
 
 .museum__text {
   @extend %text;
+  text-align: start;
+
+  @media screen and (min-width: $tablet1) {
+    text-align: justify;
+  }
 }
 
 .museum__button {

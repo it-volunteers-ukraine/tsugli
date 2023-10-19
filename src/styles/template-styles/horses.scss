@@ -98,6 +98,11 @@
 
 .horses__text {
   @extend %text;
+  text-align: start;
+  
+  @media screen and (min-width: $tablet1) {
+    text-align: justify;
+  }
 }
 
 .horses__button {

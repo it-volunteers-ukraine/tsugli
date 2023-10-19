@@ -96,6 +96,11 @@
 
 .about__text {
   @extend %text;
+  text-align: start;
+
+  @media screen and (min-width: $tablet1) {
+    text-align: justify;
+  }
 }
 
 .about__button {
@@ -107,6 +112,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
   @media screen and (min-width: $tablet1) {
     display: none;
   }
@@ -129,7 +135,7 @@
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none; /* Додайте стиль для посилання (необов'язково) */
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -154,6 +160,7 @@
     }
 
     p {
+      text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 6;
       -webkit-box-orient: vertical;
@@ -315,10 +322,12 @@
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.307px;
+
   @media screen and (min-width: $tablet1) {
     font-size: 14px;
     letter-spacing: 0.28px;
   }
+
   @media screen and (min-width: $desktop) {
     font-size: 32px;
     letter-spacing: 0.64px;
