@@ -87,8 +87,10 @@
   }
 
   @media screen and (min-width: $tablet2) {
+     left: 50%;
+    transform: translate(-50%);
     flex-direction: row;
-    gap: 16px;
+       gap: 16px;
   }
   @media screen and (min-width: $desktop) {
     gap: 44px;
