@@ -63,6 +63,10 @@
     margin-bottom: 72px;
   }
 
+  @media screen and (min-width: $tablet1) {
+    max-width: 424px;
+  }
+
   @media screen and (min-width: $tablet2) {
     max-width: 640px;
   }
