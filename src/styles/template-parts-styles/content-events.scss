@@ -108,10 +108,17 @@
   @media screen and (min-width: $tablet1) and (max-width: 991px) {
     flex-direction: row;
   }
+
+  @media screen and (min-width: $tablet2) {
+    width: 298px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 398px;
+  }
 }
 
 .events__img {
-  //width: 328px;
   height: 246px;
 
   @media screen and (min-width: $tablet1) {
@@ -120,11 +127,12 @@
   }
 
   @media screen and (min-width: $tablet2) {
-    width: 299px;
+    width: 298px;
     height: 196px;
   }
+
   @media screen and (min-width: $desktop) {
-    width: 397px;
+    width: 398px;
     height: 256px;
   }
 }
